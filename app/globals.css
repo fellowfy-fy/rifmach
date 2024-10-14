@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('/app/fonts/HarmoniaSansProCyr-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.regular {
+  font-weight: 400; 
+}
+
+.bold {
+  font-weight: 700; 
+}
+
+h1 {
+  @apply font-harmonia text-h1;
+}
+
+h2 {
+  @apply font-harmonia text-h2;
+}
+
+h3 {
+  @apply font-harmonia text-h3;
+}
+
+h4 {
+  @apply font-harmonia text-h4;
+}
+
+h5 {
+  @apply font-harmonia text-h5;
+}
