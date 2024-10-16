@@ -10,7 +10,7 @@ export const Curtain = () => {
       animate={{ x: 0 }}
       transition={{ duration: 1 }}
     >
-      <img src="/path/to/curtain-image.png" alt="Curtain" />
+      <img src="/character.svg" alt="Curtain" />
     </motion.div>
   );
 };

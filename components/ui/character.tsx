@@ -10,7 +10,7 @@ export const Character = () => {
       animate={{ opacity: 1, scale: [0.8, 1] }}
       transition={{ duration: 0.8 }}
     >
-      <img src="/path/to/character-image.png" alt="Character" />
+      <img src="/character.svg" alt="Character" />
     </motion.div>
   );
 };
