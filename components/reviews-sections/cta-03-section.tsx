@@ -3,7 +3,7 @@ import CallToAction from "../shared/call-to-action";
 
 export default function CTA03Section() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[216px] md:h-[552px] overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[216px] md:h-[552px] overflow-hidden items-center">
 
       <div className="absolute inset-0 pointer-events-none">
         <div className="block md:hidden absolute bottom-[-12px] transform">
