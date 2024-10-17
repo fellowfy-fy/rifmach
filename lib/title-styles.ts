@@ -1,3 +1,4 @@
+//если тут этот комментарий - занчит сейчас компонент не используется
 export const titleStyleVariants = {
   main: {
     color: "text-white",
