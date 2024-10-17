@@ -1,3 +1,4 @@
+"use client"
 import CallToAction from "../shared/call-to-action";
 
 export default function CTA03Section() {
