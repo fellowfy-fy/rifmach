@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import ReviewCard from "../ui/review-card";
 import Grid from "../ui/grid";
@@ -31,11 +32,6 @@ export default function ReviewsSection() {
         items={currentItems.map((review, index) => (
           <ReviewCard key={index} review={review} />
         ))}
-      />
-      <Pagination
-        totalPages={totalPages}
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
       />
     </section>
   );
