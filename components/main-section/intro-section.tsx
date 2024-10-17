@@ -7,7 +7,7 @@ export default function IntroSection() {
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col">
           <h1 className="text-[32px] md:text-h1 text-white pt-[33px] md:pt-[85px]">
-            НА ЧТО СПОСОБНЫ СТИХИ НА ЗАКАЗ?
+            НА ЧТО СПОСОБНЫ<br />СТИХИ НА ЗАКАЗ?
           </h1>
           <hr className="w-[40px] md:w-[50px] h-[5px] bg-white rounded-sm mt-[10px] md:mt-[22px]"/>
           <h4 className="text-h3 md:text-[18px] text-white mt-4 regular">
@@ -33,7 +33,7 @@ export default function IntroSection() {
       </div>
       <CallToAction />
       
-      <div className="block md:hidden">
+      <div className="block md:hidden absolute top-[620px]">
         <Image
           src="/clouds-mob.svg"
           width={393}

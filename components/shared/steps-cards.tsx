@@ -3,7 +3,7 @@ import StepsCard from "../ui/step-card";
 export default function StepsCards() {
     return(
         <div>
-            <div className="flex flex-col gap-4 md:flex-row md:justify-between mt-[49px] md:mt-[38px]">
+            <div className="flex flex-col gap-4 md:flex-row md:justify-between mt-[30px] md:mt-[38px]">
                 <StepsCard 
                     imageSrc="/step-icon-1.svg" 
                     heading="Выясняем задачу" 
