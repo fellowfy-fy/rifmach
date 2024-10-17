@@ -19,6 +19,7 @@ const buttonVariants = cva(
         main: "bg-gradient-to-t from-[#FBBF06] to-[#FBE203] w-full md:w-[231px] h-[45px] md:h-[41px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203]",
         secondary:
           "bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] w-full md:w-[300px] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white active:bg-[#FBE203]",
+        expand: "text-h4 text-main hover:underline "
       },
       size: {
         default: "h-10 px-4 py-2",
