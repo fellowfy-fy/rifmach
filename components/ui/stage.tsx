@@ -52,7 +52,7 @@ export const Stage = () => {
   const selectedImages = isMobile ? imagesmob : images;
 
   return (
-    <div className="relative w-full h-screen flex justify-center items-center">
+    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
       <motion.img
         key={currentImageIndex}
         src={selectedImages[currentImageIndex]}
