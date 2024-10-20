@@ -27,9 +27,9 @@ export default function AuthorsSection() {
             </h2>
             <hr className="w-[40px] md:w-[50px] h-[5px] bg-main rounded-sm mt-[10px] md:mt-[22px]" />
             <p className="text-textsmain text-[12px] md:text-h3 mt-[10px] md:mt-[22px] max-w-[659px]">Наши авторы — лауреаты региональных творческих конкурсов, обладатели премий федерального масштаба, за плечами у них публикации в солидных журналах и альманахах, изданные книги, членство в профессиональных союзах, мы постоянно в тренде, и продолжаем оттачивать свое мастерство.</p>
-            <center className="pt-[83px] md:pt-[102px]">
+            <div className="pt-[83px] md:pt-[102px]">
                 <Carousel items={authors}/>
-            </center>
+            </div>
         </section>
     )
 }

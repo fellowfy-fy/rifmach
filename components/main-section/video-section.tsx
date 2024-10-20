@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-export default function DemoSection() {
+export default function VideoSection() {
     return(
-        <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[40px] lg:px-[80px] xl:px-[140px] h-[1000px] md:h-[992px] overflow-hidden items-center">
+        <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[40px] lg:px-[80px] xl:px-[140px] h-[698px] md:h-[957px] overflow-hidden items-center">
 
             <div className="absolute inset-0 pointer-events-none w-full">
                 <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
@@ -30,9 +30,9 @@ export default function DemoSection() {
             </div>
 
             <div className="relative top-[101px] md:top-[97px]">
-                <h2 className="uppercase text-[24px] md:text-h2 text-white">посмотрите несколько<br/>интересных примеров</h2>
+                <h2 className="uppercase text-[24px] md:text-h2 text-white">видео от клиентов</h2>
                 <hr className="w-[40px] md:w-[50px] h-[5px] bg-white rounded-sm mt-[10px] md:mt-[22px]"/>
-                <h3 className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[600px]">Вы достойны стихов, написанных по всем законам стихосложения: качественные интересные рифмы, необычные образы, точный ритм</h3>
+                <h3 className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px]">Реальные живые эмоции клиентов. Узнайте больше о том, как презентуют готовые стихи на публику!</h3>
             </div>
         </section>
     )

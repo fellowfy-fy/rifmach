@@ -10,6 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         header: "text-h3 regular text-headers",
+        footer: "text-h4 regular text-[#8F8F9C] hover:underline px-0 mx-0",
         destructive:
           "bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90",
         callback:
@@ -19,13 +20,15 @@ const buttonVariants = cva(
         main: "bg-gradient-to-t from-[#FBBF06] to-[#FBE203] w-full md:w-[231px] h-[45px] md:h-[41px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203]",
         secondary:
           "bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] w-full md:w-[300px] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white active:bg-[#FBE203]",
-        expand: "text-h4 text-main hover:underline "
+        expand: "text-h4 text-main hover:underline ",
+        image: "p-0 bg-transparent",
       },
       size: {
         default: "h-10 px-4 py-2",
+        footer: "px-0 h-5",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        icon: "p-0",
       },
     },
     defaultVariants: {
@@ -42,17 +45,20 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-      />
+      >
+        {children} {/* Render the children inside the button */}
+      </Comp>
     )
   }
 )
 Button.displayName = "Button"
+
 
 export { Button, buttonVariants }

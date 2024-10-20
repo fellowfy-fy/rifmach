@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState } from "react";
 import HeaderContent from "./header-content";
 import Menu from "./menu";

@@ -7,20 +7,20 @@ export default function ReviewIntro() {
   return (
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[216px] h-[600px] md:h-[552px] overflow-hidden items-center">
 
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="block md:hidden absolute bottom-[-12px] transform">
+      <div className="absolute inset-0 pointer-events-none w-full">
+        <div className="block md:hidden absolute bottom-[-12px] w-full">
           <img
             src="/clouds-mob.svg"
             alt="Mobile Clouds"
-            className="w-[393px] h-auto"
+            className="w-full h-auto object-cover"
           />
         </div>
 
-        <div className="hidden md:block absolute bottom-[-2px]">
+        <div className="hidden md:block absolute bottom-[-2px] w-full">
           <img
             src="/clouds.svg"
             alt="Desktop Clouds"
-            className="w-auto h-auto"
+            className="w-full h-auto object-cover"
           />
         </div>
       </div>

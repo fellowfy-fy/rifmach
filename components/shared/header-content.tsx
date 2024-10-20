@@ -75,7 +75,6 @@ export default function HeaderContent() {
 
       <Button variant="callback" className="hidden md:block">ОБРАТНЫЙ ЗВОНОК</Button>
 
-      {/* Phone number - always visible */}
       <div className="flex flex-row items-center">
         <Image
           src="/phone.svg"
