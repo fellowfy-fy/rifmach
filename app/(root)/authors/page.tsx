@@ -4,7 +4,7 @@ import AuthorsCatalogIntro from "@/components/shared/authors-catalog-intro";
 
 export default function Authors() {
     return(
-        <body>
+        <div>
             <AuthorsCatalogIntro 
                 title="авторы" 
                 subtitle="Подберём оптимального автора под вашу задачу" 
@@ -18,6 +18,6 @@ export default function Authors() {
                 cloudImageMobile="/cloud-cta2-mob.svg"
                 cloudImageDesktop="/cloud-cta.svg"
             />
-        </body>
+        </div>
     );
 }

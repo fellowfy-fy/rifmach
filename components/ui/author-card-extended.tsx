@@ -17,7 +17,6 @@ interface AuthorCardExtendedProps {
 export default function AuthorCardExtended({ author }: AuthorCardExtendedProps) {
   return (
     <div className="border bg-white w-full md:w-[578px] h-auto md:h-[403px] pl-[25px] pr-[30px] py-[40px] rounded-[10px] relative mb-[39px] md:mb-0 flex flex-col">
-      {/* Аватар */}
         <div className="mt-[10px] flex flex-row gap-2">
             <Avatar className="w-[100px] h-[100px]">
                 <AvatarImage src={author.avatarUrl} />

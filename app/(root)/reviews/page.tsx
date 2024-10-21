@@ -4,7 +4,7 @@ import ReviewsSection from "@/components/reviews-sections/reviews-section";
 
 export default function Reviews() {
     return(
-        <body>
+        <div>
             <ReviewIntro />
             <ReviewsSection/>
             <CTASection
@@ -14,6 +14,6 @@ export default function Reviews() {
                 cloudImageMobile="/cloud-cta2-mob.svg"
                 cloudImageDesktop="/cloud-cta.svg"
             />
-        </body>
+        </div>
     );
 }

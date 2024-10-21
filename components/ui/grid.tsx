@@ -1,9 +1,9 @@
 interface GridProps {
   items: JSX.Element[];
   columns?: {
-    base?: number;
-    md?: number;
-    lg?: number;
+    base?: string;
+    md?: string;
+    lg?: string;
   };
   gap?: {
     base?: string;
@@ -12,7 +12,7 @@ interface GridProps {
   };
 }
 
-export default function Grid({ items, columns = { base: 1, md: 2 }, gap = { base: "2", md: "4" } }: GridProps) {
+export default function Grid({ items, columns = { base: "1", md: "2", lg: "3"}, gap = { base: "2", md: "4" } }: GridProps) {
   return (
     <div
       className={`

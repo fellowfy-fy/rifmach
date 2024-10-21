@@ -3,9 +3,9 @@ import ContactsForm from "@/components/contacts-sections/contacts-form"
 
 export default function Contacts() {
     return(
-        <body>
+        <div>
             <ContactsIntro/>
             <ContactsForm/>
-        </body>
+        </div>
     )
 }
