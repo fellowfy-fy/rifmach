@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			harmonia: ['Harmonia Sans Pro Cyr"', 'sans-serif']
+  			harmonia: ['Harmonia Sans Pro Cyr', 'sans-serif']
   		},
   		fontSize: {
   			h1: ['55px', { lineHeight: '1.2', fontWeight: '400' }],
