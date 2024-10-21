@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Checkout() {
     return(
-        <div className="bg-[#ECF8FF] flex flex-col items-center">
+        <div className="bg-[#ECF8FF] flex flex-col items-center min-h-screen">
             <div className="flex flex-row justify-between py-4 md:py-5 w-[360px] md:w-[540px]">
                 <Image 
                     src="/logo.svg"
@@ -16,7 +16,7 @@ export default function Checkout() {
                 />
                 <button className="text-h4 md:text-[24px] text-[#25253F] regular">+7 999 333-89-60</button>
             </div>
-                <div className="bg-white w-auto rounded-t-[5px] p-10 flex flex-col gap-4 justify-center ">
+                <div className="bg-white w-auto rounded-[5px] p-10 flex flex-col gap-4 justify-center ">
                     <center>
                         <h2 className="uppercase regular text-headers text-[24px] md:text-h2">Оплата заказа №6060</h2>
                     </center>

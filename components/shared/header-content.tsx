@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 export default function HeaderContent() {
+  const router = useRouter()
   return (
     <div className="flex flex-row mx-[9.31%] items-center justify-between pb-[18px]">
       <Image 
@@ -9,6 +11,8 @@ export default function HeaderContent() {
         alt="Логотип"
         width={138}
         height={44}
+        onClick={()=> router.push("/")}
+        className="cursor-pointer"
       />
 
       {/* это не рендерится на мобилке */}
@@ -28,7 +32,7 @@ export default function HeaderContent() {
         />
       </div>
 
-      <div className="hidden md:flex flex-col items-center">
+      <div className="hidden md:flex flex-col items-center cursor-pointer" onClick={()=> router.push("/reviews")}>
         <Image 
           src="/stars.svg"
           alt="Звезды"
@@ -75,7 +79,6 @@ export default function HeaderContent() {
 
       <Button variant="callback" className="hidden md:block">ОБРАТНЫЙ ЗВОНОК</Button>
 
-      {/* Phone number - always visible */}
       <div className="flex flex-row items-center">
         <Image
           src="/phone.svg"
