@@ -1,5 +1,6 @@
-import Image from "next/image"
-import CallToAction from "../shared/call-to-action"
+import Image from "next/image";
+import CallToAction from "../shared/call-to-action";
+import { IntroCarousel } from "../shared/intro-carousel";
 
 export default function IntroSection() {
   return (
@@ -22,7 +23,7 @@ export default function IntroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 flex md:flex-row flex-col">
+      <div className="z-10 flex md:flex-row flex-col">
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col mb-[31px] md:mb-[24px]">
@@ -37,11 +38,8 @@ export default function IntroSection() {
           </div>
           <CallToAction />
         </div>
-
-        <div>
-          <img src="/boy.svg" className="md:absolute bottom-[-130px] right-[1%] max-h-[297px] md:max-h-[400px]" />
-        </div>
       </div>
+      <IntroCarousel />
     </section>
-  )
+  );
 }
