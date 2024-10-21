@@ -13,7 +13,7 @@ export default function AllAuthorsSection() {
         items={currentItems.map((author, index) => (
           <AuthorCardExtended key={index} author={author} />
         ))}
-        columns={{ base: 1, md: 2}} // Настройка количества колонок
+        columns={{ base: "1", md: "2"}} // Настройка количества колонок
         gap={{ base: "2", md: "4", lg: "6" }} // Настройка gap
       />
       <div className="mt-2">
