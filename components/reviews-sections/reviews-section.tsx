@@ -20,7 +20,7 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section className="px-[16px] md:px-[134px] flex justify-center flex-col items-center">
+    <section className="px-[16px] md:px-[134px] flex justify-center flex-col items-center pt-[20px]">
       <Grid
         items={currentItems.map((review, index) => (
           <ReviewCard key={index} review={review} />

@@ -2,7 +2,7 @@ import { ToggleGroup, ToggleGroupItem } from "../ui/toggle-group";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
-export default function CallToAction() {
+export default function CallToAction({ shadow = true }) {
   return (
     <div className="w-full md:w-[478px]">
       <div className="flex gap-4 justify-left items-center mb-3">
@@ -14,13 +14,16 @@ export default function CallToAction() {
         </ToggleGroup>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center">
+      <div className={`flex flex-col md:flex-row items-center ${shadow ? 'shadow-md' : ''} md:shadow-none`}>
         <Input
-          className="w-full md:w-[245px] mb-1.5 md:mb-0 h-[45px] md:h-[41px]"
+          className={`w-full md:w-[245px] mb-1.5 md:mb-0 h-[45px] md:h-[41px] ${shadow ? 'shadow-md' : ''}`}
           placeholder="+7 (999) 999-99-99"
         />
-
-        <Button variant="main" className=" md:shadow-none">Узнать подробности</Button>
+        <Button
+          variant="main"
+        >
+          Узнать подробности
+        </Button>
       </div>
 
       <div className="w-full text-center md:text-right mt-2">

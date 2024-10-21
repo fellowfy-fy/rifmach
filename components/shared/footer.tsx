@@ -1,4 +1,3 @@
-"use client"
 import GraphicContent from "./graphic-content"
 import ServicesBlock from "./sevices-block"
 import OtherBlock from "./other-block"

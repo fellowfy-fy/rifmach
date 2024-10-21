@@ -17,7 +17,7 @@ const buttonVariants = cva(
           "border border-main bg-white rounded-[22.5px] text-[#529ACA] font-normal tracking-[0.2em] h-[36px]",
         ghost: "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
-        main: "bg-gradient-to-t from-[#FBBF06] to-[#FBE203] w-full md:w-[231px] h-[45px] md:h-[41px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203]",
+        main: "bg-gradient-to-t from-[#FBBF06] to-[#FBE203] w-full md:w-auto h-[45px] md:h-[41px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203]",
         secondary:
           "bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] w-full md:w-[300px] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white active:bg-[#FBE203]",
         expand: "text-h4 text-main hover:underline ",
