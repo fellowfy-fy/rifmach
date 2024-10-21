@@ -3,7 +3,7 @@ import AuthorsCatalogIntro from "@/components/shared/authors-catalog-intro";
 
 export default function Catalog() {
     return(
-        <body>
+        <div>
             <AuthorsCatalogIntro 
                 title="Стих на юбилей на заказ" 
                 subtitle="Получите начало стиха в течении суток:" 
@@ -16,6 +16,6 @@ export default function Catalog() {
                 cloudImageMobile="/cloud-cta2-mob.svg"
                 cloudImageDesktop="/cloud-cta.svg"
             />
-        </body>
+        </div>
     );
 }
