@@ -4,7 +4,7 @@ import { authors } from "@/lib/authors";
 import VacancyCard from "../shared/vacancy-card";
 
 export default function AllAuthorsSection() {
-  const itemsPerPage = 12; // Вы можете регулировать количество авторов на странице, если нужно
+  const itemsPerPage = 12; 
   const currentItems = authors.slice(0, itemsPerPage); // Без пагинации, просто выводим первые N авторов
 
   return (

@@ -25,6 +25,8 @@ export default function ReviewsSection() {
         items={currentItems.map((review, index) => (
           <ReviewCard key={index} review={review} />
         ))}
+        columns={{ base: 1, md: 2, lg: 3}} // Настройка количества колонок
+        gap={{ base: "2", md: "2", lg: "2" }} // Настройка gap
       />
       <PaginationComponent 
         totalPages={totalPages}

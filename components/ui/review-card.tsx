@@ -26,8 +26,8 @@ export default function ReviewCard({ review }: ReviewCardProps) {
 
   return (
     <div className="border w-[370px] md:w-[380px] min-h-[445px] flex flex-col justify-between pl-[25px] pr-[30px] pb-[20px] pt-[40px] rounded-[5px] relative mb-[39px] md:mb-0">
-      <div className="flex">
-        <Avatar>
+      <div className="flex flex-row items-center">
+        <Avatar className="w-[80px] h-[80px]">
           <AvatarImage src={avatarUrl} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>

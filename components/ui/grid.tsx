@@ -12,7 +12,7 @@ interface GridProps {
   };
 }
 
-export default function Grid({ items, columns = { base: 1, md: 2 }, gap = { base: "2", md: "4" } }: GridProps) {
+export default function Grid({ items, columns = { base: 1, md: 2, lg: 3}, gap = { base: "2", md: "4" } }: GridProps) {
   return (
     <div
       className={`
