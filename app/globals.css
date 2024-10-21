@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Harmonia Sans Pro Cyr';
-  src: url('/app/fonts/HarmoniaSansProCyr-Regular.otf') format('opentype');
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("/app/fonts/HarmoniaSansProCyr-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
@@ -22,11 +22,11 @@
 }
 
 .regular {
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .bold {
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 h1 {
@@ -47,4 +47,25 @@ h4 {
 
 h5 {
   @apply font-harmonia text-h5;
+}
+.overlay {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+.overlay::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 400%;
+  top: 25%;
+  left: -100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 0, 0, 1) 50%,
+    rgba(255, 0, 0, 0) 50%,
+    rgba(255, 0, 0, 0) 100%
+  );
 }
