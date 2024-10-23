@@ -25,7 +25,7 @@ export default function AuthorCard({ author }: AuthorCardProps) {
 
   const currentAuthor = author || placeholderAuthor;
 
-  const { avatarUrl, stars, city, authorName, authorText } = currentAuthor;
+  const { avatarUrl, city, authorName, authorText } = currentAuthor;
 
   return (
     <div className="border bg-white w-[280px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[39px] md:mb-0 flex items-center flex-col ">

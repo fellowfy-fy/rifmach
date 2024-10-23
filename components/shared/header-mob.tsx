@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Menu from "./menu";

@@ -1,8 +1,6 @@
-import Image from "next/image"
-
 export default function VideoSection() {
     return(
-        <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[40px] lg:px-[80px] xl:px-[140px] h-[698px] md:h-[957px] overflow-hidden items-center">
+        <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] h-[698px] md:h-[957px] overflow-hidden items-center md:px-10 lg:px-20 xl:px-36 2xl:px-60">
 
             <div className="absolute inset-0 pointer-events-none w-full">
                 <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">

@@ -18,10 +18,10 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
-        main: "bg-gradient-to-t from-[#FBBF06] to-[#FBE203] w-full md:w-auto h-[45px] md:h-[41px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203]",
+        main: "relative bg-gradient-to-t from-[#FBBF06] to-[#FBE203] h-[38px] shadow-lg shadow-[#E9A502]/60 text-textsmain active:bg-[#FBE203] after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[3px] after:bg-[#E9A502] after:rounded-b-md",
         secondary:
-          "bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] w-full md:w-[300px] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white active:bg-[#FBE203]",
-        expand: "text-h4 text-main hover:underline ",
+          "bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white active:bg-[#FBE203]",
+        expand: "text-h4 text-main hover:underline",
         image: "p-0 bg-transparent",
         outline: "p-0",
       },
@@ -55,7 +55,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {children} {/* Render the children inside the button */}
+        {children}
       </Comp>
     );
   }

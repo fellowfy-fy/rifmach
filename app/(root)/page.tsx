@@ -7,7 +7,6 @@ import IdeaSection from "@/components/main-section/idea-section";
 import CorporateSection from "@/components/main-section/corporate-section";
 import CTASection from "@/components/shared/cta-section";
 import VideoSection from "@/components/main-section/video-section";
-import { Video } from "lucide-react";
 
 export default function Main() {
   return (
@@ -19,8 +18,8 @@ export default function Main() {
       <AuthorsSection />
       <IdeaSection />
       <CTASection
-        title="эксклюзивные стихи по прозаичной цене"
-        subtitle="Всего от 200 рублей за четверостишие. И вы получаете гарантии, что стихотворение вам понравится"
+        title={<>эксклюзивные стихи<br/><span className="font-bold">по прозаической цене</span></>}
+        subtitle={<>Всего от <span className="font-bold">200 рублей</span> за четверостишие. И вы получаете гарантии, что стихотворение вам понравится</>}
         owlImage="/owl-main-1.svg"
         cloudImageMobile="/cloud-cta-mob.svg"
         cloudImageDesktop="/cloud-cta.svg"
@@ -29,7 +28,7 @@ export default function Main() {
       <CorporateSection />
       <VideoSection />
       <CTASection
-        title="стильные стихи для решения любых задач"
+        title={<>стильные стихи для решения <span className="font-bold">любых задач</span></>}
         subtitle="Вы оплатите заказ, только если стих Вам понравится."
         owlImage="/owl-main-2.svg"
         cloudImageMobile="/cloud-cta2-mob.svg"

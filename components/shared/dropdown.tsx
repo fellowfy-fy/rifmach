@@ -9,7 +9,7 @@ interface DropdownProps {
   className?: string;
 }
 
-export function Dropdown({ variant = "services", className }: DropdownProps) {
+export function Dropdown({ variant = "services" }: DropdownProps) {
   const dropdownData = {
     services: [
       "Стихи к юбилею",
