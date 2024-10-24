@@ -1,6 +1,5 @@
-import Header from "@/components/shared/header";
+import Header from "@/components/shared/Header/Header";
 import Footer from "@/components/shared/footer";
-
 
 export default function RootLayout({
   children,
@@ -10,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header/>
+        <Header />
         {children}
         <Footer />
       </body>
