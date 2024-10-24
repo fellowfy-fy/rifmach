@@ -27,7 +27,7 @@ export const IntroCarousel: React.FC = () => {
   return (
     <div>
       <div className="absolute top-[135px] right-[270px]">
-        <img src="/intro-section-cloud.png" alt="Intro Section Cloud"/>
+        <img src="/intro-section-cloud.png" alt="Intro Section Cloud" />
         <div className="w-[365px] h-[105px] bg-[#0E9EFF] rounded-full absolute top-[42px] right-[60px] flex items-center justify-center">
           <div className="relative flex items-center justify-center ">
             <svg className="w-[38px] h-[38px]">
@@ -55,7 +55,9 @@ export const IntroCarousel: React.FC = () => {
               {introData[count].id}
             </div>
           </div>
-          <p className="ml-4 text-textonblue w-[247px]">{introData[count].text}</p>
+          <p className="ml-4 text-textonblue w-[247px]">
+            {introData[count].text}
+          </p>
         </div>
       </div>
       <img

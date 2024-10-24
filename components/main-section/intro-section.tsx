@@ -18,7 +18,6 @@ export default function IntroSection() {
         />
       </div>
 
-
       <div className="z-10 flex flex-col md:flex-row">
         <div className="flex flex-col mb-8 md:mb-6">
           <h1 className="text-[32px] md:text-h1 text-white pt-8 md:pt-[85px] uppercase md:max-w-[560px]">
@@ -26,16 +25,17 @@ export default function IntroSection() {
           </h1>
           <hr className="w-10 md:w-[50px] h-[3px] bg-white rounded-sm mt-2.5 md:mt-5" />
           <h4 className="text-h3 md:text-[18px] text-white mt-8 mb-12 regular max-w-[584px]">
-            Вы получите идеальный стих, <span className="font-bold">решающий вашу задачу!</span>
+            Вы получите идеальный стих,{" "}
+            <span className="font-bold">решающий вашу задачу!</span>
           </h4>
           <div className="md:hidden block">
             <IntroCarousel />
           </div>
-          <CallToAction/>
+          <CallToAction />
         </div>
 
         <div className="hidden md:block">
-        <IntroCarousel />
+          <IntroCarousel />
         </div>
       </div>
     </section>

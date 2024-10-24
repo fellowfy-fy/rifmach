@@ -1,6 +1,12 @@
 "use client";
 import * as React from "react";
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
 
 type DropdownVariant = "services" | "themes" | "examples";
 
@@ -17,7 +23,7 @@ export function Dropdown({ variant = "services" }: DropdownProps) {
       "Стихи на свадьбу",
       "Стихи благодарность",
       "Признания в любви",
-      "Корпоративные гимны"
+      "Корпоративные гимны",
     ],
     themes: [
       "Биографии в стихах",
@@ -25,7 +31,7 @@ export function Dropdown({ variant = "services" }: DropdownProps) {
       "Стихи для коллег",
       "Стихи в стиле известных поэтов",
       "Стихи на профессиональные праздники",
-      "Визитка на конкурс"
+      "Визитка на конкурс",
     ],
     examples: [
       "Извинения в стихах",
@@ -33,16 +39,24 @@ export function Dropdown({ variant = "services" }: DropdownProps) {
       "Объявления в стихах",
       "Частушки",
       "Стихи ко дню влюблённых",
-      "РЭП текст"
-    ]
+      "РЭП текст",
+    ],
   };
 
   const data = dropdownData[variant];
 
   return (
     <Select>
-      <SelectTrigger className="w-auto shrink-0">
-        <SelectValue placeholder={variant === "services" ? "Услуги" : variant === "themes" ? "Темы поздравлений" : "Примеры работ"} />
+      <SelectTrigger className="w-auto shrink-0 px-0 py-0">
+        <SelectValue
+          placeholder={
+            variant === "services"
+              ? "Услуги"
+              : variant === "themes"
+              ? "Темы поздравлений"
+              : "Примеры работ"
+          }
+        />
       </SelectTrigger>
       <SelectContent>
         {data.map((item, index) => (

@@ -1,70 +1,81 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Button } from "../../../../ui/button";
 import { useRouter } from "next/navigation";
+import styles from "./HeaderContent.module.css";
 
 export default function HeaderContent() {
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <div className="flex flex-row mx-[9.31%] items-center justify-between pb-[18px]">
-      <Image 
+    <div className={styles.headerContentWrapperStyle}>
+      <Image
         src="/logo.svg"
         alt="Логотип"
         width={138}
         height={44}
-        onClick={()=> router.push("/")}
-        className="cursor-pointer"
+        onClick={() => router.push("/")}
+        className={styles.logoStyle}
       />
-
       {/* это не рендерится на мобилке */}
       <div className="hidden md:flex md:flex-row flex-col items-center">
-        <Image 
+        <Image
           src="/lvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
+          className={styles.branchStyle}
         />
-        <h4 className="text-h4 text-accent bold">16 лет<br />с вами</h4>
-        <Image 
+        <h4
+          // className="text-h4 text-accent bold"
+          className={styles.advantageTextStyle}
+        >
+          16 лет
+          <br />
+          с&nbsp;вами
+        </h4>
+        <Image
           src="/rvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
+          className={styles.branchStyle}
         />
       </div>
-
-      <div className="hidden md:flex flex-col items-center cursor-pointer" onClick={()=> router.push("/reviews")}>
-        <Image 
-          src="/stars.svg"
-          alt="Звезды"
-          width={76}
-          height={13}
-        />
+      <div
+        className="hidden md:flex flex-col items-center cursor-pointer"
+        onClick={() => router.push("/reviews")}
+      >
+        <Image src="/stars.svg" alt="Звезды" width={76} height={13} />
         <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
       </div>
-
       <div className="hidden md:flex flex-row items-center">
-        <Image 
+        <Image
           src="/lvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
+          className={styles.branchStyle}
         />
-        <h4 className="text-h4 text-accent bold">20 000+<br />стихов</h4>
-        <Image 
+        <h4 className={styles.advantageTextStyle}>
+          20&nbsp;000+
+          <br />
+          стихов
+        </h4>
+        <Image
           src="/rvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
+          className={styles.branchStyle}
         />
       </div>
-
-      <div className="flex items-center gap-3">
+      <div className={styles.iconsContainer}>
         <button>
           <Image
             src="/tg.svg"
             alt="Telegram"
             width={25}
             height={25}
+            className={styles.icon}
           />
         </button>
         <button>
@@ -73,20 +84,27 @@ export default function HeaderContent() {
             alt="WhatsApp"
             width={25}
             height={25}
+            className={styles.icon}
           />
         </button>
       </div>
-
-      <Button variant="callback" className="hidden md:block">ОБРАТНЫЙ ЗВОНОК</Button>
-
+      <Button variant="callback" className={styles.callbackButton}>
+        ОБРАТНЫЙ ЗВОНОК
+      </Button>
       <div className="flex flex-row items-center">
         <Image
           src="/phone.svg"
           alt="Телефон"
           width={26}
           height={25}
-        />   
-        <button className="text-[20px] text-[#25253F] font-semibold">+7 999 333-89-60</button>
+          className={styles.icon}
+        />
+        <a
+          href="tel:+79993338960"
+          className="~text-xs/xl text-[#25253F] font-semibold"
+        >
+          +7 999 333-89-60
+        </a>
       </div>
     </div>
   );

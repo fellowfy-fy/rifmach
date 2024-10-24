@@ -10,7 +10,7 @@ import VideoSection from "@/components/main-section/video-section";
 
 export default function Main() {
   return (
-    <div>
+    <div className="max-w-[1440px] mx-auto">
       <IntroSection />
       <RoadmapSection />
       <DemoSection />
@@ -18,8 +18,20 @@ export default function Main() {
       <AuthorsSection />
       <IdeaSection />
       <CTASection
-        title={<>эксклюзивные стихи<br/><span className="font-bold">по прозаической цене</span></>}
-        subtitle={<>Всего от <span className="font-bold">200 рублей</span> за четверостишие. И вы получаете гарантии, что стихотворение вам понравится</>}
+        title={
+          <>
+            эксклюзивные стихи
+            <br />
+            <span className="font-bold">по прозаической цене</span>
+          </>
+        }
+        subtitle={
+          <>
+            Всего от <span className="font-bold">200 рублей</span> за
+            четверостишие. И вы получаете гарантии, что стихотворение вам
+            понравится
+          </>
+        }
         owlImage="/owl-main-1.svg"
         cloudImageMobile="/cloud-cta-mob.svg"
         cloudImageDesktop="/cloud-cta.svg"
@@ -28,7 +40,12 @@ export default function Main() {
       <CorporateSection />
       <VideoSection />
       <CTASection
-        title={<>стильные стихи для решения <span className="font-bold">любых задач</span></>}
+        title={
+          <>
+            стильные стихи для решения{" "}
+            <span className="font-bold">любых задач</span>
+          </>
+        }
         subtitle="Вы оплатите заказ, только если стих Вам понравится."
         owlImage="/owl-main-2.svg"
         cloudImageMobile="/cloud-cta2-mob.svg"
