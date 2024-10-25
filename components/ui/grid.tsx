@@ -13,7 +13,7 @@ interface GridProps {
   isAuthors?: boolean;
 }
 /**
- * @class Удалить костыль isAuthors потом потом potom
+ * @class Удалить костыль isAuthors потом потом potom asd
  * @param param0
  * @returns
  */
