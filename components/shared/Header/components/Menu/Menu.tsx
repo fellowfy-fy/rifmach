@@ -2,7 +2,7 @@ import { Dropdown } from "../../../dropdown";
 import { Button } from "../../../../ui/button";
 import MobileAccordion from "../../../mobile-accordion";
 import { useRouter } from "next/navigation";
-import styles from "./menu.module.css";
+import styles from "./Menu.module.css";
 
 export default function Menu() {
   const router = useRouter();
