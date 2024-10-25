@@ -1,0 +1,13 @@
+.letterWrapper {
+  position: relative;
+  width: 197px;
+  height: 272px;
+  margin-left: 45px;
+  margin-right: 45px;
+  border: 1px solid #b1e1fc;
+  transition: all 0.3s ease; /* Add smooth transition for hover effects */
+}
+
+.letterWrapper:hover {
+  border-color: #ffc000; /* Change border color on hover */
+}

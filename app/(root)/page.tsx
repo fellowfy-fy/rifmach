@@ -1,12 +1,13 @@
-import IntroSection from "@/components/main-section/intro-section";
-import RoadmapSection from "@/components/main-section/roadmap-secion";
-import DemoSection from "@/components/main-section/demo-section";
-import ReviewSection from "@/components/main-section/review-section";
-import AuthorsSection from "@/components/main-section/authors-section";
-import IdeaSection from "@/components/main-section/idea-section";
-import CorporateSection from "@/components/main-section/corporate-section";
-import CTASection from "@/components/shared/cta-section";
-import VideoSection from "@/components/main-section/video-section";
+import IntroSection from '@/components/main-section/intro-section';
+import RoadmapSection from '@/components/main-section/roadmap-secion';
+import DemoSection from '@/components/main-section/demo-section';
+import ReviewSection from '@/components/main-section/review-section';
+import AuthorsSection from '@/components/main-section/authors-section';
+import IdeaSection from '@/components/main-section/idea-section';
+import CorporateSection from '@/components/main-section/corporate-section';
+import CTASection from '@/components/shared/cta-section';
+import VideoSection from '@/components/main-section/video-section';
+import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
 
 export default function Main() {
   return (
@@ -39,10 +40,11 @@ export default function Main() {
       />
       <CorporateSection />
       <VideoSection />
+      <GratitudeLetters />
       <CTASection
         title={
           <>
-            стильные стихи для решения{" "}
+            стильные стихи для решения{' '}
             <span className="font-bold">любых задач</span>
           </>
         }
