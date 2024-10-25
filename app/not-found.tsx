@@ -1,47 +1,17 @@
-"use client"; // Обязательно для использования хуков на стороне клиента
-
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Button } from "@/components/ui/button"; // Импортируем компонент Button
+import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Функция для проверки размеров экрана
-  const checkIsMobile = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  // Устанавливаем слушатель изменения размера окна
-  useEffect(() => {
-    checkIsMobile(); // Проверка при первой загрузке
-    window.addEventListener('resize', checkIsMobile); // Добавление слушателя
-
-    return () => window.removeEventListener('resize', checkIsMobile); // Очистка слушателя при размонтировании компонента
-  }, []);
-
-  // Выбираем изображение в зависимости от размера экрана
-  const selectedImage = isMobile ? '/404mob.svg' : '/404.svg';
-
   return (
-    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
-      <img
-        src={selectedImage}
-        alt="404 - Not Found"
-        className="w-full h-auto"
-      />
-
-      {/* Контейнер для абсолютного позиционирования кнопки */}
-      <div className="absolute bottom-10 flex justify-center w-full">
-        <Link href="/">
-          <Button variant="main" className="w-[231px] h-[44px]">
-            На главную
-          </Button>
-        </Link>
+    <div className="h-screen text-white  bg-[#1C233E] flex flex-col lg:flex-row items-center gap-4 px-4 justify-center">
+      <div className="lg:absolute top-40 left-[10%]">
+        <h1 className="text-[48px] md:text-h1 2xl:text-[70px]">404</h1>
+        <p className="text-[24px] md:text-[36px] 2xl:text-[48px] uppercase">Кажется, вы заблудились...</p>
+        <hr className="w-10 md:w-[50px] h-[5px] bg-white rounded-sm mt-2.5 my:mt-5 hidden md:block"/>
+        <p className="md:text-[18px] text-h3 xl:text-[24px] mt-5 my:mt-10 leading-6 xl:leading-8">Такой страницы не существует.<br/>Пожалуйста, вернитесь на главную.</p>
+        <Button variant="main" className="uppercase w-full md:w-[231px] mt-[41px] shadow-none">на главную</Button>
+      </div>
+      <div className=" lg:absolute lg:right-[20px] xl:right-[35px] 2xl:right-[60px]">
+        <img src="/404.svg" className="w-[386.22px] md:w-[493.33px] lg:w-[550px] xl:w-[640.51px] 2xl:min-h-[720px]" />
       </div>
     </div>
   );
