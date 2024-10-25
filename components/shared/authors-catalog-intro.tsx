@@ -9,7 +9,7 @@ interface IntroSectionProps {
 
 export default function AuthorsCatalogIntro({ title, subtitle, isShadowEnabled }: IntroSectionProps) {
   return (
-    <section className="relative bg-[#E2F2FF] px-[16px] md:px-[40px] lg:px-[80px] xl:px-[140px] h-[587px] md:h-[419px] overflow-hidden items-center text-left">
+    <section className="relative bg-[#E2F2FF] px-[16px] md:px-[40px] lg:px-[80px] xl:px-[140px] h-[587px] md:h-[419px] overflow-hidden items-center text-left ">
       <div className="flex flex-col md:flex-row justify-between items-center text-left">
         <div className="flex flex-col md:max-w-[50%]">
           <div className="flex flex-col mb-[31px] md:mb-[24px]">

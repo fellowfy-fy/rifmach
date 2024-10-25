@@ -1,9 +1,8 @@
-import { ArchBottom } from "../ui/arch-bottom";
+// import { ArchBottom } from "../ui/arch-bottom";
 
 export default function DemoSection() {
   return (
-    <div className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">
-      <section className="relative px-[16px] md:px-10 lg:px-20 xl:px-36 2xl:px-60 h-[1000px] md:h-[992px] overflow-hidden items-center">
+      <section className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] relative px-[16px] md:px-10 lg:px-20 xl:px-36 2xl:px-60 h-[1000px] md:h-[992px] overflow-hidden items-center">
         <div className="absolute inset-0 pointer-events-none w-full">
           <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
             <img
@@ -42,8 +41,7 @@ export default function DemoSection() {
             <span className="font-bold">качественные интересные рифмы, необычные образы, точный ритм</span>
           </h3>
         </div>
+        {/* <ArchBottom /> */}
       </section>
-      <ArchBottom />
-    </div>
   );
 }

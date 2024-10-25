@@ -10,7 +10,7 @@ import VideoSection from "@/components/main-section/video-section";
 
 export default function Main() {
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="mx-auto">
       <IntroSection />
       <RoadmapSection />
       <DemoSection />

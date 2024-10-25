@@ -3,7 +3,7 @@ import { IntroCarousel } from "../shared/intro-carousel";
 
 export default function IntroSection() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-36 2xl:px-60 h-auto md:h-[560px] 2xl:h-[620px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-36 2xl:px-60 h-auto md:h-[560px] 2xl:h-[620px] overflow-hidden items-center ">
       {/* облака */}
       <div className="absolute inset-0 pointer-events-none">
         <img
@@ -18,7 +18,7 @@ export default function IntroSection() {
         />
       </div>
 
-      <div className="z-10 flex flex-col md:flex-row">
+      <div className="z-10 flex flex-col md:flex-row max-w-[1440px]">
         <div className="flex flex-col mb-8 md:mb-6">
           <h1 className="text-[32px] md:text-h1 text-white pt-8 md:pt-[85px] uppercase md:max-w-[560px]">
             на что способны <span className="font-bold">стихи на заказ</span>?

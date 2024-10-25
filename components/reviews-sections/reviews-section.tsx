@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ReviewCard from "../ui/review-card";
 import Grid from "../ui/grid";
-import { reviews } from "@/lib/reviews";
+import { reviews } from "@/constants/reviews";
 import PaginationComponent from "../ui/pagination-component";
 
 export default function ReviewsSection() {

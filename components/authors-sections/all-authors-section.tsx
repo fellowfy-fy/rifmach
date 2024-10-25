@@ -1,6 +1,6 @@
 import AuthorCardExtended from "../ui/author-card-extended";
 import Grid from "../ui/grid";
-import { authors } from "@/lib/authors";
+import { authors } from "@/constants/authors";
 import VacancyCard from "../shared/vacancy-card";
 
 export default function AllAuthorsSection() {
