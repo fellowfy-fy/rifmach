@@ -2,7 +2,7 @@ import IdeaCards from "../shared/idea-cards"
 
 export default function IdeaSection() {
  return (
-   <section className="bg-white mx-4 md:px-10 lg:px-20 xl:px-36 2xl:px-60 pb-10 md:py-6">
+   <section className="bg-white px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] pb-10 md:py-6">
      <h2 className="text-headers text-2xl md:text-h2 uppercase">
        Нужно больше<br /><span className="font-bold">креативных идей?</span>
      </h2>

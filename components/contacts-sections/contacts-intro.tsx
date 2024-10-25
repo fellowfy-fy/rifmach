@@ -1,6 +1,6 @@
 export default function ContactsIntro() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:pl-[50px] lg:pl-[90px] xl:pl-[135px] md:pr-[20px] lg:pr-[40px] xl:pr-[100px] h-[600px] md:h-[600px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[600px] md:h-[600px] overflow-hidden items-center">
 
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[20px] w-full">

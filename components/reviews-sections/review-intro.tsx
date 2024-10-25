@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 
 export default function ReviewIntro() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-[16px] md:px-[216px] h-[600px] md:h-[552px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[600px] md:h-[552px] overflow-hidden items-center">
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[-12px] w-full">
           <img

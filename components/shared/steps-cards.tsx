@@ -1,4 +1,3 @@
-// StepsCards.tsx
 import StepsCard from "../ui/step-card";
 
 export default function StepsCards() {
@@ -7,7 +6,7 @@ export default function StepsCards() {
       <div className="flex flex-col gap-4 md:flex-row md:justify-between mt-[30px] md:mt-[38px]">
         <StepsCard
           imageSrc="/note.svg"
-          hoverImageSrc="/note-hover.svg" // Добавьте hover-версию изображения
+          hoverImageSrc="/note-hover.svg"
           heading="Выясняем задачу"
           text="Хотите вернуть любимую девушку? Блеснуть поздравлением на свадьбе? Обрадовать начальника? Запустить мощную рекламу бизнеса? Мы это сделаем."
           stepNumber={1}
@@ -20,7 +19,7 @@ export default function StepsCards() {
           heading="Узнаём у вас особенные детали"
           text="Вы сообщаете нам подробности о человеке, которые считаете нужными. Поэт виртуозно вплетает их в стих."
           stepNumber={2}
-          imageWidth={69.89} // Пример разного размера
+          imageWidth={69.89}
           imageHeight={65.58}
         />
         <StepsCard
@@ -29,16 +28,16 @@ export default function StepsCards() {
           heading="Определяемся со стилистикой"
           text="Уточняем нужную манеру стиха – трогательно, солидно, весело, чувственно, изысканно."
           stepNumber={3}
-          imageWidth={64.88} // Пример разного размера
+          imageWidth={64.88}
           imageHeight={63.58}
         />
         <StepsCard
-          imageSrc="/brilliant.svg"
-          hoverImageSrc="/brilliant-hover.svg"
+          imageSrc="/brilliant-hover.svg"
+          hoverImageSrc="/brilliant.svg"
           heading="Создаём уникальный стих"
           text="Команда Рифмачей берётся за работу. Пишем для вас шедевр, даём вам на оценку, если нужно – шлифуем."
           stepNumber={4}
-          imageWidth={42.75} // Пример разного размера
+          imageWidth={42.75}
           imageHeight={64.58}
         />
       </div>

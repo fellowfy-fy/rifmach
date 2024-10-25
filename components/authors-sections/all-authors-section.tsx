@@ -8,7 +8,7 @@ export default function AllAuthorsSection() {
   const currentItems = authors.slice(0, itemsPerPage); // Без пагинации, просто выводим первые N авторов
 
   return (
-    <section className="px-[16px] md:px-[40px] lg:px-[80px] xl:px-[134px] flex justify-center flex-col items-center py-[16px] md:py-[48px]">
+    <section className="px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] flex justify-center flex-col items-center py-[16px] md:py-[48px]">
       <Grid
         items={currentItems.map((author, index) => (
           <AuthorCardExtended key={index} author={author} />

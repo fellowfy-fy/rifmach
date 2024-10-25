@@ -8,7 +8,7 @@ const authors = Array(6)
 
 export default function AuthorsSection() {
  return (
-   <section className="bg-white mx-4 md:px-10 lg:px-20 xl:px-36 2xl:px-60 pb-10 md:py-6">
+   <section className="bg-white px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] pb-10 md:py-6">
      <div className="absolute top-[-5] right-10 hidden md:block">
        <Image
          src="/alphabet.svg"

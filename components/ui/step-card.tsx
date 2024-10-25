@@ -4,19 +4,19 @@ import { useState } from "react";
 
 interface StepsCardProps {
   imageSrc: string;
-  hoverImageSrc?: string; 
+  hoverImageSrc?: string;
   heading: string;
   text: string;
   stepNumber: number;
-  imageWidth?: number; 
-  imageHeight?: number; 
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
-export default function StepsCard({ 
-  imageSrc, 
-  hoverImageSrc, 
-  heading, 
-  text, 
+export default function StepsCard({
+  imageSrc,
+  hoverImageSrc,
+  heading,
+  text,
   stepNumber,
   imageWidth,
   imageHeight
@@ -24,7 +24,7 @@ export default function StepsCard({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="border w-full md:w-[281px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[39px] md:mb-0 transition-colors duration-300 hover:border-blue-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -38,7 +38,6 @@ export default function StepsCard({
           width={imageWidth}
           height={imageHeight}
           alt={`Step ${stepNumber}`}
-          className="transition-opacity duration-500"
         />
       </div>
       <h3 className="text-h3 text-headers bold mt-[41px] text-wrap-balance">

@@ -5,7 +5,7 @@ import ContactsAccordion from "../shared/contacts-accordion"
 
 export default function ContactsForm() {
     return(
-        <div className="p-[16px] md:px-[50px] lg:px-[90px] xl:px-[135px] items-center">
+        <div className="px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] items-center">
             <div className="flex flex-col lg:flex-row gap-[2%] mb-8">
                 <div className="w-full flex flex-col gap-4">
                     <div className="mb-8">

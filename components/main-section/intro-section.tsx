@@ -3,7 +3,7 @@ import { IntroCarousel } from "../shared/intro-carousel";
 
 export default function IntroSection() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-36 2xl:px-60 h-auto md:h-[560px] 2xl:h-[620px] overflow-hidden items-center ">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-auto md:h-[560px] 2xl:h-[620px] overflow-hidden items-center ">
       {/* облака */}
       <div className="absolute inset-0 pointer-events-none">
         <img
