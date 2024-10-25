@@ -13,7 +13,7 @@ interface GridProps {
   isAuthors?: boolean;
 }
 /**
- * @class Удалить костыль isAuthors потом потом potom asd fuck vercel
+ * @class Удалить костыль isAuthors потом потом potom asd fuck vercel mazerati
  * @param param0
  * @returns
  */
