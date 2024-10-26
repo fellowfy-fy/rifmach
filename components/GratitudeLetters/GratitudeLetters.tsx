@@ -7,7 +7,7 @@ import styles from './GratitudeLetters.module.css';
 
 export const GratitudeLetters: FC = () => {
   const [isSpinning, setIsSpinning] = useState(true);
-
+  
   const handleLetterClick = () => {
     setIsSpinning(prev => !prev);
   };
