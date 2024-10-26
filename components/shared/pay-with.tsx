@@ -18,7 +18,7 @@ export default function PayWith() {
         <div
           onClick={() => handleSelect("option-one")}
           className={cn(
-            "flex items-left md:items-center space-x-2 justify-center md:justify-between flex-col md:flex-row border rounded-[5px] h-[104px] md:h-[64px] px-[10px] max-w-[500px] cursor-pointer transition-colors duration-200",
+            "flex items-left md:items-center space-x-2 justify-center md:justify-between flex-col md:flex-row border rounded-[5px] h-[104px] md:h-[64px] px-[10px] max-w-[500px] cursor-pointer transition-colors duration-200 text-[#34D399]",
             selectedValue === "option-one"
               ? "bg-[#F1FEF8] border-[#34D399]"
               : "border-gray-300"
@@ -40,7 +40,7 @@ export default function PayWith() {
         <div
           onClick={() => handleSelect("option-two")}
           className={cn(
-            "flex items-left md:items-center space-x-2 justify-center md:justify-between flex-col md:flex-row border rounded-[5px] h-[104px] md:h-[64px] px-[10px] max-w-[500px] w-full cursor-pointer transition-colors duration-200",
+            "flex items-left md:items-center space-x-2 justify-center md:justify-between flex-col md:flex-row border rounded-[5px] h-[104px] md:h-[64px] px-[10px] max-w-[500px] w-full cursor-pointer transition-colors duration-200 text-[#34D399]",
             selectedValue === "option-two"
               ? "bg-[#F1FEF8] border-[#34D399]"
               : "border-gray-300"

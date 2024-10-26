@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='font-harmonia'>{children}</body>
     </html>
   );
 }

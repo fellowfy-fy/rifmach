@@ -20,6 +20,8 @@ const config: Config = {
         h5: ['12px', { lineHeight: '1.2' }]
       },
       colors: {
+        radio: '#C6E1F1',
+        switchbg: "#B3C2C8",
         main: '#0E9EFF',
         accent: '#FFC000',
         headers: '#29383D',
