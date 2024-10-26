@@ -1,7 +1,11 @@
-import CallToAction from "../shared/call-to-action";
+"use client"
+import CallToAction from "../shared/Call-to-action.tsx/call-to-action";
 import { IntroCarousel } from "../shared/intro-carousel";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function IntroSection() {
+  const router = useRouter();
   return (
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-auto md:h-[560px] 2xl:h-[620px] overflow-hidden items-center ">
       {/* облака */}
@@ -32,6 +36,60 @@ export default function IntroSection() {
             <IntroCarousel />
           </div>
           <CallToAction />
+
+           <div className="block md:hidden absolute">
+            <div className="flex flex-row">
+              <div className="hidden md:flex md:flex-row flex-col items-center">
+                <Image
+                  src="/lvetka.svg"
+                  alt="Ветвь"
+                  width={45}
+                  height={45}
+                />
+                <h4
+                  className="text-h4 text-accent bold"
+                >
+                  16 лет
+                  <br />
+                  с&nbsp;вами
+                </h4>
+                <Image
+                  src="/rvetka.svg"
+                  alt="Ветвь"
+                  width={45}
+                  height={45}
+                />
+              </div>
+
+              <div
+                className="hidden md:flex flex-col items-center cursor-pointer"
+                onClick={() => router.push("/reviews")}
+              >
+                <Image src="/stars.svg" alt="Звезды" width={76} height={13} />
+                <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
+              </div>
+
+              <div className="hidden md:flex flex-row items-center">
+                <Image
+                  src="/lvetka.svg"
+                  alt="Ветвь"
+                  width={45}
+                  height={45}
+                />
+                <h4>
+                  20&nbsp;000+
+                  <br />
+                  стихов
+                </h4>
+                <Image
+                  src="/rvetka.svg"
+                  alt="Ветвь"
+                  width={45}
+                  height={45}
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="hidden md:block">

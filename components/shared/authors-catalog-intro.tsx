@@ -1,4 +1,4 @@
-import CallToAction from "../shared/call-to-action";
+import CallToAction from "../call-to-action.tsx/call-to-action";
 import QuoteBlock from "./quote-block";
 
 interface IntroSectionProps {

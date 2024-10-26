@@ -1,7 +1,7 @@
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 import { Button } from "../ui/button"
-import ContactsAccordion from "../shared/contacts-accordion"
+import ContactsAccordion from "./contacts-accordion"
 
 export default function ContactsForm() {
     return(

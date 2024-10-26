@@ -1,4 +1,4 @@
-import CallToAction from "../shared/call-to-action";
+import CallToAction from "./Call-to-action.tsx/call-to-action";
 
 interface CTASectionProps {
  title: string | JSX.Element;
