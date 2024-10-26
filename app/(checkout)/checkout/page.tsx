@@ -9,7 +9,7 @@ export default function Checkout() {
         <div className="bg-[#ECF8FF] flex flex-col items-center min-h-screen">
             <div className="flex flex-row justify-between py-4 md:py-5 w-[360px] md:w-[540px]">
                 <Image 
-                    src="/logo.svg"
+                    src="/icons/logo.svg"
                     alt="Логотип"
                     width={114}
                     height={38}

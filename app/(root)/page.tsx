@@ -35,9 +35,9 @@ export default function Main() {
             понравится
           </>
         }
-        owlImage="/owl-main-1.svg"
-        cloudImageMobile="/cloud-cta-mob.svg"
-        cloudImageDesktop="/cloud-cta.svg"
+        owlImage="/characters/owl-main-1.svg"
+        cloudImageMobile="/clouds/cloud-cta-mob.svg"
+        cloudImageDesktop="/clouds/cloud-cta.svg"
         hasArch={true}
       />
       <CorporateSection />
@@ -51,9 +51,9 @@ export default function Main() {
           </>
         }
         subtitle="Вы оплатите заказ, только если стих Вам понравится."
-        owlImage="/owl-main-2.svg"
-        cloudImageMobile="/cloud-cta2-mob.svg"
-        cloudImageDesktop="/cloud-cta.svg"
+        owlImage="/characters/owl-main-2.svg"
+        cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+        cloudImageDesktop="/clouds/cloud-cta.svg"
       />
     </div>
   );

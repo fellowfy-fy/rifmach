@@ -8,7 +8,7 @@ export default function ReviewIntro() {
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[-12px] w-full">
           <img
-            src="/clouds-mob.svg"
+            src="/clouds/clouds-mob.svg"
             alt="Mobile Clouds"
             className="w-full h-auto object-cover"
           />
@@ -16,7 +16,7 @@ export default function ReviewIntro() {
 
         <div className="hidden md:block absolute bottom-[-2px] w-full">
           <img
-            src="/clouds.svg"
+            src="/clouds/clouds.svg"
             alt="Desktop Clouds"
             className="w-full h-auto object-cover"
           />
@@ -49,14 +49,14 @@ export default function ReviewIntro() {
               className="h-[55px] mx-4 bg-white hidden md:block"
             />
             <div className="gap-2 flex flex-row">
-              <Image src="/stars.svg" height={15} width={92} alt="stars" />
+              <Image src="/icons/stars.svg" height={15} width={92} alt="stars" />
               <label className="text-h4 text-white">544 отзыва</label>
             </div>
           </div>
         </div>
 
         <img
-          src="/owl-post.svg"
+          src="/characters/owl-post.svg"
           className="md:absolute bottom-[-130px] right-[1%] max-h-[297px] md:max-h-[400px]"
         />
 

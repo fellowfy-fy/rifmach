@@ -10,7 +10,7 @@ export default function VideoSection() {
 
         <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
           <img
-            src="/clouds-flip-mob.svg"
+            src="clouds/clouds-flip-mob.svg"
             alt="Mobile Clouds"
             className="w-full max-h-[148px] object-cover"
           />
@@ -18,7 +18,7 @@ export default function VideoSection() {
 
         <div className="hidden md:block absolute top-[-1px] w-full">
           <img
-            src="/clouds-flip.svg"
+            src="clouds/clouds-flip.svg"
             alt="Desktop Clouds"
             className="w-full h-auto object-cover"
           />

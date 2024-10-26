@@ -40,7 +40,7 @@ export default function AuthorCard({ author }: AuthorCardProps) {
         <p className="text-h3 text-[#25253F] mt-[45px] bold">{authorName}</p>
         <p className="text-h4 text-[#8F8F9C]">{city}</p>
         <div className="mt-[30px]">
-          <Image src="/stars.svg" width={96} height={15} alt="Rating" />
+          <Image src="/icons/stars.svg" width={96} height={15} alt="Rating" />
         </div>
       </div>
 

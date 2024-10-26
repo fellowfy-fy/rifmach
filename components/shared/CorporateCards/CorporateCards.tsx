@@ -6,7 +6,7 @@ export default function CorporateCards() {
     <div>
       <div className={styles.cardsWrapper}>
         <CorporateCard
-          imageSrc="/corporate-1.svg"
+          imageSrc="/icons/corporate-1.svg"
           heading={
             <>
               Хотите сделать{' '}
@@ -21,7 +21,7 @@ export default function CorporateCards() {
           }
         />
         <CorporateCard
-          imageSrc="/corporate-2.svg"
+          imageSrc="/icons/corporate-2.svg"
           heading={
             <>
               Вы <span className="font-bold">солидная компания</span>, которой
@@ -36,7 +36,7 @@ export default function CorporateCards() {
           }
         />
         <CorporateCard
-          imageSrc="/corporate-3.svg"
+          imageSrc="/icons/corporate-3.svg"
           heading={
             <>
               Нужны <span className="font-bold">стихи для открыток</span> и
@@ -51,7 +51,7 @@ export default function CorporateCards() {
           }
         />
         <CorporateCard
-          imageSrc="/corporate-4.svg"
+          imageSrc="/icons/corporate-4.svg"
           heading={
             <>
               Занимаетесь{' '}

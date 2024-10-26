@@ -8,7 +8,7 @@ export default function HeaderContent() {
   return (
     <div className={styles.headerContentWrapperStyle}>
       <Image
-        src="/logo.svg"
+        src="/icons/logo.svg"
         alt="Логотип"
         width={138}
         height={44}
@@ -18,7 +18,7 @@ export default function HeaderContent() {
       {/* это не рендерится на мобилке */}
       <div className="hidden md:flex md:flex-row flex-col items-center">
         <Image
-          src="/lvetka.svg"
+          src="/icons/lvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
@@ -33,7 +33,7 @@ export default function HeaderContent() {
           с&nbsp;вами
         </h4>
         <Image
-          src="/rvetka.svg"
+          src="/icons/rvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
@@ -44,12 +44,12 @@ export default function HeaderContent() {
         className="hidden md:flex flex-col items-center cursor-pointer"
         onClick={() => router.push("/reviews")}
       >
-        <Image src="/stars.svg" alt="Звезды" width={76} height={13} />
+        <Image src="/icons/stars.svg" alt="Звезды" width={76} height={13} />
         <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
       </div>
-      <div className="hidden md:flex flex-row items-center">
+      <div className="hidden md:flex flex-row items-center cursor-pointer" onClick={() => router.push("/catalog")}>
         <Image
-          src="/lvetka.svg"
+          src="/icons/lvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
@@ -61,7 +61,7 @@ export default function HeaderContent() {
           стихов
         </h4>
         <Image
-          src="/rvetka.svg"
+          src="/icons/rvetka.svg"
           alt="Ветвь"
           width={45}
           height={45}
@@ -71,7 +71,7 @@ export default function HeaderContent() {
       <div className={styles.iconsContainer}>
         <button>
           <Image
-            src="/tg.svg"
+            src="/icons/tg.svg"
             alt="Telegram"
             width={25}
             height={25}
@@ -80,7 +80,7 @@ export default function HeaderContent() {
         </button>
         <button>
           <Image
-            src="/WhatsApp.svg"
+            src="/icons/WhatsApp.svg"
             alt="WhatsApp"
             width={25}
             height={25}
@@ -93,7 +93,7 @@ export default function HeaderContent() {
       </Button>
       <div className="flex flex-row items-center">
         <Image
-          src="/phone.svg"
+          src="/icons/phone.svg"
           alt="Телефон"
           width={26}
           height={25}

@@ -1,17 +1,24 @@
+export interface Country {
+  code: string;
+  name: string;
+  flagIcon: string; 
+  phoneCode: string;
+  format: string;
+}
+
 export const countries: Country[] = [
   {
     code: "RU",
     name: "Россия",
-    flag: "🇷🇺",
+    flagIcon: "/icons/ru.svg",
     phoneCode: "+7",
-    format: "### ### ## ##" // 10 digits
+    format: "### ### ## ##"
   },
   {
     code: "US",
     name: "США",
-    flag: "🇺🇸",
+    flagIcon: "🇺🇸", 
     phoneCode: "+1",
-    format: "### ### ####" // 10 digits
+    format: "### ### ####"
   },
-  // Добавьте другие страны по необходимости
 ];

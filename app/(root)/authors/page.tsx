@@ -14,9 +14,9 @@ export default function Authors() {
             <CTASection
                 title="Эксклюзивные стихи по прозаической цене"
                 subtitle="Всего от 200 рублей за четверостишие. Яркий запоминающийся стих по цене букета цветов. Представьте!"
-                owlImage="/Pushkin.svg"
-                cloudImageMobile="/cloud-cta2-mob.svg"
-                cloudImageDesktop="/cloud-cta.svg"
+                owlImage="/characters/Pushkin.svg"
+                cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+                cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>
     );

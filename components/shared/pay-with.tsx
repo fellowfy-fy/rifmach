@@ -34,7 +34,7 @@ export default function PayWith() {
             <label className="text-[15px] text-headers bold">Российской картой</label>
             <label className="text-[13px] text-[#4B5563]">(комиссия 0%)</label>
           </div>
-          <Image src="/cards-ru.svg" width={150} height={30} alt="Российские карты" />
+          <Image src="/icons/cards-ru.svg" width={150} height={30} alt="Российские карты" />
         </div>
 
         <div
@@ -56,7 +56,7 @@ export default function PayWith() {
             <label className="text-[15px] text-headers bold">Иностранной картой</label>
             <label className="text-[13px] text-[#4B5563]">(комиссия 3%)</label>
           </div>
-          <Image src="/cards-world.svg" width={150} height={30} alt="Иностранные карты" />
+          <Image src="/icons/cards-world.svg" width={150} height={30} alt="Иностранные карты" />
         </div>
       </RadioGroup>
     </div>

@@ -5,42 +5,42 @@ export default function Payment() {
         <div className="flex flex-row items-center justify-center">
             <Button variant="image">
                 <img
-                src="/sbp.svg"
+                src="/icons/sbp.svg"
                 alt="СБП"
                 className="h-[25px]"
                 />
             </Button>
             <Button variant="image">
                 <img
-                src="/umoney.svg"
+                src="/icons/umoney.svg"
                 alt="ЮМани"
                 className="h-[22px]"
                 />
             </Button>
             <Button variant="image">
                 <img
-                src="/mastercard.svg"
+                src="/icons/mastercard.svg"
                 alt="MasterCard"
                 className="h-[22px]"
                 />
             </Button>
             <Button variant="image">
                 <img
-                src="/visa.svg"
+                src="/icons/visa.svg"
                 alt="Visa"
                 className="h-[22px]"
                 />
             </Button>
             <Button variant="image">
                 <img
-                src="/mir.svg"
+                src="/icons/mir.svg"
                 alt="Мир"
                 className="h-[20px]"
                 />
             </Button>
             <Button variant="image">
                 <img
-                src="/sber.svg"
+                src="/icons/sber.svg"
                 alt="СберПэй"
                 className="h-[25px]"
                 />

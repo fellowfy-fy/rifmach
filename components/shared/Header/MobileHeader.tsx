@@ -16,10 +16,10 @@ export function MobileHeader() {
           <MenuIcon className="w-6 h-6 text-orange-600" />
         </button>
 
-        <Image src="/logo.svg" alt="Логотип" width={138} height={44} />
+        <Image src="/icons/logo.svg" alt="Логотип" width={138} height={44} />
 
         <button>
-          <Image src="/WhatsApp.svg" alt="WhatsApp" width={25} height={25} />
+          <Image src="/icons/WhatsApp.svg" alt="WhatsApp" width={25} height={25} />
         </button>
       </div>
 
@@ -42,10 +42,10 @@ export function MobileHeader() {
               ОБРАТНЫЙ ЗВОНОК
             </Button>
             <div className="flex items-center gap-3 mt-4">
-              <Image src="/vk.svg" alt="VK" width={25} height={25} />
-              <Image src="/tg.svg" alt="Telegram" width={25} height={25} />
+              <Image src="/icons/vk.svg" alt="VK" width={25} height={25} />
+              <Image src="/icons/tg.svg" alt="Telegram" width={25} height={25} />
               <Image
-                src="/WhatsApp.svg"
+                src="/icons/WhatsApp.svg"
                 alt="WhatsApp"
                 width={25}
                 height={25}
