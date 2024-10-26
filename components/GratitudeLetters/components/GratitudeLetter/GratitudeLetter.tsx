@@ -6,11 +6,10 @@ import styles from './GratitudeLetter.module.css';
 
 interface IGratitudeLetterProps {
   path: string;
-  onClick: () => void;
 }
 
 export const GratitudeLetter: FC<IGratitudeLetterProps> = props => {
-  const { path, onClick } = props;
+  const { path } = props;
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -27,7 +26,6 @@ export const GratitudeLetter: FC<IGratitudeLetterProps> = props => {
       <PhotoView src={path}>
         <div
           className={styles.letterWrapper}
-          onClick={onClick}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
