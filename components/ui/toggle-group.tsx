@@ -45,7 +45,7 @@ const ToggleGroupItem = React.forwardRef<
   const context = React.useContext(ToggleGroupContext)
   const variantStyle = context.ctaVariant === 'secondary' 
     ? 'data-[state=on]:bg-[#70B8FE] data-[state=on]:text-white hover:bg-[#70B8FE]/90 hover:text-[#E2F2FF]/90 bg-transparent border border-[#70B8FE] text-[#70B8FE] font-light' 
-    : 'border border-white/70 bg-transparent hover:bg-neutral-100 hover:text-black text-white/70 h-[25px] data-[state=on]:bg-neutral-100 data-[state=on]:text-main font-light';
+    : 'border border-white/70 bg-transparent hover:bg-white hover:text-black text-white/70 h-[25px] data-[state=on]:bg-white data-[state=on]:text-main font-light';
 
   return (
     <ToggleGroupPrimitive.Item
