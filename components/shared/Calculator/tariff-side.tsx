@@ -20,7 +20,7 @@ export const TariffSide: React.FC<Props> = ({ occasion, setOccasion }) => {
     <div className='pt-[25px] pb-[28px] px-[28px]'>
       <h3 className='font-bold text-headers mb-2'>Выберите повод</h3>
       <Select value={occasion.toString()} onValueChange={(value) => setOccasion(Number(value))}>
-        <SelectTrigger className="w-[417px] border border-accent rounded-[5px]">
+        <SelectTrigger className="w-[417px] border border-accent rounded-[5px]" customIcon="/icons/dropdown-calc.svg">
           <SelectValue placeholder="Выберите повод" />
         </SelectTrigger>
         <SelectContent>

@@ -12,27 +12,37 @@ const SelectGroup = SelectPrimitive.Group;
 
 const SelectValue = SelectPrimitive.Value;
 
-const SelectTrigger = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-  <SelectPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      "flex regular text-h3 text-headers h-10 w-full items-center justify-between bg-white px-3 py-2 ring-offset-white placeholder:text-[#50636A] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-neutral-800 dark:bg-neutral-950 dark:ring-offset-neutral-950 dark:placeholder:text-neutral-400 dark:focus:ring-neutral-300  [&[data-state=open]>svg]:rotate-180",
-      className
+interface SelectTriggerProps extends React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> {
+  customIcon?: string;
+}
+
+const SelectTrigger = React.forwardRef<HTMLButtonElement, SelectTriggerProps>(
+  ({ className, children, customIcon, ...props }: SelectTriggerProps, ref: React.ForwardedRef<HTMLButtonElement>) => (
+    <SelectPrimitive.Trigger
+  ref={ref}
+  className={cn(
+    "flex regular text-h3 text-headers h-10 w-full items-center justify-between bg-white px-3 py-2 ring-offset-white placeholder:text-[#50636A] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+    "group",
+    className
+  )}
+  {...props}
+>
+  {children}
+  <SelectPrimitive.Icon asChild>
+  <div className="transition-transform duration-200 group-data-[state=open]:rotate-180">
+    {customIcon ? (
+        <img
+          src={customIcon}
+          alt="dropdown"
+        />
+    ) : (
+      <ChevronDown className="h-4 w-4 opacity-50" />
     )}
-    {...props}
-  >
-    {children}
-    <SelectPrimitive.Icon asChild>
-    <img 
-        src="/icons/dropdown-calc.svg" 
-        alt="dropdown"
-      />
-    </SelectPrimitive.Icon>
-  </SelectPrimitive.Trigger>
-));
+    </div>
+  </SelectPrimitive.Icon>
+</SelectPrimitive.Trigger>
+  )
+);
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
 const SelectScrollUpButton = React.forwardRef<
