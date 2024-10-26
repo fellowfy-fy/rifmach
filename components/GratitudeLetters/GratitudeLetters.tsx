@@ -2,7 +2,6 @@
 import { FC, useState } from 'react';
 import { GratitudeLetter } from './components/GratitudeLetter/GratitudeLetter';
 import { gratitudeLettersPathsConfig } from './GratitudeLetters.utils';
-import Marquee from 'react-fast-marquee';
 
 export const GratitudeLetters: FC = () => {
   const [isSpinning, setIsSpinning] = useState(true);
@@ -22,11 +21,7 @@ export const GratitudeLetters: FC = () => {
         письма
       </h2>
       <hr className="w-10 md:w-[50px] h-[5px] bg-main rounded-sm mt-2.5 md:mt-5" />
-      <div className="mt-10 md:mt-12">
-        <Marquee pauseOnHover={true} pauseOnClick={true}>
-          {letters}
-        </Marquee>
-      </div>
+      <div className="mt-10 md:mt-12">{letters}</div>
     </section>
   );
 };
