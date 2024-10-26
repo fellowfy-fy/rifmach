@@ -38,7 +38,6 @@ export default function Main() {
         owlImage="/characters/owl-main-1.svg"
         cloudImageMobile="/clouds/cloud-cta-mob.svg"
         cloudImageDesktop="/clouds/cloud-cta.svg"
-        hasArch={true}
       />
       <CorporateSection />
       <VideoSection />

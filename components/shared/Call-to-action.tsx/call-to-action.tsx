@@ -1,11 +1,16 @@
 import { PhoneInput } from "./phone-input";
 import { ContactType } from "./contact-type";
 import { Button } from "@/components/ui/button";
+import { CallToActionProps } from "@/lib/types";
 
-export default function CallToAction({ shadow = true }) {
+export default function CallToAction({ 
+  shadow = true, 
+  showConsent = true,
+  variant = 'primary'
+}: CallToActionProps) {
   return (
     <div className="w-full md:w-[478px]">
-      <ContactType />
+      <ContactType variant={variant} />
       <div className="flex flex-col md:relative">
         <PhoneInput shadow={shadow} />
         <Button
@@ -20,13 +25,15 @@ export default function CallToAction({ shadow = true }) {
         >
           Узнать подробности
         </Button>
-        <div className="relative h-12">
-          <div className="absolute right-0 w-[160px] text-center">
-            <p className="text-[#A6A6A6] md:text-[#EEF5F7] mt-2 text-[10px] leading-tight">
-              Даю согласие на обработку<br/>персональных данных
-            </p>
+        {showConsent && (
+          <div className="relative h-12">
+            <div className="absolute right-0 w-[160px] text-center">
+              <p className="text-[#A6A6A6] md:text-[#EEF5F7] mt-2 text-[10px] leading-tight">
+                Даю согласие на обработку<br/>персональных данных
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -119,7 +119,9 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
         </DropdownMenuContent>
       </DropdownMenu>
       <Input
-        className={`w-full md:w-[478px] h-[41px] pl-14 transition-colors ${shadow ? 'shadow-md' : ''} ${getBorderColor()}`}
+        className={`w-full md:w-[478px] h-[41px] pl-14 transition-colors ${
+          shadow ? 'shadow-[9px_10px_30px_0px_#65ADED]' : ''
+        } ${getBorderColor()}`}
         placeholder={`${selectedCountry.phoneCode} (999) 999-99-99`}
         value={phoneNumber}
         onChange={handlePhoneChange}

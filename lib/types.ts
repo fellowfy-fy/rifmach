@@ -11,3 +11,7 @@ export interface CallToActionProps {
   showConsent?: boolean;
   variant?: 'primary' | 'secondary';
 }
+
+export interface ContactTypeProps {
+  variant?: 'primary' | 'secondary';
+}
