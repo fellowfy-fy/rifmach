@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 interface CorporateProps {
   imageSrc: string;
-  heading: string;
-  text: string;
+  heading: string | JSX.Element;
+  text: string | JSX.Element;
 }
 
 export default function CorporateCard({
