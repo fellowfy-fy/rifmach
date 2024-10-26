@@ -15,7 +15,7 @@ export default function CTABlock() {
                     />   
                     <button className="text-[20px] text-[#25253F] font-semibold">+7 999 333-89-60</button>
                 </div> 
-                <Button variant="callback" className="hidden md:block">ОБРАТНЫЙ ЗВОНОК</Button>
+                <Button variant="callback" className="hidden md:block uppercase">ОБРАТНЫЙ ЗВОНОК</Button>
                 <hr />
                 <button className="text-[#ED5640] underline text-h3">mail@rifmach.ru</button>
                 <hr />

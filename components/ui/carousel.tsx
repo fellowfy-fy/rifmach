@@ -1,34 +1,48 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselProps {
   items: JSX.Element[];
+  itemsPerBreakpoint: {
+    mobile: number;
+    md: number;
+    xl: number;
+  };
 }
 
-export default function Carousel({ items }: CarouselProps) {
+export default function Carousel({ items, itemsPerBreakpoint }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
 
-  // Определяем количество видимых элементов в зависимости от размера экрана
-  const itemsPerPage = isMobile ? 1 : 3;
+  const getItemsPerPage = () => {
+    if (screenWidth < 768) return itemsPerBreakpoint.mobile;
+    if (screenWidth < 1280) return itemsPerBreakpoint.md;
+    return itemsPerBreakpoint.xl;
+  };
+
+  const itemsPerPage = getItemsPerPage();
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
-  // Отслеживаем изменение размера экрана
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768); // 768px - breakpoint для md
+    const updateScreenWidth = () => {
+      setScreenWidth(window.innerWidth);
     };
-
-    // Проверяем при монтировании
-    checkIfMobile();
-
-    // Добавляем слушатель изменения размера окна
-    window.addEventListener('resize', checkIfMobile);
-
-    // Очищаем слушатель при размонтировании
-    return () => window.removeEventListener('resize', checkIfMobile);
+    
+    updateScreenWidth();
+    window.addEventListener('resize', updateScreenWidth);
+    return () => window.removeEventListener('resize', updateScreenWidth);
   }, []);
+
+  useEffect(() => {
+    const maxIndex = items.length - itemsPerPage;
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(Math.max(0, maxIndex));
+    }
+  }, [itemsPerPage, items.length, currentIndex]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) =>
@@ -46,22 +60,47 @@ export default function Carousel({ items }: CarouselProps) {
     setCurrentIndex(pageIndex * itemsPerPage);
   };
 
+  const onTouchStart = (e: TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isSwipe = Math.abs(distance) > minSwipeDistance;
+    if (isSwipe) {
+      if (distance > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+  };
+
   return (
     <div className="relative">
-      {/* Основной контейнер с отзывами */}
       <div className="relative overflow-hidden">
         <div
-          className="flex transition-transform duration-300 ease-in-out"
+          className="flex transition-transform duration-300 ease-in-out touch-pan-y"
           style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
+            transform: `translateX(-${(currentIndex * 100) / itemsPerPage}%)`,
           }}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
           {items.map((item, index) => (
             <div
               key={index}
-              className={`${
-                isMobile ? 'min-w-full' : 'min-w-[calc(100%/3)]'
-              } px-2`}
+              className="px-2"
+              style={{
+                minWidth: `${100 / itemsPerPage}%`
+              }}
             >
               {item}
             </div>
@@ -69,7 +108,6 @@ export default function Carousel({ items }: CarouselProps) {
         </div>
       </div>
 
-      {/* Кнопки навигации */}
       <button
         onClick={prevSlide}
         className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 p-2 transition-colors text-accent hover:text-[#FF9900] hidden md:block"
@@ -85,7 +123,6 @@ export default function Carousel({ items }: CarouselProps) {
         <ChevronRight size={24} />
       </button>
 
-      {/* Пагинация точками */}
       <div className="flex justify-center gap-2 mt-6">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button

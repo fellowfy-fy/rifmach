@@ -13,7 +13,7 @@ interface AuthorCardProps {
 }
 
 export default function AuthorCard({ author }: AuthorCardProps) {
-  // Затычки
+  // затычки
   const placeholderAuthor = {
     avatarUrl: "/avatar.svg",
     stars: 5,

@@ -15,9 +15,16 @@ export default function ReviewSection() {
         <span className="font-bold">любимых клиентов</span>
       </h2>
       <hr className="w-10 md:w-[50px] h-[5px] bg-main rounded-sm mt-2.5 md:mt-5" />
-      <div className="mt-10 md:mt-12">
-        <Carousel items={reviewItems} />
-      </div>
+  <div className="mt-10 md:mt-12 -mx-4 md:mx-0"> {/* Отрицательные отступы на мобильных */}
+    <Carousel
+      items={reviewItems}
+      itemsPerBreakpoint={{
+        mobile: 1,
+        md: 2,
+        xl: 3,
+      }}
+    />
+  </div>
     </section>
   );
 }
