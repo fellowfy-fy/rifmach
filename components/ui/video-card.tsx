@@ -8,7 +8,7 @@ interface VideoCardProps {
 
 export default function VideoCard({ thumbnailUrl, title, subtitle, isActive, onClick }: VideoCardProps) {
   return (
-    <div onClick={onClick} className="cursor-pointer">
+    <div onClick={onClick} className="cursor-pointer shadow-2xl">
       <div
         className={`relative rounded-[32px] overflow-hidden transition-all duration-500 ${
           isActive ? 'w-[706px] h-[472px]' : 'w-[490px] h-[273px] filter blur-[2px]'
@@ -22,11 +22,10 @@ export default function VideoCard({ thumbnailUrl, title, subtitle, isActive, onC
         {/* отображение кнопки только на текущей карточке */}
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           {isActive && (
-            <button className="w-20 h-20 rounded-full bg-white/30 flex items-center justify-center transition-all duration-500">
+            <button className="w-[76.72px] h-[76.72px] flex items-center justify-center transition-all duration-500">
               <img
-                src="/play.svg"
+                src="/icons/play.svg"
                 alt="Play"
-                className="w-8 h-8"
               />
             </button>
           )}

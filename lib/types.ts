@@ -5,3 +5,9 @@ interface Country {
   phoneCode: string;
   format: string;
 }
+
+export interface CallToActionProps {
+  shadow?: boolean;
+  showConsent?: boolean;
+  variant?: 'primary' | 'secondary';
+}

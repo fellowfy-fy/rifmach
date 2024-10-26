@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import VideoCard from "../ui/video-card";
+import Image from "next/image";
 
 interface VideoSlide {
   videoUrl: string;
@@ -69,14 +69,24 @@ export default function VideoCarousel({ videos }: VideoCarouselProps) {
           className="absolute left-0 bottom-10 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
           aria-label="Previous video"
         >
-          <ChevronLeft size={40} />
+          <Image 
+            src="/icons/arrow-left-video.svg"
+            alt="Arrow-left"
+            width={55}
+            height={5}
+          />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-0 bottom-10 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
           aria-label="Next video"
         >
-          <ChevronRight size={40} />
+          <Image 
+            src="/icons/arrow-right-video.svg"
+            alt="Arrow-right"
+            width={55}
+            height={5}
+          />
         </button>
 
         {/* пагинация */}

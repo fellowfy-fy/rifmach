@@ -33,7 +33,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
         </Avatar>
         <div className="ml-4">
           <div className="flex items-center">
-            <Image src="/stars.svg" width={78} height={13} alt="Rating" />
+            <Image src="/icons/stars.svg" width={78} height={13} alt="Rating" />
           </div>
           <p className="text-h5 text-[#8F8F9C] mt-1">{date}</p>
           <p className="text-h4 text-[#25253F] mt-3">{reviewerName}</p>

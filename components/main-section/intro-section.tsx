@@ -11,12 +11,12 @@ export default function IntroSection() {
       {/* облака */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="/clouds-mob.svg"
+          src="/clouds/clouds-mob.svg"
           alt="Mobile Clouds"
           className="w-full h-auto object-cover block md:hidden absolute bottom-[-3%]"
         />
         <img
-          src="/clouds.svg"
+          src="/clouds/clouds.svg"
           alt="Desktop Clouds"
           className="w-full h-auto object-cover hidden md:block absolute bottom-[-2px]"
         />
@@ -41,7 +41,7 @@ export default function IntroSection() {
             <div className="flex flex-row">
               <div className="hidden md:flex md:flex-row flex-col items-center">
                 <Image
-                  src="/lvetka.svg"
+                  src="/icons/lvetka.svg"
                   alt="Ветвь"
                   width={45}
                   height={45}
@@ -54,7 +54,7 @@ export default function IntroSection() {
                   с&nbsp;вами
                 </h4>
                 <Image
-                  src="/rvetka.svg"
+                  src="/icons/rvetka.svg"
                   alt="Ветвь"
                   width={45}
                   height={45}
@@ -65,13 +65,13 @@ export default function IntroSection() {
                 className="hidden md:flex flex-col items-center cursor-pointer"
                 onClick={() => router.push("/reviews")}
               >
-                <Image src="/stars.svg" alt="Звезды" width={76} height={13} />
+                <Image src="/icons/stars.svg" alt="Звезды" width={76} height={13} />
                 <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
               </div>
 
               <div className="hidden md:flex flex-row items-center">
                 <Image
-                  src="/lvetka.svg"
+                  src="/icons/lvetka.svg"
                   alt="Ветвь"
                   width={45}
                   height={45}
@@ -82,7 +82,7 @@ export default function IntroSection() {
                   стихов
                 </h4>
                 <Image
-                  src="/rvetka.svg"
+                  src="/icons/rvetka.svg"
                   alt="Ветвь"
                   width={45}
                   height={45}

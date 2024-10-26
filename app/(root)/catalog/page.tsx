@@ -12,9 +12,9 @@ export default function Catalog() {
             <CTASection
                 title="ХОТИТЕ, ЧТОБЫ ИМЕННО ВАШ ТОСТ ЗАПОМНИЛИ?"
                 subtitle="Вы оплатите заказ, только если стих Вам понравится."
-                owlImage="/owl-main-1.svg"
-                cloudImageMobile="/cloud-cta2-mob.svg"
-                cloudImageDesktop="/cloud-cta.svg"
+                owlImage="/characters/owl-main-1.svg"
+                cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+                cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>
     );

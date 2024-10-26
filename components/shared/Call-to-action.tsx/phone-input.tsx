@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
-import { ChevronDown } from "lucide-react";
 import { countries } from "@/constants/phone-dropdown";
 import {
   DropdownMenu,
@@ -22,7 +22,6 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
 
   const validatePhoneNumber = (number: string) => {
     if (!number) return null;
-
     const cleanNumber = number.replace(/\D/g, "");
 
     switch (selectedCountry.code) {
@@ -76,6 +75,20 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
     return "border-[#D4D4D4]";
   };
 
+  const renderFlag = (country: typeof countries[0]) => {
+    if (country.code === "RU") {
+      return (
+        <Image
+          src={country.flagIcon}
+          alt={`${country.name} flag`}
+          width={24}
+          height={16}
+        />
+      );
+    }
+    return <span>{country.flagIcon}</span>;
+  };
+
   useEffect(() => {
     setPhoneNumber(selectedCountry.phoneCode);
     setIsValid(null);
@@ -85,8 +98,13 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
     <div className="relative flex items-center">
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center gap-1 absolute left-3 z-10">
-          <span>{selectedCountry.flag}</span>
-          <ChevronDown className="h-4 w-4" />
+          {renderFlag(selectedCountry)}
+          <Image
+            src="/icons/dropdown-cta.svg"
+            alt="выбор"
+            width={13}
+            height={8}
+          />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {countries.map((country) => (
@@ -94,14 +112,14 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
               key={country.code}
               onClick={() => setSelectedCountry(country)}
             >
-              <span className="mr-2">{country.flag}</span>
+              <span className="mr-2">{renderFlag(country)}</span>
               {country.name} ({country.phoneCode})
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
       <Input
-        className={`w-full md:w-[478px] h-[41px] pl-20 transition-colors ${shadow ? 'shadow-md' : ''} ${getBorderColor()}`}
+        className={`w-full md:w-[478px] h-[41px] pl-14 transition-colors ${shadow ? 'shadow-md' : ''} ${getBorderColor()}`}
         placeholder={`${selectedCountry.phoneCode} (999) 999-99-99`}
         value={phoneNumber}
         onChange={handlePhoneChange}
