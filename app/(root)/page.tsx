@@ -8,6 +8,7 @@ import CorporateSection from '@/components/main-section/corporate-section';
 import CTASection from '@/components/shared/cta-section';
 import VideoSection from '@/components/main-section/video-section';
 import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
+import { CalculatorSection } from '@/components/calculator-section/calculator-section';
 
 export default function Main() {
   return (
@@ -16,6 +17,7 @@ export default function Main() {
       <RoadmapSection />
       <DemoSection />
       <ReviewSection />
+      <CalculatorSection />
       <AuthorsSection />
       <IdeaSection />
       <CTASection
