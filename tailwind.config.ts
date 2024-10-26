@@ -26,6 +26,8 @@ const config: Config = {
         textsmain: '#50636A',
         textonblue: '#EEF5F7',
         maskform: '#A4AFB5',
+        calculator: '#ECF8FF',
+        selecticon: "#0E9EFF",
         secondaryButton: '#70C6FD',
         secondaryButtonGradient: {
           start: '#70C6FD',
