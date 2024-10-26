@@ -14,8 +14,7 @@ export default function CTASection({
  subtitle,
  owlImage,
  cloudImageMobile,
- cloudImageDesktop,
- hasArch,
+ cloudImageDesktop
 }: CTASectionProps) {
  return (     
      <section className="relative px-4 md:h-[552px] overflow-hidden md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">

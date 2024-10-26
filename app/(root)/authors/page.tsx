@@ -5,17 +5,30 @@ import AuthorsCatalogIntro from "@/components/shared/authors-catalog-intro";
 export default function Authors() {
     return(
         <div>
-            <AuthorsCatalogIntro 
-                title="авторы" 
-                subtitle="Подберём оптимального автора под вашу задачу" 
-                isShadowEnabled={true}
-            />
-            <AllAuthorsSection />
+       <AuthorsCatalogIntro
+        title="авторы"
+        subtitle={<>
+          Подберём оптимального автора под <span className="font-bold">вашу задачу</span>
+        </>}
+        isShadowEnabled={true}
+      />
             <CTASection
-                title="Эксклюзивные стихи по прозаической цене"
-                subtitle="Всего от 200 рублей за четверостишие. Яркий запоминающийся стих по цене букета цветов. Представьте!"
-                owlImage="/characters/Pushkin.svg"
-                cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+                title={
+                <>
+                    эксклюзивные стихи
+                    <br />
+                    <span className="font-bold">по прозаической цене</span>
+                </>
+                }
+                subtitle={
+                <>
+                    Всего от <span className="font-bold">200 рублей</span> за
+                    четверостишие. И вы получаете гарантии, что стихотворение вам
+                    понравится
+                </>
+                }
+                owlImage="/characters/owl-main-1.svg"
+                cloudImageMobile="/clouds/cloud-cta-mob.svg"
                 cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>
