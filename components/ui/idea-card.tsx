@@ -19,7 +19,7 @@ export default function IdeaCard({
   showButton
 }: IdeaCardProps) {
   return (
-    <div className="border w-full md:w-[378px] h-auto md:h-[377px] pl-[25px] pr-[24px] py-[20px] rounded-[5px] relative mb-[39px] md:mb-0 flex flex-col">
+    <div className="border hover:border-main w-full md:w-[378px] h-auto md:h-[377px] pl-[25px] pr-[24px] py-[20px] rounded-[5px] relative mb-[39px] md:mb-0 flex flex-col">
       <div>
         <div className="h-[105px]">
           <Image

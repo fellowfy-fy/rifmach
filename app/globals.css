@@ -14,15 +14,15 @@
   font-family: 'Harmonia Sans Pro Cyr';
   src: url('./fonts/HarmoniaSansProCyr-Bold.ttf') format('opentype');
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Harmonia Sans Pro Cyr';
   src: url('./fonts/HarmoniaSans-Light.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 200;
+  font-style: light;
   font-display: swap;
 }
 
@@ -36,6 +36,10 @@
   :root {
     --radius: 0.5rem;
   }
+}
+
+.light {
+  font-weight: 200;
 }
 
 .regular {

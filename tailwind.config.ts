@@ -13,11 +13,11 @@ const config: Config = {
         harmonia: ['Harmonia Sans Pro Cyr', 'sans-serif']
       },
       fontSize: {
-        h1: ['55px', { lineHeight: '1.2', fontWeight: '400' }],
-        h2: ['40px', { lineHeight: '1.2', fontWeight: '400' }],
-        h3: ['16px', { lineHeight: '1.2', fontWeight: '400' }],
-        h4: ['14px', { lineHeight: '1.2', fontWeight: '400' }],
-        h5: ['12px', { lineHeight: '1.2', fontWeight: '400' }]
+        h1: ['55px', { lineHeight: '1.2' }],
+        h2: ['40px', { lineHeight: '1.2' }],
+        h3: ['16px', { lineHeight: '1.2' }],
+        h4: ['14px', { lineHeight: '1.2' }],
+        h5: ['12px', { lineHeight: '1.2' }]
       },
       colors: {
         main: '#0E9EFF',
