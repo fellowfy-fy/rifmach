@@ -1,0 +1,26 @@
+.sectionWrapper {
+  background-color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: clamp(
+    14px,
+    calc(14px + (102 - 14) * ((100vw - 320px) / (1440 - 320))),
+    102px
+  );
+  padding-right: clamp(
+    0px,
+    calc(0px + (102 - 0) * ((100vw - 320px) / (1440 - 320))),
+    102px
+  );
+}
+
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}

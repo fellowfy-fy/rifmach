@@ -1,0 +1,68 @@
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 20px; /* Add some padding for the navigation buttons */
+}
+
+.carouselViewport {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carouselContainer {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 1280px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.letterWrapper {
+  flex: 0 0 197px; /* Fixed width for each letter */
+  margin-right: 45px; /* Gap between letters */
+}
+
+.letterWrapper:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  z-index: 10;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d1d5db; /* gray-300 */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: #3b82f6; /* main color, adjust as needed */
+}
