@@ -1,0 +1,20 @@
+.graphicContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+  .graphicContent {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .graphicContent {
+    justify-content: center;
+    align-items: center;
+  }
+}
