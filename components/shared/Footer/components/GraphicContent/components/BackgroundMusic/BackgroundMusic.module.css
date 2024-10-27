@@ -1,0 +1,49 @@
+.bgmusicWrapper {
+  position: relative;
+  z-index: 99;
+}
+
+.bgmusicButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgmusicButton {
+  width: 320px;
+  height: 320px;
+}
+
+@media (min-width: 768px) {
+  .bgmusicButton {
+    width: clamp(
+      320px,
+      calc(320px + (350 - 320) * ((100vw - 768px) / (1440 - 768))),
+      350px
+    );
+    height: clamp(
+      320px,
+      calc(320px + (350 - 320) * ((100vw - 768px) / (1440 - 768))),
+      350px
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .bgmusicButton {
+    .bgmusicButton {
+      width: clamp(
+        240px,
+        calc(240px + (100vw - 240) * ((100vw - 320px) / (768 - 320))),
+        100%
+      );
+      height: auto;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
