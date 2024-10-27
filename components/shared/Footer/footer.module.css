@@ -38,6 +38,12 @@
   );
 }
 
+@media (max-width: 768px) {
+  .footerWrapper {
+    padding-top: 25px;
+  }
+}
+
 @media (min-width: 768px) {
   .footerWrapper {
     flex-direction: row;

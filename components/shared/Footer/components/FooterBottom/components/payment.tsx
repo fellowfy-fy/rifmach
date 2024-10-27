@@ -3,7 +3,7 @@ import styles from './payment.module.css';
 
 export default function Payment() {
   return (
-    <div className="flex flex-row items-center justify-center">
+    <div className="flex flex-row items-center justify-center pb-3 md:pb-0">
       <Button variant="image">
         <img src="/icons/sbp.svg" alt="СБП" className={styles.paymentIcon} />
       </Button>
