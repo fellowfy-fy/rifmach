@@ -12,6 +12,7 @@ export default function Authors() {
         </>}
         isShadowEnabled={true}
       />
+      <AllAuthorsSection/>
             <CTASection
                 title={
                 <>

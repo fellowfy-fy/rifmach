@@ -38,8 +38,8 @@ export default function VacancyCard() {
         </li>
       </ul>
 
-      <div className="mt-6">
-        <Button variant="main" className="w-full">
+      <div className="mt-12 flex justify-center">
+        <Button variant="main" className="w-full md:w-[302px]">
           ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ
         </Button>
       </div>
