@@ -28,7 +28,7 @@ export default function AuthorCard({ author }: AuthorCardProps) {
   const { avatarUrl, city, authorName, authorText } = currentAuthor;
 
   return (
-    <div className="border hover:border-main bg-white w-[280px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[39px] md:mb-0 flex items-center flex-col ">
+    <div className="border transition-colors duration-300 hover:border-main bg-white w-[280px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[39px] md:mb-0 flex items-center flex-col ">
       <div className="absolute top-[-60px] w-[120px] h-[120px] flex items-center justify-center rounded-full bg-white border border-accent">
         <Avatar>
           <AvatarImage src={avatarUrl} />

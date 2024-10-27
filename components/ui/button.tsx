@@ -25,6 +25,7 @@ const buttonVariants = cva(
         expand: "text-h4 text-main hover:underline",
         image: "p-0 bg-transparent",
         outline: "p-0",
+        demo: "text-white text-[14px] text-center flex justify-center"
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -50,7 +50,6 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' }
         },
-        // Добавляем анимации мерцания
         'twinkle-1': {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.3' }
@@ -71,7 +70,6 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        // Добавляем анимации мерцания
         'twinkle-1': 'twinkle-1 2s ease-in-out infinite',
         'twinkle-2': 'twinkle-2 2.5s ease-in-out infinite',
         'twinkle-3': 'twinkle-3 3s ease-in-out infinite',
@@ -79,7 +77,9 @@ const config: Config = {
       }
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate")
+  ],
 };
 
 export default config;

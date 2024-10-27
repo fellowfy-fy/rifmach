@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/components/ui/toggle"
 
 type ToggleGroupProps = React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
-  VariantProps<typeof toggleVariants> & {
-    ctaVariant?: 'primary' | 'secondary';
-  };
+VariantProps<typeof toggleVariants> & {
+  ctaVariant?: 'primary' | 'secondary' | 'tertiary';
+};
 
 const ToggleGroupContext = React.createContext<{
   variant?: VariantProps<typeof toggleVariants>["variant"];
   size?: VariantProps<typeof toggleVariants>["size"];
-  ctaVariant?: 'primary' | 'secondary';
+  ctaVariant?: 'primary' | 'secondary' | 'tertiary';
 }>({
   size: "default",
   variant: "default",
@@ -43,16 +43,24 @@ const ToggleGroupItem = React.forwardRef<
   VariantProps<typeof toggleVariants>
 >(({ className, children, variant, size, ...props }, ref) => {
   const context = React.useContext(ToggleGroupContext)
-  const variantStyle = context.ctaVariant === 'secondary' 
-    ? 'data-[state=on]:bg-[#70B8FE] data-[state=on]:text-white hover:bg-[#70B8FE]/90 hover:text-[#E2F2FF]/90 bg-transparent border border-[#70B8FE] text-[#70B8FE] font-light' 
-    : 'border border-white/70 bg-transparent hover:bg-white hover:text-black text-white/70 h-[25px] data-[state=on]:bg-white data-[state=on]:text-main font-light';
+  
+  const getVariantStyle = () => {
+    switch (context.ctaVariant) {
+      case 'secondary':
+        return 'data-[state=on]:bg-[#70B8FE] data-[state=on]:text-white hover:bg-[#70B8FE]/90 hover:text-[#E2F2FF]/90 bg-transparent border border-[#70B8FE] text-[#70B8FE] font-light';
+      case 'tertiary':
+        return 'bg-[#E9EDF4] text-textsmain hover:bg-white data-[state=on]:bg-white data-[state=on]:text-main h-[30px] font-light';
+      default: // primary
+        return 'border border-white/70 bg-transparent hover:bg-white hover:text-black text-white/70 h-[25px] data-[state=on]:bg-white data-[state=on]:text-main font-light';
+    }
+  };
 
   return (
     <ToggleGroupPrimitive.Item
       ref={ref}
       className={cn(
         "rounded-full px-3 text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-        variantStyle,
+        getVariantStyle(),
         className
       )}
       {...props}
