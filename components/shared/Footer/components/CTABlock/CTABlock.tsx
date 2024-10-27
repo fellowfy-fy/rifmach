@@ -16,14 +16,14 @@ export default function CTABlock() {
         <Button variant="callback" className="hidden md:block uppercase">
           ОБРАТНЫЙ ЗВОНОК
         </Button>
-        <hr />
+        <hr  className='w-[202px] my-[15px] hidden md:block' />
         <a
           href="mailto:mail@rifmach.ru"
           className="text-[#ED5640] underline text-h3 mx-auto md:mx-0"
         >
           mail@rifmach.ru
         </a>
-        <hr />
+        <hr className='w-[202px] my-[15px] hidden md:block'/>
         <div className="flex items-center gap-3 mx-auto md:mx-0">
           <button>
             <Image src="/icons/vk.svg" alt="Telegram" width={25} height={25} />

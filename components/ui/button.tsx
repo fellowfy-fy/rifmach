@@ -14,7 +14,7 @@ const buttonVariants = cva(
         destructive:
           "bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90",
         callback:
-          "border hover:bg-[#70C6FD] hover:text-white border-main bg-white rounded-[22.5px] text-[#529ACA] font-normal tracking-[0.2em] h-[36px]",
+          "border hover:bg-[#70C6FD] hover:text-white border-main bg-white rounded-[22.5px] text-[#529ACA] font-normal tracking-[0.2em] h-[36px] w-[202px] text-[12px] flex items-center justify-center",
         ghost:
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
