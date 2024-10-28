@@ -16,7 +16,7 @@
 @media (max-width: 767px) {
   .servicesBlock {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 25px;
     max-width: 100%;
   }
