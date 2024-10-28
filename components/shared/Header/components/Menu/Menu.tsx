@@ -6,7 +6,7 @@ import styles from './Menu.module.css';
 import { getRoutesConfig } from '@/lib/utils';
 import MenuLink from './components/MenuLink/MenuLink';
 
-export default function Menu() {
+export default function Menu({ children }: { children?: React.ReactNode }) {
   const router = useRouter();
 
   return (
@@ -22,6 +22,7 @@ export default function Menu() {
 
       <div className="block md:hidden w-full">
         <MobileAccordion />
+        {children}
       </div>
 
       <Button

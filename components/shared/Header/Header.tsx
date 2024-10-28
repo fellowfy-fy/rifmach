@@ -1,7 +1,7 @@
-"use client";
-import HeaderContent from "./components/HeaderContent/HeaderContent";
-import Menu from "./components/Menu/Menu";
-import { MobileHeader } from "./MobileHeader";
+'use client';
+import HeaderContent from './components/HeaderContent/HeaderContent';
+import Menu from './components/Menu/Menu';
+import { MobileHeader } from './MobileHeader';
 
 export default function Header() {
   return (
