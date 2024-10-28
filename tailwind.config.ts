@@ -22,6 +22,7 @@ const config: Config = {
       colors: {
         radio: '#C6E1F1',
         switchbg: "#B3C2C8",
+        slidercalc: "#ABCCE2",
         main: '#0E9EFF',
         accent: '#FFC000',
         headers: '#29383D',
