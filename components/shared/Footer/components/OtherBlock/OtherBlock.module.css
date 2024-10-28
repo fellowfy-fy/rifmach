@@ -22,7 +22,7 @@
 @media (max-width: 767px) {
   .otherBlock {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 25px;
     max-width: 100%;
   }
