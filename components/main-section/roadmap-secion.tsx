@@ -1,10 +1,68 @@
 import StepsCards from "../shared/steps-cards"
 import { Button } from "../ui/button"
+import Image from "next/image";
 
 export default function RoadmapSection() {
   return (
-    <section className="bg-white py-20 md:py-6">
-      <div className=" mx-auto px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]">
+    <section className="bg-white py-0 md:py-6">
+
+      <div className="md:hidden mb-[72px]">
+        <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row items-center">
+            <Image
+              src="/icons/lvetka.svg"
+              alt="Ветвь"
+              width={45}
+              height={45}
+            />
+            <h4
+              className="text-h4 text-accent bold"
+            >
+              16 лет
+              <br />
+              с&nbsp;вами
+            </h4>
+            <Image
+              src="/icons/rvetka.svg"
+              alt="Ветвь"
+              width={45}
+              height={45}
+            />
+          </div>
+
+          <div
+            className="flex flex-col items-center"
+          >
+            <Image src="/icons/stars.svg" alt="Звезды" width={76} height={13} />
+            <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
+          </div>
+
+          <div className="flex flex-row items-center">
+            <Image
+              src="/icons/lvetka.svg"
+              alt="Ветвь"
+              width={45}
+              height={45}
+            />
+            <h4
+              className="text-h4 text-accent bold"
+            >
+              20 000+
+              <br />
+              стихов
+            </h4>
+            <Image
+              src="/icons/rvetka.svg"
+              alt="Ветвь"
+              width={45}
+              height={45}
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <div className="mx-auto px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-60 max-w-[1920px]">
         <h2 className="text-headers text-2xl md:text-h2 uppercase">
           Как создается стих,<br />
           <span className="font-bold">бьющий точно в цель?</span>
