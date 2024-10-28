@@ -1,5 +1,7 @@
 .menuWrapperStyle {
   display: flex;
+  list-style: none;
+  height: 56px;
   padding-left: clamp(
     40px,
     calc(40px + (134 - 40) * ((100vw - 768px) / (1440 - 768))),
@@ -17,11 +19,24 @@
     100px
   );
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
 
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.li {
+  display: block;
+  height: 100%;
+  position: relative;
+  list-style: none;
+}
+
+.li:hover > ul {
+  display: block;
+}
+
+.li:hover > a {
+  background-color: white;
 }

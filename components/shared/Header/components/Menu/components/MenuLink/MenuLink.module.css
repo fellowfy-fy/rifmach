@@ -1,0 +1,68 @@
+.hoverEffectHolder {
+  position: absolute;
+  cursor: pointer;
+  height: 1px;
+  width: 100%;
+}
+
+.childrenUl {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  background-color: white;
+  list-style-type: none;
+  margin: 0;
+  /* padding: 12px 0; */
+  padding-bottom: 12px;
+  margin-top: 1px;
+  /* box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.15); */
+  margin-top: 28px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.childLinkSecondary {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 11px 20px 5px 24px;
+  color: #50636a;
+  white-space: nowrap;
+}
+
+.childLinkSecondary:hover {
+  color: #0e9eff; /* active state color */
+}
+
+.childLinkSecondary:hover {
+  background-color: white;
+}
+
+.childLinkPrimary {
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 160px 8px 24px;
+  color: #ffffff; /* non-active state color */
+  white-space: nowrap;
+}
+
+.childLinkPrimary.active {
+  color: #0e9eff; /* active state color */
+}
+
+.childLinkPrimary:hover {
+  background-color: #0e9eff;
+}
+
+.linkStyle {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
+  color: #50636a;
+  text-decoration: none;
+}
