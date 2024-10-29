@@ -33,7 +33,7 @@ export default function Footer() {
         <GraphicContent />
         {isMobile && <CTABlock isMobile={isMobile} />}
         {isMobile ? (
-          <div className="flex gap-3 mx-auto items-start">
+          <div className="flex gap-3 mx-auto items-start justify-between max-w-[320px] w-full">
             <ServicesBlock />
             <OtherBlock />
           </div>
