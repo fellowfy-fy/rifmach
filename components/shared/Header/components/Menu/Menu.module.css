@@ -2,6 +2,7 @@
   display: flex;
   list-style: none;
   height: 56px;
+  position: relative;
   padding-left: clamp(
     40px,
     calc(40px + (134 - 40) * ((100vw - 768px) / (1440 - 768))),
@@ -33,10 +34,133 @@
   list-style: none;
 }
 
-.li:hover > ul {
-  display: block;
+.li:hover {
+  cursor: pointer;
 }
 
-.li:hover > a {
+.li:hover svg {
+  transform: rotate(180deg);
+  color: #ffd700;
+}
+
+.opened + .menuList {
+  display: flex;
   background-color: white;
+}
+
+.linkStyle {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menuList {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 56px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 100;
+  padding-bottom: 10px;
+  margin-left: clamp(
+    40px,
+    calc(40px + (134 - 40) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+}
+
+.childLinkSecondary {
+  display: block;
+  max-width: 100%;
+  font-size: clamp(
+    10px,
+    calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768))),
+    12px
+  );
+  line-height: clamp(
+    10px,
+    calc(10px + (14 - 10) * ((100vw - 768px) / (1440 - 768))),
+    14px
+  );
+  padding: 11px 15px 5px 16px;
+  /* width: clamp(
+    182px,
+    calc(182px + (200 - 182) * ((100vw - 320px) / (1920 - 320))),
+    262px
+  ); */
+  /* text-wrap: wrap; */
+  color: #50636a;
+  white-space: nowrap;
+  position: relative;
+}
+
+.childrenUl {
+  position: relative;
+}
+
+.childrenUl:not(:first-child) {
+  /* padding-left: 10px; */
+}
+
+.childrenUl:not(:first-child)::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  z-index: 101;
+  /* background: linear-gradient(
+    270deg,
+    transparent 0%,
+    rgba(41, 56, 61, 0) 20%,
+    rgba(93, 93, 93, 0.4) 50%,
+    rgba(41, 56, 61, 0) 80%,
+    transparent 100%
+  ); */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #aeaeae 20%,
+    #c5c5c5 50%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.childLinkSecondary:hover {
+  color: #0e9eff; /* active state color */
+  border-left: 2px solid #0e9eff;
+}
+
+/* First group (services) */
+.servicesGroup {
+  width: clamp(
+    130px,
+    calc(130px + (182 - 130) * ((100vw - 768px) / (1440 - 768))),
+    182px
+  );
+}
+
+/* Second group (themes) */
+.themesGroup {
+  width: clamp(
+    160px,
+    calc(160px + (200 - 160) * ((100vw - 768px) / (1440 - 768))),
+    200px
+  );
+}
+
+/* Third group (examples) */
+.examplesGroup {
+  width: clamp(
+    130px,
+    calc(163px + (187 - 163) * ((100vw - 768px) / (1440 - 768))),
+    187px
+  );
 }
