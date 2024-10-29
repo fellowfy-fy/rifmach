@@ -72,7 +72,6 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
 
       <div className="block md:hidden w-full">
         <MobileAccordion />
-        {children}
       </div>
 
       <Button
@@ -99,6 +98,8 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
       >
         Контакты
       </Button>
+
+      {children}
     </div>
   );
 }

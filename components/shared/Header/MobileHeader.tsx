@@ -44,9 +44,9 @@ export function MobileHeader() {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetContent side="top" className="p-4 h-full items-start text-left">
           <Menu>
-            <div className="mt-8">
-              <hr />
-              <h4 className="text-h3 regular mt-3 text-headers uppercase">
+            <hr className="w-[100%]" />
+            <div className="mx-auto">
+              <h4 className="text-h3 regular mt-3 text-headers uppercase text-center">
                 Пообщаемся?
               </h4>
               <div className="flex flex-row items-center my-2">
@@ -63,8 +63,10 @@ export function MobileHeader() {
                   +7 999 333-89-60
                 </a>
               </div>
-              <hr />
-              <Button variant="callback" className="mt-4 w-full">
+            </div>
+            <hr className="w-[100%]" />
+            <div className="mx-auto flex flex-col items-center justify-center">
+              <Button variant="callback" className="mt-4 w-[241px]">
                 ОБРАТНЫЙ ЗВОНОК
               </Button>
               <div className="flex items-center gap-3 mt-4">
