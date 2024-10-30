@@ -19,7 +19,7 @@ const OwlImage = ({ className }: OwlImageProps) => {
     // Проверяем время при загрузке
     checkWorkingHours();
 
-    // Проверяем каждую минуту
+    // проверяем каждую минуту
     const interval = setInterval(checkWorkingHours, 60000);
 
     return () => clearInterval(interval);
