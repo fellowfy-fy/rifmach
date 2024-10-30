@@ -1,5 +1,6 @@
 import { DemoMenu } from "./demo-menu";
 import { Task } from "./task";
+import { PoemBlock } from "./poem-block/poem-block";
 
 export default function DemoSection() {
   return (
@@ -61,8 +62,9 @@ export default function DemoSection() {
             <DemoMenu/>
           </div>
 
-          <div className="mt-[36px] md:-[45px]">
+          <div className="mt-[36px] md:-[45px] flex flex-row gap-[80px]">
             <Task/>
+            <PoemBlock/>
           </div>
         </div>
       </section>

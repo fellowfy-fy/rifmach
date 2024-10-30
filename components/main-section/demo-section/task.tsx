@@ -5,8 +5,8 @@ import { TASK_CONTENT } from "@/constants/tasks";
 export const Task = () => {
   return (
     <div className="flex flex-col">
-      <h2 className="text-[20px] text-white mb-10">
-        {TASK_CONTENT.title}
+      <h2 className="text-[20px] text-white/70 font-bold mb-10 uppercase">
+        задача
       </h2>
       <div className="w-[415px] h-[404px] mb-[65px]">
         <ScrollArea className="h-full">
