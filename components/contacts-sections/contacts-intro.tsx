@@ -1,6 +1,56 @@
+"use client"
+import { useState, useEffect } from 'react';
+
+interface OwlImageProps {
+  className?: string;
+}
+
+const OwlImage = ({ className }: OwlImageProps) => {
+  const [isWorkingHours, setIsWorkingHours] = useState(true);
+
+  useEffect(() => {
+    const checkWorkingHours = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      // Рабочие часы с 10:00 до 22:00
+      setIsWorkingHours(hours >= 10 && hours < 22);
+    };
+
+    // Проверяем время при загрузке
+    checkWorkingHours();
+
+    // Проверяем каждую минуту
+    const interval = setInterval(checkWorkingHours, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <>
+      <img 
+        src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
+        alt={isWorkingHours ? "онлайн" : "оффлайн"} 
+        className={`block md:hidden w-[306px] mt-[50px] mb-[-40px] ${className || 'block md:hidden w-[306px] mt-[0px] mb-[-15px]'}`}
+      />
+
+      <img 
+        src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
+        alt={isWorkingHours ? "онлайн" : "оффлайн"} 
+        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-24 hidden md:block ${className || 'absolute md:right-8 lg:right-32 xl:right-48 2xl:right-56 top-24 hidden md:block'}`}
+      />
+
+      <img 
+        src={isWorkingHours ? "/characters/owl-globe.svg" : "/characters/owl-sleep.svg"} 
+        alt={isWorkingHours ? "Сова с глобусом" : "Спящая сова"}
+        className={`absolute bottom-[-300px] md:bottom-[-70px] md:right-[10px] 2xl:right-[-50px] ${className || 'max-h-[292px] md:max-h-[320px] lg:max-h-[370px] xl:max-h-[426px] 2xl:h-[550px]'}`}
+      />
+    </>
+  );
+};
+
 export default function ContactsIntro() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[600px] md:h-[600px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
 
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[20px] w-full">
@@ -36,7 +86,7 @@ export default function ContactsIntro() {
                     <img src="/icons/phone2.svg" className="h-[15px] md:h-[35px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">телефон для связи</p>
-                        <p className="text-h3 md:text-[20px] md:bold">+7 999 333-89-60</p>
+                        <p className="text-h3  md:text-[18px] md:font-bold">+7 999 333-89-60</p>
                     </div>
                 </div>
 
@@ -44,7 +94,7 @@ export default function ContactsIntro() {
                     <img src="/icons/email.svg" className="h-[12px] md:h-[30px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">электронная почта</p>
-                        <p className="text-h3 md:text-[20px] md:bold underline">mail@rifmach.ru</p>
+                        <p className="text-h3  md:text-[18px] md:font-bold underline">mail@rifmach.ru</p>
                     </div>
                 </div>
 
@@ -52,7 +102,7 @@ export default function ContactsIntro() {
                     <img src="/icons/case.svg" className="h-[14px] md:h-[36px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">Для сотрудничества</p>
-                        <button className="text-h3 md:text-[20px] md:bold underline">Написать нам</button>
+                        <button className="text-h3 md:text-[18px] md:font-bold underline">director@rifmach.ru</button>
                     </div>
                 </div>
 
@@ -60,7 +110,11 @@ export default function ContactsIntro() {
                     <img src="/icons/pen.svg" className="h-[15px] md:h-[37px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">оставьте заявку</p>
-                        <p className="text-h3 md:text-[20px] md:bold">+7 999 333-89-60</p>
+                        <p 
+                        className="text-h3 md:text-[18px] md:font-bold uppercase">
+                          написать нам
+                          <img src="/icons/line.svg" className="md:w-[135px] w-[120px] mt-[-2px] md:mt-[-5px]" />
+                          </p>
                     </div>
                 </div>
               </div>
@@ -72,7 +126,7 @@ export default function ContactsIntro() {
           </div>
         </div>
 
-        <img src="/characters/owl-globe.svg" className="absolute bottom-[-300px] md:bottom-[-70px] md:right-[10px] 2xl:right-[80px] max-h-[292px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[476px] 2xl:h-[600px]"/>
+        <OwlImage />
       </div>
     </section>
   );
