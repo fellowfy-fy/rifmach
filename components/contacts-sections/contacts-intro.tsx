@@ -36,7 +36,7 @@ const OwlImage = ({ className }: OwlImageProps) => {
       <img 
         src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
         alt={isWorkingHours ? "онлайн" : "оффлайн"} 
-        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-24 hidden md:block ${className || 'absolute md:right-8 lg:right-32 xl:right-48 2xl:right-56 top-24 hidden md:block'}`}
+        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-24 hidden md:block ${className || 'absolute md:right-8 lg:right-32 xl:right-48 2xl:right-48 top-24 hidden md:block'}`}
       />
 
       <img 
@@ -94,7 +94,7 @@ export default function ContactsIntro() {
                     <img src="/icons/email.svg" className="h-[12px] md:h-[30px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">электронная почта</p>
-                        <p className="text-h3  md:text-[18px] md:font-bold underline">mail@rifmach.ru</p>
+                        <p className="text-h3  md:text-[18px] md:font-bold underline uppercase">mail@rifmach.ru</p>
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@ export default function ContactsIntro() {
                     <img src="/icons/case.svg" className="h-[14px] md:h-[36px]"/>
                     <div className="flex flex-col text-white">
                         <p className="uppercase text-[13px] hidden md:block">Для сотрудничества</p>
-                        <button className="text-h3 md:text-[18px] md:font-bold underline">director@rifmach.ru</button>
+                        <button className="text-h3 md:text-[18px] md:font-bold underline uppercase">director@rifmach.ru</button>
                     </div>
                 </div>
 
