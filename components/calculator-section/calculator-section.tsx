@@ -7,7 +7,7 @@ interface Props {
 
 export const CalculatorSection: React.FC<Props> = () => {
   return (
-         <section className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] relative px-[16px] md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[1000px] md:h-[992px] overflow-hidden items-center">
+         <section className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] relative px-[16px] md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[1390px] md:h-[992px] overflow-hidden items-center">
         <div className="absolute inset-0 pointer-events-none w-full">
           <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
             <img
