@@ -6,7 +6,7 @@ interface DemoMenuProps {
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-export const DemoMenu = ({ variant = 'tertiary' }: DemoMenuProps) => {
+export const VideoMenu = ({ variant = 'tertiary' }: DemoMenuProps) => {
   const handleNavigate = (path: string) => {
     window.location.href = path;
   };
@@ -17,16 +17,13 @@ export const DemoMenu = ({ variant = 'tertiary' }: DemoMenuProps) => {
         <div className="flex flex-nowrap items-center gap-3">
           <ToggleGroup type="single" ctaVariant={variant} className="gap-3 flex-nowrap whitespace-nowrap">
             <ToggleGroupItem value="1" className="h-[24px] whitespace-nowrap">
-              Стих для коллег
+                Юбилей компании
             </ToggleGroupItem>
             <ToggleGroupItem value="2" className="h-[24px] whitespace-nowrap">
-              Стих на юбилей артистки
+                День рождения руководителя
             </ToggleGroupItem>
             <ToggleGroupItem value="3" className="h-[24px] whitespace-nowrap">
-              60 лет Президенту РЖД
-            </ToggleGroupItem>
-            <ToggleGroupItem value="4" className="h-[24px] whitespace-nowrap">
-              Внуку на свадьбу
+              Хвала и честь Руководителю
             </ToggleGroupItem>
           </ToggleGroup>
           <Button
@@ -34,7 +31,7 @@ export const DemoMenu = ({ variant = 'tertiary' }: DemoMenuProps) => {
             onClick={() => handleNavigate("/catalog")}
             className="flex items-center gap-2 whitespace-nowrap ml-3"
           >
-            Ещё стихи
+            Ещё видео
             <img
               src="/icons/more.svg"
               alt="More"

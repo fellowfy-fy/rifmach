@@ -6,7 +6,7 @@ import AuthorsSection from '@/components/main-section/authors-section';
 import IdeaSection from '@/components/main-section/idea-section';
 import CorporateSection from '@/components/main-section/corporate-section';
 import CTASection from '@/components/shared/cta-section';
-import VideoSection from '@/components/main-section/video-section';
+import VideoSection from '@/components/main-section/video-section/video-section';
 import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
 import { CalculatorSection } from '@/components/calculator-section/calculator-section';
 
@@ -51,6 +51,7 @@ export default function Main() {
         }
         subtitle="Вы оплатите заказ, только если стих Вам понравится."
         owlImage="/characters/owl-main-2.svg"
+        alternateOwlImage="/characters/owl_poet_mask.svg"
         cloudImageMobile="/clouds/cloud-cta2-mob.svg"
         cloudImageDesktop="/clouds/cloud-cta.svg"
       />

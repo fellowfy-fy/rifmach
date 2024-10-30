@@ -1,5 +1,6 @@
-import VideoCarousel from "../shared/video-carousel";
+import VideoCarousel from "../../shared/video-carousel";
 import { videos } from "@/constants/videos";
+import { VideoMenu } from "./video-menu";
 
 export default function VideoSection() {
 
@@ -56,6 +57,13 @@ export default function VideoSection() {
         <h3 className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px]">
           Реальные живые эмоции клиентов. Узнайте больше о том, как презентуют готовые стихи на публику!
         </h3>
+
+
+          <div className="mt-[30px]">
+            <VideoMenu/>
+          </div>
+
+
         <VideoCarousel videos={videos} />
       </div>
     </section>
