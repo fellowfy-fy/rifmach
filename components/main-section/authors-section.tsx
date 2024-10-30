@@ -35,14 +35,17 @@ export default function AuthorsSection() {
           союзах, мы постоянно в тренде, и продолжаем оттачивать свое мастерство.
         </p>
         <div className="mt-3">
-          <Carousel
-            items={authors}
-            itemsPerBreakpoint={{
-              mobile: 1,
-              md: 3,
-              xl: 4,
-            }}
-          />
+<Carousel
+  items={authors}
+  itemsPerBreakpoint={{
+    mobile: 1,
+    md: 3,
+    xl: 4,
+  }}
+  className="min-h-[420px] md:min-h-[460px]" // Добавляем минимальную высоту для слайдера
+  containerClassName="h-full" // Добавляем высоту для внешнего контейнера
+  itemClassName="pt-[100px] md:pt-[120px]"
+/>
         </div>
       </div>
     </section>

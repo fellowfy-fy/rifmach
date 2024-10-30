@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState, useEffect, TouchEvent } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -9,9 +9,18 @@ interface CarouselProps {
     md: number;
     xl: number;
   };
+  className?: string;
+  containerClassName?: string;
+  itemClassName?: string;
 }
 
-export default function Carousel({ items, itemsPerBreakpoint }: CarouselProps) {
+export default function Carousel({ 
+  items, 
+  itemsPerBreakpoint,
+  className = "", 
+  containerClassName = "",
+  itemClassName = ""
+}: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -83,8 +92,8 @@ export default function Carousel({ items, itemsPerBreakpoint }: CarouselProps) {
   };
 
   return (
-    <div className="relative">
-      <div className="relative overflow-hidden">
+    <div className={`relative ${containerClassName}`}>
+      <div className={`relative overflow-hidden ${className}`}>
         <div
           className="flex transition-transform duration-300 ease-in-out touch-pan-y"
           style={{
@@ -97,7 +106,7 @@ export default function Carousel({ items, itemsPerBreakpoint }: CarouselProps) {
           {items.map((item, index) => (
             <div
               key={index}
-              className="px-2"
+              className={`px-2 ${itemClassName}`}
               style={{
                 minWidth: `${100 / itemsPerPage}%`
               }}
@@ -123,12 +132,12 @@ export default function Carousel({ items, itemsPerBreakpoint }: CarouselProps) {
         <ChevronRight size={24} />
       </button>
 
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="flex justify-center gap-3 md:gap-2 mt-6">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
             onClick={() => goToPage(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
+            className={`w-3 h-3 md:w-2 md:h-2 rounded-full transition-colors ${
               Math.floor(currentIndex / itemsPerPage) === index
                 ? 'bg-main'
                 : 'bg-gray-300'
