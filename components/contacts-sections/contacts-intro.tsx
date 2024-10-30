@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
+import { BreadcrumbWithCustomSeparator } from '../main-section/breadcrumbs';
 
 interface OwlImageProps {
   className?: string;
@@ -19,7 +20,7 @@ const OwlImage = ({ className }: OwlImageProps) => {
     // Проверяем время при загрузке
     checkWorkingHours();
 
-    // проверяем каждую минуту
+    // Проверяем каждую минуту
     const interval = setInterval(checkWorkingHours, 60000);
 
     return () => clearInterval(interval);
@@ -30,13 +31,13 @@ const OwlImage = ({ className }: OwlImageProps) => {
       <img 
         src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
         alt={isWorkingHours ? "онлайн" : "оффлайн"} 
-        className={`block md:hidden w-[306px] mt-[50px] mb-[-40px] ${className || 'block md:hidden w-[306px] mt-[0px] mb-[-15px]'}`}
+        className={`block md:hidden w-[306px] mt-[50px] mb-[-40px] ${className || 'block md:hidden w-[306px] mt-[40px] mb-[-25px]'}`}
       />
 
       <img 
         src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
         alt={isWorkingHours ? "онлайн" : "оффлайн"} 
-        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-24 hidden md:block ${className || 'absolute md:right-8 lg:right-32 xl:right-48 2xl:right-48 top-24 hidden md:block'}`}
+        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-14 hidden md:block ${className || 'absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 hidden md:block'}`}
       />
 
       <img 
@@ -51,6 +52,10 @@ const OwlImage = ({ className }: OwlImageProps) => {
 export default function ContactsIntro() {
   return (
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
+      
+      <div className='pt-5'>
+        <BreadcrumbWithCustomSeparator currentPage="Контакты"/>
+      </div>
 
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[20px] w-full">
@@ -75,9 +80,9 @@ export default function ContactsIntro() {
       <div className="relative z-10 flex md:flex-row flex-col">
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col mb-[31px] md:mb-[24px]">
-              <h1 className="text-[32px] md:text-h1 text-white pt-[33px] md:pt-[85px] uppercase mb-[26px]">
-                Контакты<br />студии «Рифмач»
+            <div className="flex flex-col mb-0 md:mb-[24px]">
+              <h1 className="text-[32px] md:text-h1 text-white pt-[21px] md:pt-[50px] uppercase mb-[26px]">
+                Контакты<br /><span className='font-bold'>студии «Рифмач»</span>
               </h1>
               <hr className="w-[40px] md:w-[50px] h-[4px] bg-white rounded-sm md:mb-[40px] hidden md:block" />
 
@@ -131,3 +136,5 @@ export default function ContactsIntro() {
     </section>
   );
 }
+
+
