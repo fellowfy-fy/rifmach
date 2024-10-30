@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { BreadcrumbWithCustomSeparator } from '../shared/breadcrumbs';
+import Image from 'next/image';
 
 interface OwlImageProps {
   className?: string;
@@ -11,10 +12,14 @@ const OwlImage = ({ className }: OwlImageProps) => {
 
   useEffect(() => {
     const checkWorkingHours = () => {
-      const now = new Date();
-      const hours = now.getHours();
-      // Рабочие часы с 10:00 до 22:00
-      setIsWorkingHours(hours >= 10 && hours < 22);
+      // Получаем текущее время в Москве
+      const moscowTime = new Date().toLocaleString("en-US", {
+        timeZone: "Europe/Moscow",
+      });
+      const moscowHours = new Date(moscowTime).getHours();
+      
+      // Рабочие часы с 10:00 до 22:00 по Москве
+      setIsWorkingHours(moscowHours >= 10 && moscowHours < 22);
     };
 
     // Проверяем время при загрузке
@@ -28,21 +33,27 @@ const OwlImage = ({ className }: OwlImageProps) => {
 
   return (
     <>
-      <img 
+      <Image 
         src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
-        alt={isWorkingHours ? "онлайн" : "оффлайн"} 
-        className={`block md:hidden w-[306px] mt-[50px] mb-[-40px] ${className || 'block md:hidden w-[306px] mt-[40px] mb-[-25px]'}`}
+        alt={isWorkingHours ? "онлайн" : "оффлайн"}
+        width={306}
+        height={60} 
+        className={`block md:hidden w-[306px] mt-[50px] mb-[-40px] ${className || 'block md:hidden w-[362px] mt-[40px] mb-[-25px]'}`}
       />
 
-      <img 
+      <Image 
         src={isWorkingHours ? "/icons/online.svg" : "/icons/offline.svg"} 
-        alt={isWorkingHours ? "онлайн" : "оффлайн"} 
-        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-14 hidden md:block ${className || 'absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 hidden md:block'}`}
+        alt={isWorkingHours ? "онлайн" : "оффлайн"}
+        width={306}
+        height={60} 
+        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-14 hidden md:block ${className || 'absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 w-[370px] hidden md:block'}`}
       />
 
-      <img 
+      <Image 
         src={isWorkingHours ? "/characters/owl-globe.svg" : "/characters/owl-sleep.svg"} 
         alt={isWorkingHours ? "Сова с глобусом" : "Спящая сова"}
+        width={550}
+        height={550}
         className={`absolute bottom-[-300px] md:bottom-[-70px] md:right-[10px] 2xl:right-[-50px] ${className || 'max-h-[292px] md:max-h-[320px] lg:max-h-[370px] xl:max-h-[426px] 2xl:h-[550px]'}`}
       />
     </>
