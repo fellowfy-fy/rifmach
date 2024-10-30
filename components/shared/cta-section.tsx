@@ -1,26 +1,32 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CallToAction from './Call-to-action.tsx/call-to-action';
 
 interface CTASectionProps {
   title: string | JSX.Element;
   subtitle: string | JSX.Element;
   owlImage: string;
+  owlImageMobile?: string; // Добавляем мобильную версию совы
+  alternateOwlImage?: string;
+  alternateOwlImageMobile?: string; // Добавляем мобильную версию альтернативной совы
   cloudImageMobile: string;
   cloudImageDesktop: string;
   hasArch?: boolean;
-  alternateOwlImage?: string;
 }
 
 const CTASection = ({
   title,
   subtitle,
   owlImage,
+  owlImageMobile,
+  alternateOwlImage,
+  alternateOwlImageMobile,
   cloudImageMobile,
   cloudImageDesktop,
-  alternateOwlImage,
 }: CTASectionProps) => {
   const [currentOwlImage, setCurrentOwlImage] = useState(owlImage);
+  const [currentOwlImageMobile, setCurrentOwlImageMobile] = useState(owlImageMobile || owlImage);
 
   useEffect(() => {
     if (!alternateOwlImage) return;
@@ -29,36 +35,51 @@ const CTASection = ({
       setCurrentOwlImage(prev => 
         prev === owlImage ? alternateOwlImage : owlImage
       );
+      
+      // Если есть мобильные версии, меняем и их
+      if (owlImageMobile && alternateOwlImageMobile) {
+        setCurrentOwlImageMobile(prev =>
+          prev === owlImageMobile ? alternateOwlImageMobile : owlImageMobile
+        );
+      }
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [owlImage, alternateOwlImage]);
+  }, [owlImage, alternateOwlImage, owlImageMobile, alternateOwlImageMobile]);
 
   return (
     <section className="relative px-4 md:h-[552px] overflow-hidden md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">
       {/* clouds */}
       <div className="absolute inset-0 pointer-events-none">
-        <img
+        <Image
           src={cloudImageMobile}
           alt="Mobile Clouds"
+          width={375}
+          height={200}
           className="w-full h-auto object-cover block md:hidden absolute bottom-[-12px]"
         />
-        <img
+        <Image
           src={cloudImageDesktop}
           alt="Desktop Clouds"
+          width={1920}
+          height={200}
           className="w-full h-auto object-cover hidden md:block absolute bottom-[-2px]"
         />
         <div className="hidden md:block absolute top-0 w-full">
-          <img
+          <Image
             src="/arch-top.svg"
             alt="Desktop arch"
+            width={1920}
+            height={100}
             className="w-full h-auto object-cover"
           />
         </div>
         <div className="block md:hidden absolute top-0 w-full">
-          <img
+          <Image
             src="/arch-top-mob.svg"
             alt="Mobile arch"
+            width={375}
+            height={100}
             className="w-full h-auto object-cover"
           />
         </div>
@@ -74,10 +95,23 @@ const CTASection = ({
           </h4>
           <CallToAction />
         </div>
-        <img
+
+        {/* Мобильная версия совы */}
+        <Image
+          src={currentOwlImageMobile}
+          alt="Owl"
+          width={297}
+          height={297}
+          className="block md:hidden max-h-[297px] transition-opacity duration-800"
+        />
+
+        {/* Десктопная версия совы */}
+        <Image
           src={currentOwlImage}
           alt="Owl"
-          className="md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800"
+          width={420}
+          height={420}
+          className="hidden md:block md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800"
         />
       </div>
     </section>

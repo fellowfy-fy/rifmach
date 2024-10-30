@@ -17,6 +17,7 @@ export default function Reviews() {
           </>
         }
                 owlImage="/characters/owl-flowers.svg"
+                owlImageMobile="/characters/owl-flowers-mob.svg"
                 cloudImageMobile="/clouds/cloud-cta-mob.svg"
                 cloudImageDesktop="/clouds/cloud-cta.svg"
             />

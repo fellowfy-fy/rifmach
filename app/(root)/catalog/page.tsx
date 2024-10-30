@@ -5,14 +5,20 @@ export default function Catalog() {
     return(
         <div>
             <AuthorsCatalogIntro 
-                title="Стих на юбилей на заказ" 
+                               title={
+                <>стихи на юбилей<br /><span className="font-bold">на заказ</span>
+                </>
+                }
                 subtitle="Получите начало стиха в течении суток:" 
                 isShadowEnabled={true}
             />
             <CTASection
-                title="ХОТИТЕ, ЧТОБЫ ИМЕННО ВАШ ТОСТ ЗАПОМНИЛИ?"
+                title={
+                <>ХОТИТЕ, ЧТОБЫ ИМЕННО<br /><span className="font-bold">ВАШ ТОСТ ЗАПОМНИЛИ?</span>
+                </>
+                }
                 subtitle="Вы оплатите заказ, только если стих Вам понравится."
-                owlImage="/characters/owl-main-1.svg"
+                owlImage="/characters/owl-contacts.svg"
                 cloudImageMobile="/clouds/cloud-cta-mob.svg"
                 cloudImageDesktop="/clouds/cloud-cta.svg"
             />
