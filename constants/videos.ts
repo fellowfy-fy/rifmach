@@ -7,7 +7,7 @@ interface Video {
 
 export const videos: Video[] = [
   {
-    videoUrl: "/video1.mp4",
+    videoUrl: "/dog.mp4",
     thumbnailUrl: "/thumbnail1.png", 
     title: "Юбилей компании «Медси»",
     subtitle: "на мотив «Despacito»"
