@@ -1,15 +1,10 @@
-
-
-
-
-
-"use client";
-import React, { useState } from "react";
-import { useSwipeable, SwipeEventData } from "react-swipeable";
-import VideoCard from "../ui/video-card";
-import Image from "next/image";
-import VideoPlayer from "../main-section/video-section/video-player";
-
+'use client';
+import React, { useState } from 'react';
+import { useSwipeable, SwipeEventData } from 'react-swipeable';
+import VideoCard from '../ui/video-card';
+import Image from 'next/image';
+import VideoPlayer from '../main-section/video-section/video-player';
+import styles from './video-carousel.module.css';
 interface VideoSlide {
   videoUrl: string;
   thumbnailUrl: string;
@@ -24,14 +19,14 @@ interface VideoCarouselProps {
 export default function VideoCarousel({ videos }: VideoCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [videoUrl, setVideoUrl] = useState("");
+  const [videoUrl, setVideoUrl] = useState('');
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % videos.length);
+    setCurrentIndex(prev => (prev + 1) % videos.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + videos.length) % videos.length);
+    setCurrentIndex(prev => (prev - 1 + videos.length) % videos.length);
   };
 
   const goToSlide = (index: number) => {
@@ -41,18 +36,18 @@ export default function VideoCarousel({ videos }: VideoCarouselProps) {
   const getPrevIndex = () => (currentIndex - 1 + videos.length) % videos.length;
   const getNextIndex = () => (currentIndex + 1) % videos.length;
 
-const swipeHandlers = useSwipeable({
-  onSwiped: (eventData: SwipeEventData) => {
-    if (eventData.dir === "Left") {
-      nextSlide();
-    } else if (eventData.dir === "Right") {
-      prevSlide();
-    }
-    eventData.event.preventDefault();
-  },
-  trackMouse: true,
-  delta: 10,
-});
+  const swipeHandlers = useSwipeable({
+    onSwiped: (eventData: SwipeEventData) => {
+      if (eventData.dir === 'Left') {
+        nextSlide();
+      } else if (eventData.dir === 'Right') {
+        prevSlide();
+      }
+      eventData.event.preventDefault();
+    },
+    trackMouse: true,
+    delta: 10,
+  });
 
   const openVideoPlayer = (url: string) => {
     setIsPlaying(true);
@@ -61,11 +56,11 @@ const swipeHandlers = useSwipeable({
 
   const closeVideoPlayer = () => {
     setIsPlaying(false);
-    setVideoUrl("");
+    setVideoUrl('');
   };
 
   return (
-    <div className="relative w-full md:w-[1100px] mx-auto mt-16" {...swipeHandlers}>
+    <div className={styles.container} {...swipeHandlers}>
       {/* карусель */}
       <div className="relative h-[300px] md:h-[600px]">
         {/* предыдущий слайд */}
@@ -98,10 +93,10 @@ const swipeHandlers = useSwipeable({
       <div className="hidden lg:block">
         <button
           onClick={prevSlide}
-          className="absolute left-16 bottom-36 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
+          className="absolute left-10 bottom-36 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
           aria-label="Previous video"
         >
-          <Image 
+          <Image
             src="/icons/arrow-left-video.svg"
             alt="Arrow-left"
             width={55}
@@ -110,10 +105,10 @@ const swipeHandlers = useSwipeable({
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-16 bottom-36 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
+          className="absolute right-10 bottom-36 -translate-y-1/2 text-white transition-opacity hover:opacity-80"
           aria-label="Next video"
         >
-          <Image 
+          <Image
             src="/icons/arrow-right-video.svg"
             alt="Arrow-right"
             width={55}
@@ -129,7 +124,9 @@ const swipeHandlers = useSwipeable({
             key={index}
             onClick={() => goToSlide(index)}
             className={`h-[10px] rounded-full transition-all duration-300 ${
-              index === currentIndex ? "w-[20px] bg-white" : "w-[10px] bg-white/30"
+              index === currentIndex
+                ? 'w-[20px] bg-white'
+                : 'w-[10px] bg-white/30'
             }`}
             aria-label={`Go to video ${index + 1}`}
           />
@@ -138,10 +135,7 @@ const swipeHandlers = useSwipeable({
 
       {/* видеоплеер */}
       {isPlaying && (
-        <VideoPlayer
-          videoUrl={videoUrl}
-          onClose={closeVideoPlayer}
-        />
+        <VideoPlayer videoUrl={videoUrl} onClose={closeVideoPlayer} />
       )}
     </div>
   );
