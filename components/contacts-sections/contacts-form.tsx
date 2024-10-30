@@ -59,9 +59,9 @@ export default function ContactsForm() {
           </div>
         </div>
         <div className="mt-4 lg:mt-0 text-textsmain">
-          <div className="flex flex-row justify-between mb-[10px]">
+          <div className="flex flex-row justify-between mb-[10px] items-center text-center">
             <p className="text-[18px]">Наши реквизиты</p>
-            <button className="flex flex-row text-main text-[12px] gap-2 hover:underline">
+            <button className="flex flex-row text-main text-[12px] gap-2 hover:underline justify-center">
               <Image 
                 src="/icons/pdf.svg" 
                 alt="pdf" 
