@@ -28,20 +28,19 @@ export default function ReviewIntro() {
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col mb-[31px] md:mb-[24px]">
               <h1 className="text-[24px] md:text-h2 text-white pt-[33px] md:pt-[85px] uppercase">
-                эксклюзивные стихи
+                отзывы о заказах
                 <br />
-                по прозрачной цене
+                <span className="bold">в «Рифмаче»</span>
               </h1>
-              <hr className="w-[40px] md:w-[50px] h-[2px] bg-white rounded-sm mt-[10px] md:mt-[22px]" />
-              <h4 className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[544px]">
-                Мнение клиентов с нашей работе — лучший мотиватор держать планку
-                и продолжать развитие
-              </h4>
+              <hr className="hidden md:block w-[50px] h-[2px] bg-white rounded-sm mt-[10px] md:mt-[22px]" />
+              <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[544px]">
+                Мнение клиентов о нашей работе — лучший мотиватор <br /><span className="bold">держать планку и продолжать развитие</span>
+              </p>
             </div>
           </div>
 
           <div className="flex flex-row items-center gap-3">
-            <Button variant="main" className="uppercase hidden md:block">
+            <Button variant="main" className="uppercase hidden md:block w-[231px]">
               оставить отзыв
             </Button>
             <Separator

@@ -8,10 +8,16 @@ export default function Reviews() {
             <ReviewIntro />
             <ReviewsSection/>
             <CTASection
-                title="эксклюзивные стихи по прозрачной цене"
-                subtitle="Всего от 200 рублей за четверостишие. И вы получаете гарантии, что стихотворение вам понравится"
-                owlImage="/characters/owl-main-1.svg"
-                cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+                title="А хотите также?"
+                        subtitle={
+          <>
+            Всего от <span className="font-bold">200 рублей</span> за
+            четверостишие. И вы получаете гарантии, что стихотворение вам
+            понравится
+          </>
+        }
+                owlImage="/characters/owl-flowers.svg"
+                cloudImageMobile="/clouds/cloud-cta-mob.svg"
                 cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>

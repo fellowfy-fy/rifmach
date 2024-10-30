@@ -52,7 +52,7 @@ export default function Main() {
         subtitle="Вы оплатите заказ, только если стих Вам понравится."
         owlImage="/characters/owl-main-2.svg"
         alternateOwlImage="/characters/owl_poet_mask.svg"
-        cloudImageMobile="/clouds/cloud-cta2-mob.svg"
+        cloudImageMobile="/clouds/cloud-cta-mob.svg"
         cloudImageDesktop="/clouds/cloud-cta.svg"
       />
     </div>
