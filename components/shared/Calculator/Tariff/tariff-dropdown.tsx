@@ -19,7 +19,7 @@ export const TariffDropdown: React.FC<Props> = ({ className, setOccasion, occasi
   return (
   <div className={className}>
     <Select value={occasion.toString()} onValueChange={(value) => setOccasion(Number(value))}>
-        <SelectTrigger className="w-[417px] border border-accent rounded-[5px]" customIcon="/icons/dropdown-calc.svg">
+        <SelectTrigger className="w-full lg:w-[417px] border border-accent rounded-[5px]" customIcon="/icons/dropdown-calc.svg">
           <SelectValue placeholder="Выберите повод" />
         </SelectTrigger>
         <SelectContent>

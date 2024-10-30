@@ -16,12 +16,12 @@ export const Calculator: React.FC<Props> = () => {
 
 
   return (
-    <div className="w-[1172px] h-[576px] bg-white rounded-[5px]">
-        <div className='grid grid-cols-2'>
-            <div className='col-span-1 w-[541px] h-[507px] bg-calculator my-[34px] ml-[34px] mr-[11px] rounded-[5px]'>
+    <div className="h-auto w-auto lg:w-[1172px] lg:h-[576px] bg-white rounded-[5px]">
+        <div className='flex flex-col lg:flex-row'>
+            <div className='col-span-1 w-auto h-auto lg:w-[541px] lg:h-[507px] bg-white lg:bg-calculator lg:my-[34px] mx-[10px] lg:ml-[34px] lg:mr-[11px] rounded-[5px]'>
                 <TariffSide occasion={occasion} setOccasion={setOccasion} tariff={tariff} setTariff={setTariff}  />
             </div>
-            <div className='col-span-1 w-[541px] h-[507px] bg-calculator my-[34px] ml-[11px] mr-[34px] rounded-[5px]'>
+            <div className='col-span-1 w-auto h-auto lg:w-[541px] lg:h-[507px] bg-white lg:bg-calculator mx-[10px] lg:my-[34px] lg:ml-[11px] lg:mr-[34px] rounded-[5px]'>
                 <CostSide genre={genre} setGenre={setGenre} occasion={occasion} isOn={isOn} setIsOn={setIsOn} />
             </div> 
         </div>

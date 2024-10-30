@@ -23,7 +23,7 @@ export const GenreDropdown: React.FC<Props> = ({ className, setGenre, genre, occ
     <h3 className='font-bold text-headers mb-2'>Жанр поздравления</h3>
   <div className={className}>
     <Select value={genre.toString()} onValueChange={(value) => setGenre(Number(value))}>
-        <SelectTrigger className="w-[417px] border border-accent rounded-[5px]" customIcon="/icons/dropdown-calc.svg">
+        <SelectTrigger className="w-full lg:w-[417px] border border-accent rounded-[5px]" customIcon="/icons/dropdown-calc.svg">
           <SelectValue placeholder="Выберите жанр" />
         </SelectTrigger>
         <SelectContent>

@@ -75,7 +75,7 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
 
       <Button
         className="text-left md:text-center md:px-0 xs:px-4"
-        onClick={() => router.push('/')}
+        onClick={() => router.push('/pricing')}
       >
         <p className={styles.li_right}>Цены</p>
       </Button>
