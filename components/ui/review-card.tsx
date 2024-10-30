@@ -25,7 +25,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
   const truncatedText = reviewText.length > 220 ? `${reviewText.substring(0, 220)}...` : reviewText;
 
   return (
-    <div className="border transition-colors duration-300 hover:border-main w-full md:w-auto  lg:w-[380px] min-h-[445px] flex flex-col justify-between pl-[25px] pr-[30px] pb-[20px] pt-[40px] rounded-[5px] relative mb-[39px] md:mb-0">
+    <div className="border transition-colors duration-300 hover:border-main w-full md:w-auto  lg:w-[380px] min-h-[445px] flex flex-col justify-between pl-[25px] pr-[30px] pb-[20px] pt-[40px] rounded-[5px] relative mb-[9px] md:mb-0">
       <div className="flex flex-row items-center">
         <Avatar className="w-[80px] h-[80px]">
           <AvatarImage src={avatarUrl} />
