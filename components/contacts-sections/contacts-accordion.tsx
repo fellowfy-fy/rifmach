@@ -9,49 +9,49 @@ export default function ContactsAccordion() {
     return(
         <Accordion type="single" collapsible className="border rounded-[5px] w-full md:min-w-[478px] py-2">
             <AccordionItem value="item-1" className="px-4">
-                <AccordionTrigger>Испольнитель:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">Испольнитель:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-2" className="px-4">
-                <AccordionTrigger>ИНН:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">ИНН:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-3" className="px-4">
-                <AccordionTrigger>Банк:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">Банк:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-4" className="px-4">
-                <AccordionTrigger>ОГРНИП:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">ОГРНИП:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-5" className="px-4">
-                <AccordionTrigger>Расчётный счёт:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">Расчётный счёт:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-6" className="px-4">
-                <AccordionTrigger>Корреспондентский счёт:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">Корреспондентский счёт:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-7" className="px-4">
-                <AccordionTrigger>БИК:</AccordionTrigger>
+                <AccordionTrigger className="uppercase">БИК:</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
