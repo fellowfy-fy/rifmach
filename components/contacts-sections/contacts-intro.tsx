@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
-import { BreadcrumbWithCustomSeparator } from '../main-section/breadcrumbs';
+import { BreadcrumbWithCustomSeparator } from '../shared/breadcrumbs';
 
 interface OwlImageProps {
   className?: string;
@@ -118,7 +118,7 @@ export default function ContactsIntro() {
                         <p 
                         className="text-h3 md:text-[18px] md:font-bold uppercase">
                           написать нам
-                          <img src="/icons/line.svg" className="md:w-[135px] w-[120px] mt-[-2px] md:mt-[-5px]" />
+                          <img src="/icons/line.svg" className="md:w-[140px] w-[120px] mt-[-2px] md:mt-[-5px]" />
                           </p>
                     </div>
                 </div>
@@ -136,3 +136,5 @@ export default function ContactsIntro() {
     </section>
   );
 }
+
+
