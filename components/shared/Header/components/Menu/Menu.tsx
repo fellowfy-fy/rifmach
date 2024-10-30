@@ -1,4 +1,3 @@
-import { Dropdown } from '../../../dropdown';
 import { Button } from '../../../../ui/button';
 import MobileAccordion from '../../../mobile-accordion';
 import { useRouter } from 'next/navigation';
