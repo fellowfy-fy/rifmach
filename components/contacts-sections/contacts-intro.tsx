@@ -61,8 +61,15 @@ const OwlImage = ({ className }: OwlImageProps) => {
 };
 
 export default function ContactsIntro() {
+    const scrollToForm = () => {
+    const formElement = document.getElementById('contact-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto h-[650px] md:h-[600px] overflow-hidden items-center">
       
       <div className='pt-5'>
         <BreadcrumbWithCustomSeparator variant="default" currentPage="Контакты"/>
@@ -122,16 +129,18 @@ export default function ContactsIntro() {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-2 items-center">
+                <div className="flex flex-row gap-2 items-center cursor-pointer">
                     <img src="/icons/pen.svg" className="h-[15px] md:h-[37px]"/>
-                    <div className="flex flex-col text-white">
+                    <div 
+                      className="flex flex-col text-white"
+                      onClick={scrollToForm}
+                    >
                         <p className="uppercase text-[13px] hidden md:block">оставьте заявку</p>
-                        <p 
-                        className="text-h3 md:text-[18px] md:font-bold uppercase">
+                        <p className="text-h3 md:text-[18px] md:font-bold uppercase">
                           написать нам
                           <img src="/icons/line.svg" className="md:w-[140px] w-[120px] mt-[-2px] md:mt-[-5px]" />
-                          </p>
-                    </div>
+                        </p>
+                     </div>
                 </div>
               </div>
 
@@ -147,5 +156,3 @@ export default function ContactsIntro() {
     </section>
   );
 }
-
-

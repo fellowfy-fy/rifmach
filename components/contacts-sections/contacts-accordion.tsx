@@ -11,49 +11,49 @@ export default function ContactsAccordion() {
             <AccordionItem value="item-1" className="px-4">
                 <AccordionTrigger className="uppercase">Испольнитель:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    ИП Ясюнинский Андрей Павлович
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-2" className="px-4">
                 <AccordionTrigger className="uppercase">ИНН:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    772365016790
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-3" className="px-4">
                 <AccordionTrigger className="uppercase">Банк:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    304770000261881
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-4" className="px-4">
                 <AccordionTrigger className="uppercase">ОГРНИП:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    ПАО «СБЕРБАНК»
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-5" className="px-4">
                 <AccordionTrigger className="uppercase">Расчётный счёт:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    40802810638000150782
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-6" className="px-4">
                 <AccordionTrigger className="uppercase">Корреспондентский счёт:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    30101810400000000225
                 </AccordionContent>
             </AccordionItem>
 <hr />
             <AccordionItem value="item-7" className="px-4">
                 <AccordionTrigger className="uppercase">БИК:</AccordionTrigger>
                 <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    044525225
                 </AccordionContent>
             </AccordionItem>
         </Accordion>
