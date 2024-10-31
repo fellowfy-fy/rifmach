@@ -65,7 +65,7 @@ export default function ContactsIntro() {
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
       
       <div className='pt-5'>
-        <BreadcrumbWithCustomSeparator currentPage="Контакты"/>
+        <BreadcrumbWithCustomSeparator variant="default" currentPage="Контакты"/>
       </div>
 
       <div className="absolute inset-0 pointer-events-none w-full">

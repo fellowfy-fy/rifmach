@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
+import { BreadcrumbWithCustomSeparator } from "../breadcrumbs";
 
 export default function ReviewIntro() {
   return (
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[600px] md:h-[552px] overflow-hidden items-center">
+      <div className="pt-[19px] md:pt-[21px]">
+        <BreadcrumbWithCustomSeparator variant="default" currentPage="Отзывы"/>
+      </div>
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[-12px] w-full">
           <img
@@ -27,7 +31,7 @@ export default function ReviewIntro() {
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col mb-[31px] md:mb-[24px]">
-              <h1 className="text-[24px] md:text-h2 text-white pt-[33px] md:pt-[85px] uppercase">
+              <h1 className="text-[24px] md:text-h2 text-white pt-[19px] md:pt-[49px] uppercase">
                 отзывы о заказах
                 <br />
                 <span className="bold">в «Рифмаче»</span>

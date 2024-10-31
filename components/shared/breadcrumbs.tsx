@@ -10,24 +10,30 @@ import {
 
 interface BreadcrumbProps {
   currentPage: string;
+  variant?: "default" | "muted" | "solid";
 }
 
-export function BreadcrumbWithCustomSeparator({ currentPage }: BreadcrumbProps) {
+export function BreadcrumbWithCustomSeparator({ 
+  currentPage, 
+  variant = "default" 
+}: BreadcrumbProps) {
   return (
-    <Breadcrumb>
-      <BreadcrumbList>
+    <Breadcrumb variant={variant}>
+      <BreadcrumbList variant={variant}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Главная</BreadcrumbLink>
+          <BreadcrumbLink href="/" variant={variant}>
+            Главная
+          </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash />
+          <Slash className={variant !== "default" ? "text-textsmain" : "text-white"} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
-          <BreadcrumbPage>{currentPage}</BreadcrumbPage>
+          <BreadcrumbPage variant={variant}>
+            {currentPage}
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
   );
 }
-
-

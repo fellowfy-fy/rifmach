@@ -1,9 +1,13 @@
 import { Calculator } from "@/components/shared/Calculator/calculator";
 import Image from "next/image";
+import { BreadcrumbWithCustomSeparator } from "@/components/shared/breadcrumbs";
 
 export default function pricing() {
   return (
     <div className="mx-auto pb-[82px] md:pb-[93px] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-60 max-w-[1920px] bg-[#E2F2FF]">
+      <div className="pt-[19px] md:pt-[21px]">
+        <BreadcrumbWithCustomSeparator variant="muted" currentPage="Цены"/>
+      </div>
       <div className="py-[19px] md:py-[29px]">
         <h1 className="uppercase text-headers text-[32px] md:text-h1">цены</h1>
         <hr className="w-10 md:w-[50px] h-[5px] bg-main rounded-sm mt-[7px] mb-[15px] hidden md:block" />
