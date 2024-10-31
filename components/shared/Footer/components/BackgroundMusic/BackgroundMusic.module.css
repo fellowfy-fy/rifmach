@@ -52,7 +52,6 @@
   position: absolute;
   top: -50px;
   left: -66px;
-  opacity: 0.5;
   width: clamp(
     430px,
     calc(240px + (430 - 240) * ((100vw - 320px) / (768 - 320))),

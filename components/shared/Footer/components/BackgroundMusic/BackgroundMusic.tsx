@@ -40,24 +40,11 @@ const BackgroundMusic: React.FC = () => {
         Your browser does not support the audio element.
       </audio>
       <div className={styles.bgmusicButton} onClick={togglePlay}>
-        <OwlPlaying className={styles.playingOwlStyle} />
-        <OwlStart className={styles.playOwlStyle} />
-
-        {/* {!isPlaying ? (
+        {!isPlaying ? (
           <OwlStart className={styles.playOwlStyle} />
         ) : (
           <OwlPlaying className={styles.playingOwlStyle} />
-        )} */}
-        {/* <Image
-          src={
-            isPlaying
-              ? '/characters/footer-playing.svg'
-              : '/characters/footer-start.svg'
-          }
-          alt={isPlaying ? 'Stop music' : 'Play music'}
-          layout="fill"
-          className={styles.playOwlStyle}
-        /> */}
+        )}
       </div>
     </div>
   );
