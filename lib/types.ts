@@ -10,6 +10,7 @@ export interface CallToActionProps {
   shadow?: boolean;
   showConsent?: boolean;
   variant?: 'primary' | 'secondary';
+  consentBreak?: boolean;
 }
 
 export interface ContactTypeProps {

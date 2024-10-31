@@ -1,17 +1,10 @@
 import CTASection from "@/components/shared/cta-section";
-import AuthorsCatalogIntro from "@/components/shared/authors-catalog-intro";
+import CatalogIntro from "@/components/catalog-sections/catalog-intro";
 
 export default function Catalog() {
     return(
         <div>
-            <AuthorsCatalogIntro 
-                               title={
-                <>стихи на юбилей<br /><span className="font-bold">на заказ</span>
-                </>
-                }
-                subtitle="Получите начало стиха в течении суток:" 
-                isShadowEnabled={true}
-            />
+            <CatalogIntro/>
             <CTASection
                 title={
                 <>ХОТИТЕ, ЧТОБЫ ИМЕННО<br /><span className="font-bold">ВАШ ТОСТ ЗАПОМНИЛИ?</span>

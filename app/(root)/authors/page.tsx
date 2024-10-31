@@ -1,17 +1,11 @@
 import CTASection from "@/components/shared/cta-section";
 import AllAuthorsSection from "@/components/authors-sections/all-authors-section";
-import AuthorsCatalogIntro from "@/components/shared/authors-catalog-intro";
+import AuthorsIntro from "@/components/authors-sections/authors-intro";
 
 export default function Authors() {
     return(
         <div>
-       <AuthorsCatalogIntro
-        title="авторы"
-        subtitle={<>
-          Подберём оптимального автора под <span className="font-bold">вашу задачу</span>
-        </>}
-        isShadowEnabled={true}
-      />
+       <AuthorsIntro/>
       <AllAuthorsSection/>
             <CTASection
                 title={
@@ -36,5 +30,3 @@ export default function Authors() {
         </div>
     );
 }
-
-//comment

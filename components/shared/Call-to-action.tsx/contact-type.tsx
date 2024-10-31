@@ -7,7 +7,9 @@ interface ContactTypeProps {
 export const ContactType = ({ variant = 'primary' }: ContactTypeProps) => {
   return (
     <div className="flex gap-4 justify-left items-center mb-3">
-      <label className="text-[15px] text-white">Укажите</label>
+      <label className={`text-[15px] ${variant === 'primary' ? 'text-white' : 'text-headers'}`}>
+        Укажите
+      </label>
       <ToggleGroup type="single" ctaVariant={variant}>
         <ToggleGroupItem value="WhatsApp" className="h-[24px]">
           WhatsApp

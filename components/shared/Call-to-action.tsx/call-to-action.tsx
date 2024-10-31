@@ -3,10 +3,11 @@ import { ContactType } from "./contact-type";
 import { Button } from "@/components/ui/button";
 import { CallToActionProps } from "@/lib/types";
 
-export default function CallToAction({ 
-  shadow = true, 
+export default function CallToAction({
+  shadow = true,
   showConsent = true,
-  variant = 'primary'
+  variant = 'primary',
+  consentBreak = true
 }: CallToActionProps) {
   return (
     <div className="w-full md:w-[478px]">
@@ -27,10 +28,16 @@ export default function CallToAction({
         </Button>
         {showConsent && (
           <div className="relative h-12">
-            <div className="absolute right-0 w-[160px] text-center">
-              <p className="text-[#A6A6A6] md:text-[#EEF5F7] mt-2 text-[10px] leading-tight">
-                Даю согласие на обработку<br/>персональных данных
-              </p>
+            <div className={`absolute inset-x-0 md:inset-x-auto ${consentBreak ? 'md:right-10' : 'md:right-0'} text-center`}>
+              {consentBreak ? (
+                <p className="mt-2 text-[10px] leading-tight md:text-[#EEF5F7]">
+                  Даю согласие на обработку<br/>персональных данных
+                </p>
+              ) : (
+                <p className="mt-2 text-[10px] leading-tight md:text-[#EEF5F7]">
+                  Даю согласие на обработку персональных данных
+                </p>
+              )}
             </div>
           </div>
         )}

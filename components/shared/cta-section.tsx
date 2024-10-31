@@ -7,9 +7,9 @@ interface CTASectionProps {
   title: string | JSX.Element;
   subtitle: string | JSX.Element;
   owlImage: string;
-  owlImageMobile?: string; // Добавляем мобильную версию совы
+  owlImageMobile?: string;
   alternateOwlImage?: string;
-  alternateOwlImageMobile?: string; // Добавляем мобильную версию альтернативной совы
+  alternateOwlImageMobile?: string;
   cloudImageMobile: string;
   cloudImageDesktop: string;
   hasArch?: boolean;
@@ -27,23 +27,36 @@ const CTASection = ({
 }: CTASectionProps) => {
   const [currentOwlImage, setCurrentOwlImage] = useState(owlImage);
   const [currentOwlImageMobile, setCurrentOwlImageMobile] = useState(owlImageMobile || owlImage);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Проверяем размер экрана при монтировании
+    const checkIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768); // 768px - breakpoint для md
+    };
+
+    // Вызываем сразу при монтировании
+    checkIsDesktop();
+
+    // Добавляем слушатель изменения размера окна
+    window.addEventListener('resize', checkIsDesktop);
+
+    // Очищаем слушатель при размонтировании
+    return () => window.removeEventListener('resize', checkIsDesktop);
+  }, []);
 
   useEffect(() => {
     if (!alternateOwlImage) return;
-
     const interval = setInterval(() => {
-      setCurrentOwlImage(prev => 
+      setCurrentOwlImage(prev =>
         prev === owlImage ? alternateOwlImage : owlImage
       );
-      
-      // Если есть мобильные версии, меняем и их
       if (owlImageMobile && alternateOwlImageMobile) {
         setCurrentOwlImageMobile(prev =>
           prev === owlImageMobile ? alternateOwlImageMobile : owlImageMobile
         );
       }
     }, 7000);
-
     return () => clearInterval(interval);
   }, [owlImage, alternateOwlImage, owlImageMobile, alternateOwlImageMobile]);
 
@@ -93,9 +106,10 @@ const CTASection = ({
           <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px] mb-6">
             {subtitle}
           </p>
-          <CallToAction />
+          <CallToAction
+            consentBreak={!isDesktop}
+          />
         </div>
-
         {/* Мобильная версия совы */}
         <Image
           src={currentOwlImageMobile}
@@ -104,7 +118,6 @@ const CTASection = ({
           height={297}
           className="block md:hidden max-h-[297px] transition-opacity duration-800"
         />
-
         {/* Десктопная версия совы */}
         <Image
           src={currentOwlImage}
