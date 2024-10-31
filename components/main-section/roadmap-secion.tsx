@@ -15,13 +15,13 @@ export default function RoadmapSection() {
               width={45}
               height={45}
             />
-            <h4
+            <p
               className="text-h4 text-accent bold"
             >
               16 лет
               <br />
               с&nbsp;вами
-            </h4>
+            </p>
             <Image
               src="/icons/rvetka.svg"
               alt="Ветвь"
@@ -34,7 +34,7 @@ export default function RoadmapSection() {
             className="flex flex-col items-center"
           >
             <Image src="/icons/stars.svg" alt="Звезды" width={76} height={13} />
-            <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
+            <p className="text-[13px] text-[#B6B6B6] bold">544 отзыва</p>
           </div>
 
           <div className="flex flex-row items-center">
@@ -44,13 +44,13 @@ export default function RoadmapSection() {
               width={45}
               height={45}
             />
-            <h4
+            <p
               className="text-h4 text-accent bold"
             >
               20 000+
               <br />
               стихов
-            </h4>
+            </p>
             <Image
               src="/icons/rvetka.svg"
               alt="Ветвь"
@@ -62,7 +62,7 @@ export default function RoadmapSection() {
       </div>
 
 
-      <div className="mx-auto px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-60 max-w-[1920px]">
+      <div className="mx-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-60 max-w-[1920px]">
         <h2 className="text-headers text-2xl md:text-h2 uppercase">
           Как создается стих,<br />
           <span className="font-bold">бьющий точно в цель?</span>

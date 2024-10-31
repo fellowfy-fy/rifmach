@@ -7,7 +7,7 @@ import {
 
 export default function ContactsAccordion() {
     return(
-        <Accordion type="single" collapsible className="border rounded-[5px] w-full md:min-w-[478px] py-2">
+        <Accordion type="single" collapsible className="border rounded-[5px] w-full md:w-[478px] py-2">
             <AccordionItem value="item-1" className="px-4">
                 <AccordionTrigger className="uppercase">Испольнитель:</AccordionTrigger>
                 <AccordionContent>

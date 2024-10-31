@@ -46,7 +46,7 @@ const OwlImage = ({ className }: OwlImageProps) => {
         alt={isWorkingHours ? "онлайн" : "оффлайн"}
         width={306}
         height={60} 
-        className={`absolute md:right-24 lg:right-48 xl:right-72 2xl:right-80 top-14 hidden md:block ${className || 'absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 w-[370px] hidden md:block'}`}
+        className={`absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 hidden md:block ${className || 'absolute md:right-8 lg:right-36 xl:right-36 2xl:right-36 top-14 w-[370px] hidden md:block'}`}
       />
 
       <Image 
@@ -62,7 +62,7 @@ const OwlImage = ({ className }: OwlImageProps) => {
 
 export default function ContactsIntro() {
   return (
-    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
+    <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%]  h-[650px] md:h-[600px] overflow-hidden items-center">
       
       <div className='pt-5'>
         <BreadcrumbWithCustomSeparator variant="default" currentPage="Контакты"/>
@@ -135,8 +135,8 @@ export default function ContactsIntro() {
                 </div>
               </div>
 
-              <h4 className="text-h4 text-white mt-4 regular max-w-[544px] hidden md:block">
-                Заявки принимаются круглосуточно. Поддержка работает с 10:00 до 22:00 по московскому времени.
+              <h4 className="text-h4 text-[#EEF5F7] mt-4 regular max-w-[544px] hidden md:block">
+                Заявки принимаются круглосуточно. <br />Поддержка работает с 10:00 до 22:00 по московскому времени.
               </h4>
             </div>
           </div>

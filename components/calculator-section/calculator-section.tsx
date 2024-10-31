@@ -7,7 +7,7 @@ interface Props {
 
 export const CalculatorSection: React.FC<Props> = () => {
   return (
-         <section className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] relative px-[16px] md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[1390px] md:h-[992px] overflow-hidden items-center">
+         <section className="bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] relative px-[16px] md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%] h-[1390px] md:h-[992px] overflow-hidden items-center">
         <div className="absolute inset-0 pointer-events-none w-full">
           <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
             <img
@@ -54,7 +54,7 @@ export const CalculatorSection: React.FC<Props> = () => {
           <h2 className="uppercase text-[24px] md:text-h2 text-white">
             Сколько это стоит?
           </h2>
-          <hr className="w-[40px] md:w-[50px] h-[4px] bg-white rounded-sm mt-[10px] md:mt-[22px]" />
+          <hr className="w-10 md:w-[50px] h-[4px] bg-white rounded-sm mt-[10px] md:mt-[22px]" />
           <p className="text-h3 md:text-[18px] text-white mt-4 regular mb-[28px]">
           Укажите повод и рассчитайте примерную стоимость вашего заказа
           </p>

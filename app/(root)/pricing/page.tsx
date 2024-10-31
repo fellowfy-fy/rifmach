@@ -4,7 +4,7 @@ import { BreadcrumbWithCustomSeparator } from "@/components/shared/breadcrumbs";
 
 export default function pricing() {
   return (
-    <div className="mx-auto pb-[82px] md:pb-[93px] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-60 max-w-[1920px] bg-[#E2F2FF]">
+    <div className="mx-auto pb-[82px] md:pb-[93px] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-60 max-w-[1920px] bg-[#E2F2FF]">
       <div className="pt-[19px] md:pt-[21px]">
         <BreadcrumbWithCustomSeparator variant="muted" currentPage="Цены"/>
       </div>

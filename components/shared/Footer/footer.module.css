@@ -7,15 +7,13 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 25px;
+  padding-top: 53px;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .footer {
     background-color: white;
-    margin-top: 84px;
-    padding-top: 25px;
   }
 }
 

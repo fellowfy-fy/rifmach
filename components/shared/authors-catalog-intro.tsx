@@ -24,7 +24,7 @@ export default function AuthorsCatalogIntro({
   showConsent = false 
 }: IntroSectionProps) {
   return (
-    <section className="relative bg-[#E2F2FF] px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-[15%] h-[587px] md:h-[469px] overflow-hidden items-center text-left">
+    <section className="relative bg-[#E2F2FF] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%] h-[587px] md:h-[469px] overflow-hidden items-center text-left">
       <div className="pt-[19px] md:pt-[21px]">
         <BreadcrumbWithCustomSeparator variant="muted" currentPage="Авторы"/>
       </div>
