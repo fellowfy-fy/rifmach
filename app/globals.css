@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'Harmonia Sans Pro Cyr';
+  font-family: 'Harmonia Sans Pro Cyr Bold';
   src: url('./fonts/HarmoniaSansProCyr-Bold.ttf') format('opentype');
   font-weight: 700;
   font-style: bold;
@@ -76,7 +76,7 @@ h5 {
   height: 300px;
 }
 .overlay::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 300%;
   height: 400%;

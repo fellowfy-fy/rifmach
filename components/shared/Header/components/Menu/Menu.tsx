@@ -34,7 +34,6 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
             >
               <p className={styles.linkStyle}>{item.title}</p>
               <ChevronAnimated />
-              {/* <MenuLink {...item} isMobile={false} /> */}
             </li>
           )
       )}
@@ -74,25 +73,25 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
       </div>
 
       <Button
-        className="text-left md:text-center md:px-0 xs:px-4"
+        className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
         onClick={() => router.push('/pricing')}
       >
         <p className={styles.li_right}>Цены</p>
       </Button>
       <Button
-        className="text-left md:text-center text-h4 md:px-0 xs:px-4"
+        className="text-left md:text-center text-h4 md:px-0 xs:px-4 text-[#29383D]"
         onClick={() => router.push('/authors')}
       >
         <p className={styles.li_right}>Авторы</p>
       </Button>
       <Button
-        className="text-left md:text-center md:px-0 xs:px-4"
+        className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
         onClick={() => router.push('/reviews')}
       >
         <p className={styles.li_right}>Отзывы</p>
       </Button>
       <Button
-        className="text-left md:text-center md:px-0 xs:px-4"
+        className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
         onClick={() => router.push('/contacts')}
       >
         <p className={styles.li}>Контакты</p>

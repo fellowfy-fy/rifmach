@@ -5,14 +5,14 @@ const ChevronAnimated: FC = () => {
   return (
     <ChevronDown
       className={`
-        h-4 
-        w-4 
+        h-[12px] 
+        w-[14px] 
         shrink-0 
         transition-all 
         duration-200 
         relative
-        left-[100%]
-        top-[-8%]
+        left-[102%]
+        top-[-4%]
         ml-[0px]
       `}
     />
