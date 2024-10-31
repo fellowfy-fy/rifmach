@@ -13,7 +13,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1020px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .CTABlock {
     min-width: 50%;
   }
@@ -32,4 +32,21 @@
   margin-top: 25px;
   display: flex;
   flex-direction: column;
+}
+
+.email {
+  color: #ed5640; /* Corresponds to text-[#ED5640] */
+  padding-bottom: -5px;
+  line-height: 1.2;
+  border-bottom: 1px solid #ed5640;
+  font-size: 16px; /* Example size for text-h3, adjust as needed */
+  margin-left: auto; /* Corresponds to mx-auto */
+  margin-right: auto; /* Corresponds to mx-auto */
+}
+
+@media (min-width: 768px) {
+  .email {
+    margin-left: 0; /* Corresponds to md:mx-0 */
+    margin-right: 0; /* Corresponds to md:mx-0 */
+  }
 }

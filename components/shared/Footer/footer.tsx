@@ -13,7 +13,7 @@ export default function Footer() {
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     // Initial check
@@ -29,22 +29,24 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       {isMobile && <hr />}
-      <div className={styles.footerWrapper}>
+      <div className={styles.outerFooterWrapper}>
         <GraphicContent />
-        {isMobile && <CTABlock isMobile={isMobile} />}
-        {isMobile ? (
-          <div className="flex gap-3 mx-auto items-start justify-between max-w-[320px] w-full">
-            <ServicesBlock />
-            <OtherBlock />
-          </div>
-        ) : (
-          <>
-            <ServicesBlock />
-            <OtherBlock />
-          </>
-        )}
-        {!isMobile && <CTABlock isMobile={isMobile} />}
-        {isMobile && <BackgroundMusic />}
+        <div className={styles.footerWrapper}>
+          {isMobile && <CTABlock isMobile={isMobile} />}
+          {isMobile ? (
+            <div className="flex gap-3 mx-auto items-start justify-between max-w-[320px] w-full">
+              <ServicesBlock />
+              <OtherBlock />
+            </div>
+          ) : (
+            <>
+              <ServicesBlock />
+              <OtherBlock />
+            </>
+          )}
+          {!isMobile && <CTABlock isMobile={isMobile} />}
+          {isMobile && <BackgroundMusic />}
+        </div>
       </div>
       <FooterBottom isMobile={isMobile} />
     </footer>

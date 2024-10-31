@@ -7,13 +7,14 @@
 }
 
 @media (min-width: 768px) and (max-width: 1020px) {
-  .graphicContent {
+  /* .graphicContent {
     min-width: 50%;
-  }
+  } */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .graphicContent {
+    padding-top: 25px;
     justify-content: center;
     align-items: center;
   }

@@ -22,9 +22,3 @@
     flex-direction: row;
   }
 }
-
-@media (max-width: 767px) {
-  .footerBottomWrapper {
-    margin-top: -100px;
-  }
-}

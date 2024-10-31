@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './BackgroundMusic.module.css';
+import OwlStart from './OwlStart';
+import OwlPlaying from './OwlPlaying';
 
 const BackgroundMusic: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -38,7 +40,15 @@ const BackgroundMusic: React.FC = () => {
         Your browser does not support the audio element.
       </audio>
       <div className={styles.bgmusicButton} onClick={togglePlay}>
-        <Image
+        <OwlPlaying className={styles.playingOwlStyle} />
+        <OwlStart className={styles.playOwlStyle} />
+
+        {/* {!isPlaying ? (
+          <OwlStart className={styles.playOwlStyle} />
+        ) : (
+          <OwlPlaying className={styles.playingOwlStyle} />
+        )} */}
+        {/* <Image
           src={
             isPlaying
               ? '/characters/footer-playing.svg'
@@ -46,8 +56,8 @@ const BackgroundMusic: React.FC = () => {
           }
           alt={isPlaying ? 'Stop music' : 'Play music'}
           layout="fill"
-          style={{ marginTop: '-60px' }}
-        />
+          className={styles.playOwlStyle}
+        /> */}
       </div>
     </div>
   );
