@@ -1,4 +1,3 @@
-"use client"
 import Image from "next/image"
 import PriceComponent from "@/components/shared/price-component"
 import PayWith from "@/components/shared/pay-with"
