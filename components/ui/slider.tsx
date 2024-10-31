@@ -11,7 +11,7 @@ const Slider = React.forwardRef<
     const min = props.min || 0;
     const step = props.step || 1;
     const count = Math.floor((max - min) / step);
-    // Вычисляем позиции между значениями слайдер потом сделать
+    // Вычисляем позиции между значениями слайдер потом сделать да
     return Array.from({ length: count - 1 }, (_, i) => {
       const stepPosition = ((i + 1.5) / count) * 100;
       return stepPosition;
