@@ -42,7 +42,8 @@ const BreadcrumbList = React.forwardRef<HTMLOListElement, BreadcrumbListProps>(
     <ol
       ref={ref}
       className={cn(
-        "flex flex-wrap items-center gap-1.5 break-words text-[10px] md:text-[12px] sm:gap-2.5",
+        // Здесь настраивается расстояние между элементами через gap
+        "flex flex-wrap items-center gap-2 break-words text-[10px] md:text-[12px] md:gap-1",
         variants[variant].list,
         className
       )}
@@ -58,7 +59,7 @@ const BreadcrumbItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <li
     ref={ref}
-    className={cn("inline-flex items-center gap-1.5", className)}
+    className={cn("inline-flex items-center gap-4", className)}
     {...props}
   />
 ));
@@ -76,7 +77,8 @@ const BreadcrumbLink = React.forwardRef<HTMLAnchorElement, BreadcrumbLinkProps>(
       <Comp
         ref={ref}
         className={cn(
-          "transition-colors hover:underline",
+          // Удалили hover: и сделали подчеркивание постоянным
+          "transition-colors underline",
           variants[variant].list,
           className
         )}
@@ -113,7 +115,11 @@ const BreadcrumbSeparator = ({
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:size-3.5", className)}
+    className={cn(
+      // Здесь настраивается размер и поворот разделителя
+      "[&>svg]:size-3.5 [&>svg]:rotate-[160deg]",
+      className
+    )}
     {...props}
   >
     {children ?? <ChevronRight />}
