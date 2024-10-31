@@ -38,12 +38,51 @@
     .bgmusicButton {
       width: clamp(
         240px,
-        calc(240px + (100vw - 240) * ((100vw - 320px) / (768 - 320))),
-        100%
+        calc(240px + (355 - 240) * ((100vw - 320px) / (768 - 320))),
+        355px
       );
       height: auto;
       max-width: 100%;
       aspect-ratio: 1 / 1;
     }
+  }
+}
+
+.playOwlStyle {
+  position: absolute;
+  top: -50px;
+  left: -66px;
+  width: clamp(
+    430px,
+    calc(240px + (430 - 240) * ((100vw - 320px) / (768 - 320))),
+    430px
+  );
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  @media (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.playingOwlStyle {
+  position: absolute;
+  top: -14px;
+  left: -45px;
+  width: clamp(
+    240px,
+    calc(330px + (330 - 240) * ((100vw - 320px) / (768 - 320))),
+    330px
+  );
+  height: auto;
+  aspect-ratio: 1 / 1;
+  @media (max-width: 767px) {
+    left: clamp(
+      113px,
+      calc(113px + (334 - 113) * ((100vw - 320px) / (768 - 320))),
+      334px
+    );
+    transform: translateX(-50%);
   }
 }

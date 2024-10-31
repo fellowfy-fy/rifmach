@@ -36,14 +36,15 @@
 .branchStyle {
   width: clamp(
     20px,
-    calc(20px + (45 - 20) * ((100vw - 768px) / (1440 - 768))),
-    45px
+    calc(20px + (37 - 20) * ((100vw - 768px) / (1440 - 768))),
+    37px
   );
 
   height: auto;
 }
 
 .advantageTextStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
   font-size: clamp(
     12px,
     calc(12px + (14 - 12) * ((100vw - 768px) / (1440 - 768))),
@@ -54,9 +55,8 @@
     calc(12px + (14 - 12) * ((100vw - 768px) / (1440 - 768))),
     14px
   );
-  /* font-size: 1.25rem; Example size for h4 */
-  color: #ffc000; /* Example color for accent */
-  font-weight: bold;
+  color: #f1c14d;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -99,8 +99,8 @@
 .icon {
   width: clamp(
     18px,
-    calc(18px + (25 - 18) * ((100vw - 768px) / (1440 - 768))),
-    25px
+    calc(18px + (26 - 18) * ((100vw - 768px) / (1440 - 768))),
+    26px
   );
   height: auto; /* Maintain aspect ratio */
 }

@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { Button } from "../../../../ui/button";
-import { useRouter } from "next/navigation";
-import styles from "./HeaderContent.module.css";
+import Image from 'next/image';
+import { Button } from '../../../../ui/button';
+import { useRouter } from 'next/navigation';
+import styles from './HeaderContent.module.css';
 
 export default function HeaderContent() {
   const router = useRouter();
@@ -12,22 +12,18 @@ export default function HeaderContent() {
         alt="Логотип"
         width={138}
         height={44}
-        onClick={() => router.push("/")}
+        onClick={() => router.push('/')}
         className={styles.logoStyle}
       />
-      {/* это не рендерится на мобилке */}
       <div className="hidden md:flex md:flex-row flex-col items-center">
         <Image
           src="/icons/lvetka.svg"
           alt="Ветвь"
-          width={45}
-          height={45}
+          width={35}
+          height={42}
           className={styles.branchStyle}
         />
-        <h4
-          // className="text-h4 text-accent bold"
-          className={styles.advantageTextStyle}
-        >
+        <h4 className={styles.advantageTextStyle}>
           16 лет
           <br />
           с&nbsp;вами
@@ -35,24 +31,33 @@ export default function HeaderContent() {
         <Image
           src="/icons/rvetka.svg"
           alt="Ветвь"
-          width={45}
-          height={45}
+          width={35}
+          height={42}
           className={styles.branchStyle}
         />
       </div>
       <div
         className="hidden md:flex flex-col items-center cursor-pointer"
-        onClick={() => router.push("/reviews")}
+        onClick={() => router.push('/reviews')}
       >
-        <Image src="/icons/stars.svg" alt="Звезды" width={76} height={13} />
+        <Image
+          src="/icons/stars.svg"
+          alt="Звезды"
+          className="mb-[7px]"
+          width={76}
+          height={13}
+        />
         <h4 className="text-[13px] text-[#B6B6B6] bold">544 отзыва</h4>
       </div>
-      <div className="hidden md:flex flex-row items-center cursor-pointer" onClick={() => router.push("/catalog")}>
+      <div
+        className="hidden md:flex flex-row items-center cursor-pointer"
+        onClick={() => router.push('/catalog')}
+      >
         <Image
           src="/icons/lvetka.svg"
           alt="Ветвь"
-          width={45}
-          height={45}
+          width={35}
+          height={42}
           className={styles.branchStyle}
         />
         <h4 className={styles.advantageTextStyle}>
@@ -63,8 +68,8 @@ export default function HeaderContent() {
         <Image
           src="/icons/rvetka.svg"
           alt="Ветвь"
-          width={45}
-          height={45}
+          width={35}
+          height={42}
           className={styles.branchStyle}
         />
       </div>
@@ -91,7 +96,7 @@ export default function HeaderContent() {
       <Button variant="callback" className={styles.callbackButton}>
         ОБРАТНЫЙ ЗВОНОК
       </Button>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center gap-[4px]">
         <Image
           src="/icons/phone.svg"
           alt="Телефон"
@@ -101,7 +106,7 @@ export default function HeaderContent() {
         />
         <a
           href="tel:+79993338960"
-          className="~text-xs/xl text-[#25253F] font-semibold"
+          className="text-[20px] leading-[24px] text-[#25253F] font-[600]"
         >
           +7 999 333-89-60
         </a>

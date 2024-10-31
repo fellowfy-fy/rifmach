@@ -1,4 +1,5 @@
 'use client';
+import { HorizontalSplit } from '../HorizontalSplit/HorizontalSplit';
 import HeaderContent from './components/HeaderContent/HeaderContent';
 import Menu from './components/Menu/Menu';
 import { MobileHeader } from './MobileHeader';
@@ -9,7 +10,7 @@ export default function Header() {
       <MobileHeader />
       <div className="hidden md:block">
         <HeaderContent />
-        <hr />
+        <HorizontalSplit />
         <Menu />
       </div>
     </div>

@@ -55,7 +55,7 @@ export default function CTABlock(props: { isMobile: boolean }) {
             <hr className="w-[202px] my-[15px] hidden md:block" />
             <a
               href="mailto:mail@rifmach.ru"
-              className="text-[#ED5640] underline text-h3 mx-auto md:mx-0"
+              className={'text-[#ED5640] underline text-h3 mx-auto md:mx-0'}
             >
               mail@rifmach.ru
             </a>
@@ -81,10 +81,7 @@ export default function CTABlock(props: { isMobile: boolean }) {
               ОБРАТНЫЙ ЗВОНОК
             </Button>
             <hr className="w-[202px] my-[15px] hidden md:block" />
-            <a
-              href="mailto:mail@rifmach.ru"
-              className="text-[#ED5640] underline text-h3 mx-auto md:mx-0"
-            >
+            <a href="mailto:mail@rifmach.ru" className={styles.email}>
               mail@rifmach.ru
             </a>
             <hr className="w-[202px] my-[15px] hidden md:block" />
