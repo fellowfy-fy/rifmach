@@ -1,7 +1,7 @@
-import AuthorCardExtended from "../ui/author-card-extended";
-import Grid from "../ui/grid";
-import { authors } from "@/constants/authors";
-import VacancyCard from "../shared/vacancy-card";
+import AuthorCardExtended from '../ui/AuthorCardExtended/AuthorCardExtended';
+import Grid from '../ui/grid';
+import { authors } from '@/constants/authors';
+import VacancyCard from '../shared/VacancyCard/VacancyCard';
 
 export default function AllAuthorsSection() {
   const itemsPerPage = 12;
@@ -13,8 +13,8 @@ export default function AllAuthorsSection() {
         items={currentItems.map((author, index) => (
           <AuthorCardExtended key={index} author={author} />
         ))}
-        columns={{ base: "1", md: "2" }} // Настройка количества колонок
-        gap={{ base: "2", md: "4", lg: "6" }} // Настройка gap
+        columns={{ base: '1', md: '2' }} // Настройка количества колонок
+        gap={{ base: '2', md: '4', lg: '6' }} // Настройка gap
         isAuthors={true} // Указать, что это карточки авторов
       />
       <div className="mt-2">

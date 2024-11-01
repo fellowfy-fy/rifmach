@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { Button } from "../ui/button";
+import Image from 'next/image';
+import { Button } from '../ui/button';
+import { CustomButton } from './CustomButton/CustomButton';
 
 interface IdeaCardProps {
   imageSrc: string;
@@ -16,7 +17,7 @@ export default function IdeaCard({
   text,
   imageWidth,
   imageHeight,
-  showButton
+  showButton,
 }: IdeaCardProps) {
   return (
     <div className="border transition-colors duration-300 hover:border-main w-full md:w-[378px] h-auto md:h-[377px] pl-[25px] pr-[24px] py-[20px] rounded-[5px] relative mb-[39px] md:mb-0 flex flex-col">
@@ -38,12 +39,7 @@ export default function IdeaCard({
       </div>
       {showButton && (
         <center className="mt-auto pt-4">
-          <Button 
-            variant="secondary"
-            className="w-full max-w-[316px] uppercase shadow-md"
-          >
-            узнать подробности
-          </Button>
+          <CustomButton type="secondary">узнать подробности</CustomButton>
         </center>
       )}
     </div>
