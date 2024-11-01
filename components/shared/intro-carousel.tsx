@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import { introData } from "@/constants/intro";
-import { useInterval } from "react-use";
+'use client';
+import React from 'react';
+import { introData } from '@/constants/intro';
+import { useInterval } from 'react-use';
 
 export const IntroCarousel: React.FC = () => {
   const [count, setCount] = React.useState(0);
@@ -21,7 +21,7 @@ export const IntroCarousel: React.FC = () => {
   }, delay);
 
   useInterval(() => {
-    setProgress((prevProgress) => prevProgress + progressStep);
+    setProgress(prevProgress => prevProgress + progressStep);
   }, stepDuration);
 
   return (
@@ -48,7 +48,7 @@ export const IntroCarousel: React.FC = () => {
                 fill="none"
                 strokeDasharray="360"
                 strokeDashoffset={360 - (360 * progress) / 100}
-                style={{ transition: "stroke-dashoffset 0.1s linear" }}
+                style={{ transition: 'stroke-dashoffset 0.1s linear' }}
               />
             </svg>
             <div className="absolute flex items-center justify-center text-center text-[18px] font-bold text-textonblue">

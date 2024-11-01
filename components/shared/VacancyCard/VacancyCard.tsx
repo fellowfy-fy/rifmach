@@ -1,6 +1,6 @@
-import { Button } from "../ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { CustomButton } from '../../ui/CustomButton/CustomButton';
+import styles from './VacancyCard.module.css';
 export default function VacancyCard() {
   return (
     <div className="border bg-white w-full md:w-[578px] h-auto md:h-[560px] pl-[25px] pr-[30px] py-[40px] rounded-[10px] relative mb-[39px] md:mb-0 flex flex-col">
@@ -12,7 +12,9 @@ export default function VacancyCard() {
         <div className="flex flex-col">
           <p className="text-h3 text-[#25253F] font-semibold">Ваше Имя</p>
 
-          <p className="text-h4 text-textsmain mt-2">Хотите стать частью команды “Рифмачей”?</p>
+          <p className="text-h4 text-textsmain mt-2">
+            Хотите стать частью команды “Рифмачей”?
+          </p>
           <p className="text-h4 text-[#8F8F9C] leading-5 mt-1">
             Ознакомьтесь с требованиями к соискателю и заполните анкету.
           </p>
@@ -29,19 +31,21 @@ export default function VacancyCard() {
         <li>Грамотность в отношении знаков препинания.</li>
         <li>Отсутствие ошибок в тексте.</li>
         <li>
-          Оригинальность рифм. Не банальные глагольные, которые присущи большинству авторов-любителей. 
-          «Поздравлять-желать» и провозглашать «в юбилей-налей» могут многие (включая самих заказчиков).
+          Оригинальность рифм. Не банальные глагольные, которые присущи
+          большинству авторов-любителей. «Поздравлять-желать» и провозглашать «в
+          юбилей-налей» могут многие (включая самих заказчиков).
         </li>
         <li>Образность, эрудиция.</li>
         <li>
-          Можно оперировать достаточно простыми (НЕ БАНАЛЬНЫМИ!) рифмами, но содержание банальным быть не должно.
+          Можно оперировать достаточно простыми (НЕ БАНАЛЬНЫМИ!) рифмами, но
+          содержание банальным быть не должно.
         </li>
       </ul>
 
       <div className="mt-12 flex justify-center">
-        <Button variant="main" className="w-full md:w-[302px]">
+        <CustomButton type="main" customClass={styles.vacancyCardButton}>
           ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ
-        </Button>
+        </CustomButton>
       </div>
     </div>
   );

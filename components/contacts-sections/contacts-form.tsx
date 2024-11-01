@@ -1,19 +1,23 @@
-import { Input } from "../ui/input"
-import { Textarea } from "../ui/textarea"
-import { Button } from "../ui/button"
-import ContactsAccordion from "./contacts-accordion"
-import Image from "next/image"
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
+import ContactsAccordion from './contacts-accordion';
+import Image from 'next/image';
+import { CustomButton } from '../ui/CustomButton/CustomButton';
+import styles from './contacts-form.module.css';
 
 export default function ContactsForm() {
-  return(
-    <div id="contact-form" className="px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center">
+  return (
+    <div
+      id="contact-form"
+      className="px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center"
+    >
       <div className="flex flex-col lg:flex-row gap-[2%] mb-[82px]">
         <div className="w-full flex flex-col gap-4">
           <div className="mb-8">
             <h1 className="text-[24px] md:text-h2 text-headers uppercase">
               напишите нам
             </h1>
-            <hr className="w-[40px] md:w-[50px] h-[5px] bg-main rounded-sm mt-[10px] md:mt-[22px]"/>
+            <hr className="w-[40px] md:w-[50px] h-[5px] bg-main rounded-sm mt-[10px] md:mt-[22px]" />
           </div>
           <div className="flex flex-col md:flex-row gap-4 text-h4 text-textsmain">
             <div>
@@ -50,11 +54,13 @@ export default function ContactsForm() {
             />
           </div>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <Button variant="main" className="w-[281px] uppercase">
+            <CustomButton type="main" customClass={styles.contactsFormButton}>
               отправить сообщение
-            </Button>
+            </CustomButton>
             <p className="text-textsmain text-[10px] text-center md:text-left">
-              Даю согласие на обработку<br/>Персональных данных
+              Даю согласие на обработку
+              <br />
+              Персональных данных
             </p>
           </div>
         </div>
@@ -62,19 +68,14 @@ export default function ContactsForm() {
           <div className="flex flex-row justify-between mb-[10px] items-center text-center">
             <p className="text-[18px]">Наши реквизиты</p>
             <button className="flex flex-row text-main text-[12px] gap-2 hover:underline justify-center">
-              <Image
-                src="/icons/pdf.svg"
-                alt="pdf"
-                width={16}
-                height={16}
-              />
+              <Image src="/icons/pdf.svg" alt="pdf" width={16} height={16} />
               СКАЧАТЬ PDF
             </button>
           </div>
-          <ContactsAccordion/>
+          <ContactsAccordion />
         </div>
       </div>
-      <hr className="hidden md:block"/>
+      <hr className="hidden md:block" />
     </div>
-  )
+  );
 }
