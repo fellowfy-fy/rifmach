@@ -4,4 +4,5 @@ export interface ICustomButtonProps {
   type?: 'main' | 'secondary';
   children: ReactNode;
   customClass?: string;
+  onClick?: ()=> void;
 }

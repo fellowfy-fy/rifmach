@@ -4,26 +4,72 @@
 
 @font-face {
   font-family: 'Harmonia Sans Pro Cyr';
-  src: url('./fonts/HarmoniaSansProCyr-Regular.ttf') format('opentype');
-  font-weight: 400;
+  src: url('./fonts/HarmoniaSansProCyr-Light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Harmonia Sans Pro Cyr Bold';
-  src: url('./fonts/HarmoniaSansProCyr-Bold.ttf') format('opentype');
-  font-weight: 700;
-  font-style: bold;
-  font-display: swap;
 }
 
 @font-face {
   font-family: 'Harmonia Sans Pro Cyr';
-  src: url('./fonts/HarmoniaSans-Light.otf') format('opentype');
-  font-weight: 200;
-  font-style: light;
-  font-display: swap;
+  src: url('./fonts/HarmoniaSansProCyr-LightIt.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-SemiBd.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-SemiBdIt.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-BoldIt.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harmonia Sans Pro Cyr';
+  src: url('./fonts/HarmoniaSansProCyr-BlackIt.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
 }
 
 @layer utilities {
@@ -38,18 +84,7 @@
   }
 }
 
-.light {
-  font-weight: 300;
-}
-
-.regular {
-  font-weight: 400;
-}
-
-.bold {
-  font-weight: 700;
-}
-
+/* Heading styles */
 h1 {
   @apply font-harmonia text-h1;
 }
@@ -69,12 +104,14 @@ h4 {
 h5 {
   @apply font-harmonia text-h5;
 }
+
 .overlay {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 300px;
 }
+
 .overlay::after {
   content: '';
   position: absolute;

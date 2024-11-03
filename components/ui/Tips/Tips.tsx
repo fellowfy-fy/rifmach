@@ -1,15 +1,14 @@
 "use client"
-import { ToggleGroup, ToggleGroupItem } from "./toggle-group";
+import { useState } from 'react';
+import { ToggleGroup, ToggleGroupItem } from "../toggle-group";
+import styles from "./Tips.module.css"
 
 interface TipItemProps {
   value: string;
   background: string;
   border: string;
   hoverBorder?: string;
-  activeGradient?: {
-    from: string;
-    to: string;
-  };
+  activeBorder?: string;
 }
 
 const tipItems: TipItemProps[] = [
@@ -18,30 +17,47 @@ const tipItems: TipItemProps[] = [
     background: "#FFF0F0",
     border: "#EDD5D5",
     hoverBorder: "#DEB6B6",
-    activeGradient: {
-      from: "#FFFBF0",
-      to: "#FFD3D3"
-    }
+    activeBorder: "#FFBABA",
   },
   {
     value: "5",
     background: "#F0FAFF",
-    border: "#CEDFE8"
+    border: "#CEDFE8",
+    hoverBorder: "#CEDFE8",
+    activeBorder: "#0E9EFF"
   },
   {
     value: "10",
     background: "#F1FEF8",
-    border: "#D9EBE3"
+    border: "#D9EBE3",
+    hoverBorder: "#D9EBE3",
+    activeBorder: "#34D399"
   }
 ];
 
+const getEmoji = (value: string) => {
+  switch (value) {
+    case "0":
+      return "😔";
+    case "5":
+      return "😊";
+    case "10":
+      return "😁";
+    default:
+      return "😊";
+  }
+};
+
 export default function Tips({ onTipChange }: { onTipChange?: (tip: number) => void }) {
+  const [selectedTip, setSelectedTip] = useState<string>("");
+
   return (
     <div className="flex items-center gap-6">
       <ToggleGroup
         type="single"
         className="flex gap-4"
         onValueChange={(value) => {
+          setSelectedTip(value);
           if (onTipChange) {
             onTipChange(Number(value));
           }
@@ -60,23 +76,23 @@ export default function Tips({ onTipChange }: { onTipChange?: (tip: number) => v
               justify-center
               border
               transition-all
-              ${item.value === "0" ?
-                'hover:border-[#DEB6B6] hover:shadow-md data-[state=on]:bg-gradient-to-b data-[state=on]:from-[#FFFBF0] data-[state=on]:to-[#FFD3D3]'
-                : ''
-              }
+              hover:shadow-md
+              data-[state=on]:border-[2px]
+              [&:not([data-state=on])]:border-opacity-50
+              hover:border-opacity-100
             `}
             style={{
               backgroundColor: item.background,
-              borderColor: item.border,
+              borderColor: item.value === selectedTip ? item.activeBorder : item.border,
             }}
           >
-            <span className="text-[15px] font-bold text-textsmain">
+            <span className={styles.tipButtonStyle}>
               {item.value === "0" ? "0%" : `+${item.value}%`}
             </span>
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
-      <span className="text-2xl">😊</span>
+      <span className="text-2xl">{getEmoji(selectedTip)}</span>
     </div>
   );
 }
