@@ -1,0 +1,91 @@
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+@media (min-width: 847px) {
+  .cardsWrapper {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 847px) {
+  .cardsWrapper {
+    justify-content: center;
+    margin-top: 31px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cardsWrapper {
+    flex-direction: row;
+    margin-top: 45px;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 40px;
+  }
+}
+
+.dartStyle {
+  position: relative;
+  width: 130px;
+  height: 70px;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 19.56px;
+    transform: rotate(-22.02deg);
+  }
+}
+
+.smokingStyle {
+  position: relative;
+  width: 58px;
+  height: 70px;
+  transform: scale(1.2);
+
+  @media (max-width: 767px) {
+    position: absolute;
+  }
+}
+
+.letterStyle {
+  position: relative;
+  width: 65px;
+  height: 70px;
+  transform: scale(1.2);
+
+  @media (max-width: 767px) {
+    position: absolute;
+  }
+}
+
+.maskStyle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  transform: scale(1.5);
+
+  @media (max-width: 767px) {
+    position: absolute;
+  }
+}
+
+.cardTitleStyle {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0e9eff;
+  overflow-wrap: break-word;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

@@ -4,7 +4,7 @@ import DemoSection from '@/components/main-section/demo-section/demo-section';
 import ReviewSection from '@/components/main-section/review-section';
 import AuthorsSection from '@/components/main-section/authors-section';
 import IdeaSection from '@/components/main-section/idea-section';
-import CorporateSection from '@/components/main-section/corporate-section';
+import CorporateSection from '@/components/main-section/CorporateSection/CorporateSection';
 import CTASection from '@/components/shared/cta-section';
 import VideoSection from '@/components/main-section/video-section/video-section';
 import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';

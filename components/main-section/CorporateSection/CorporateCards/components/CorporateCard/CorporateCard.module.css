@@ -1,0 +1,101 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 235px;
+  transition: transform 0.3s ease; /* Smooth transition for the tilt effect */
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    gap: 50px;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); /* Start and end at the original position */
+  }
+  40% {
+    transform: translateY(-10px); /* Move up */
+  }
+  60% {
+    transform: translateY(-5px); /* Move down slightly */
+  }
+}
+
+.cardWrapper:hover {
+  cursor: default;
+}
+
+.cardWrapper:hover img {
+  animation: bounce 1s infinite;
+}
+
+@media (min-width: 768px) {
+  .cardWrapper {
+    flex-direction: column;
+    /* width: 378px;
+    height: 377px; */
+    margin-bottom: 0;
+  }
+}
+
+.cardHrStyle {
+  width: 59px;
+  height: 1px;
+  background-color: #50636a;
+  border-radius: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: 768px) {
+    width: 84px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.cardTextStyle {
+  font-family: 'Harmonia Sans Pro Cyr', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.textPartWrapper {
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
+}
+
+.defaultImageWrapper {
+  @media (min-width: 768px) {
+    margin-bottom: 33px;
+  }
+}
+
+.cardMobileTextWrapper {
+  @media (max-width: 767px) {
+    margin-left: 126px;
+  }
+}
