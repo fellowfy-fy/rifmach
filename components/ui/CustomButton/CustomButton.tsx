@@ -6,6 +6,7 @@ export const CustomButton: FC<ICustomButtonProps> = ({
   children,
   type,
   customClass,
+  onClick,
 }) => {
   const innerButtonContent = useMemo(() => {
     if (type === 'main') {
@@ -33,6 +34,7 @@ export const CustomButton: FC<ICustomButtonProps> = ({
 
   return (
     <button
+      onClick={onClick}
       className={`${styles.commonButtonStyle} ${buttonClass} ${customClass}`}
     >
       {innerButtonContent}

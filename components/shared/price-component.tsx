@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Input } from "../ui/input";
-import Tips from "../ui/tips";
+import Tips from "../ui/Tips/Tips";
 
 interface PriceComponentProps {
   isInputDisabled?: boolean;

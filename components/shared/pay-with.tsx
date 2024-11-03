@@ -36,7 +36,7 @@ export default function PayWith() {
               className="cursor-pointer"
               checked={selectedValue === "option-one"}
             />
-            <label className="text-[15px] text-headers bold">Российской картой</label>
+            <label className="text-[15px] text-headers bold font-harmonia font-bold">Российской картой</label>
             <label className="text-[13px] text-[#4B5563]">(комиссия 0%)</label>
           </div>
           <Image src="/icons/cards-ru.svg" width={150} height={30} alt="Российские карты" />
@@ -57,7 +57,7 @@ export default function PayWith() {
               className="cursor-pointer"
               checked={selectedValue === "option-two"}
             />
-            <label className="text-[15px] text-headers bold">Иностранной картой</label>
+            <label className="text-[15px] text-headers font-harmonia font-bold">Иностранной картой</label>
             <label className="text-[13px] text-[#4B5563]">(комиссия 3%)</label>
           </div>
           <Image src="/icons/cards-world.svg" width={150} height={30} alt="Иностранные карты" />

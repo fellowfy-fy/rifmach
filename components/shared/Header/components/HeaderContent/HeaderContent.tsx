@@ -94,7 +94,7 @@ export default function HeaderContent() {
         </button>
       </div>
       <Button variant="callback" className={styles.callbackButton}>
-        ОБРАТНЫЙ ЗВОНОК
+        <span>ОБРАТНЫЙ ЗВОНОК</span>
       </Button>
       <div className="flex flex-row items-center gap-[4px]">
         <Image

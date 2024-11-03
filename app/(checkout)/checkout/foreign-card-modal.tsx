@@ -1,8 +1,9 @@
 // components/modals/foreign-card-modal.tsx
 import { ModalContainer } from '@/components/ui/modal';
-import { Button } from '@/components/ui/button';
+import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
 import Image from 'next/image';
 import { DialogClose } from '@/components/ui/dialog';
+import styles from "./Page.module.css"
 
 export const ForeignCardModal = ({
   isOpen,
@@ -33,7 +34,7 @@ export const ForeignCardModal = ({
             ОПЛАТА ИНОСТРАННОЙ КАРТОЙ
           </h2>
           
-          <div className="text-center pt-[12px] pb-[15px] w-[290px] md:w-[495px]">
+          <div className="text-center pt-[12px] pb-[15px] w-[290px] md:w-[525px]">
             <p className="text-[16px] text-textsmain leading-5">
               Оплата происходит на грузинский банк в валюте Лари.
             </p>
@@ -62,13 +63,13 @@ export const ForeignCardModal = ({
             <span>GEL</span>
           </div>
 
-          <Button
-            variant="main"
-            className="w-[340px] md:w-[199px] h-[44px] mt-6"
+          <CustomButton
+            type="main"
+            customClass={styles.foreignCardButton}
             onClick={() => onOpenChange(false)}
           >
             ПЕРЕЙТИ К ОПЛАТЕ
-          </Button>
+          </CustomButton>
         </div>
       </div>
     </ModalContainer>
