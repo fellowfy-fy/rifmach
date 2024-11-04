@@ -89,8 +89,10 @@
 }
 
 .defaultImageWrapper {
+  margin-bottom: 0px;
+
   @media (min-width: 768px) {
-    margin-bottom: 33px;
+    margin-bottom: 33px !important;
   }
 }
 
