@@ -17,7 +17,7 @@ export const CorporateCard: FC<CorporateProps> = ({
 }) => {
   return (
     <div className={styles.cardWrapper}>
-      <div className={`${styles.defaultImageWrapper} ${imageStyle}`}>
+      <div className={`${styles.defaultImageWrapperStyle} ${imageStyle}`}>
         <Image src={imageSrc} fill={true} alt="image" />
       </div>
       <div
