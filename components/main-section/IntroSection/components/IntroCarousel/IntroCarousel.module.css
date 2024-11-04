@@ -93,8 +93,8 @@
   @media (max-width: 768px) {
     bottom: clamp(
       150px,
-      calc(150px + (315 - 150) * ((768px - 100vw) / (768 - 393))),
-      315px
+      calc(150px + (290 - 150) * ((768px - 100vw) / (768 - 393))),
+      290px
     );
     width: 217px;
     height: 340px;
@@ -125,8 +125,8 @@
   @media (max-width: 768px) {
     bottom: clamp(
       150px,
-      calc(150px + (310 - 150) * ((768px - 100vw) / (768 - 393))),
-      310px
+      calc(150px + (295 - 150) * ((768px - 100vw) / (768 - 393))),
+      295px
     );
     width: 350px;
     height: 259px;
@@ -157,8 +157,8 @@
   @media (max-width: 768px) {
     bottom: clamp(
       150px,
-      calc(150px + (300 - 150) * ((768px - 100vw) / (768 - 393))),
-      300px
+      calc(150px + (285 - 150) * ((768px - 100vw) / (768 - 393))),
+      285px
     );
     width: 290px;
     height: 163px;
@@ -189,8 +189,8 @@
   @media (max-width: 768px) {
     bottom: clamp(
       150px,
-      calc(150px + (300 - 150) * ((768px - 100vw) / (768 - 393))),
-      300px
+      calc(150px + (285 - 150) * ((768px - 100vw) / (768 - 393))),
+      285px
     );
     width: 290px;
     height: 192px;
