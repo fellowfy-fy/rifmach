@@ -1,0 +1,108 @@
+.sectionWrapper {
+  position: relative; /* Equivalent to relative */
+  background: linear-gradient(
+    to right,
+    #70b3ff,
+    #70dbfc
+  ); /* Equivalent to bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] */
+  height: auto; /* Equivalent to h-auto */
+  overflow: hidden; /* Equivalent to overflow-hidden */
+  padding-top: 32px;
+
+  @media (min-width: 768px) {
+    padding-top: 85px;
+  }
+
+  /* @media (min-width: 1536px) {
+    height: 620px;
+  } */
+}
+
+.customContainer {
+  z-index: 10; /* Equivalent to z-10 */
+  display: flex; /* Equivalent to flex */
+  flex-direction: column; /* Equivalent to flex-col */
+  max-width: 1440px; /* Equivalent to max-w-[1440px] */
+  position: relative;
+  margin: 0 auto;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+}
+
+@media (min-width: 768px) {
+  .customContainer {
+    flex-direction: row; /* Equivalent to md:flex-row */
+  }
+}
+
+.introTitleStyle {
+  font-size: 32px; /* Equivalent to text-[32px] */
+  color: white; /* Equivalent to text-white */
+  text-transform: uppercase; /* Equivalent to uppercase */
+
+  @media (min-width: 768px) {
+    font-size: 55px;
+    line-height: 1.2;
+    max-width: 518px; /* Equivalent to md:max-w-[518px] */
+  }
+
+  @media (max-width: 767px) {
+    max-width: 50%;
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+
+.introHrStyle {
+  width: 2.5rem; /* Equivalent to w-10 (10 * 0.25rem) */
+  height: 2px; /* Equivalent to h-[2px] */
+  background-color: white; /* Equivalent to bg-white */
+  border-radius: 2px; /* Equivalent to rounded-sm */
+  margin-top: 10px; /* Equivalent to mt-2.5 (2.5 * 4px) */
+  display: none; /* Equivalent to hidden */
+
+  @media (min-width: 768px) {
+    width: 50px; /* Equivalent to md:w-[50px] */
+    margin-top: 20px; /* Equivalent to md:mt-5 (5 * 4px) */
+    display: block; /* Equivalent to md:block */
+  }
+}
+
+.introSubtitleStyle {
+  font-size: 1.5rem; /* Example size for text-h3, adjust as needed */
+  color: white; /* Equivalent to text-white */
+  margin-top: 10px; /* Equivalent to mt-2.5 (2.5 * 4px) */
+  margin-bottom: 48px; /* Equivalent to mb-12 (12 * 4px) */
+  font-weight: 400; /* Equivalent to regular */
+  max-width: 152px; /* Equivalent to max-w-[152px] */
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    margin-top: 31px;
+    max-width: 539px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 169px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.desktopCarousel {
+  display: none; /* Hide the element by default */
+}
+
+@media (min-width: 1140px) {
+  .desktopCarousel {
+    display: block; /* Show the element when the screen width is greater than 1140px */
+  }
+}

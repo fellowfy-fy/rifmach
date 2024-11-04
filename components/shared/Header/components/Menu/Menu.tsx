@@ -20,8 +20,6 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
 
   const childRoutes = [services.children, themes.children, examples.children];
 
-  console.log(childRoutes);
-
   return (
     <div className={styles.menuWrapperStyle}>
       {getRoutesConfig().map(
