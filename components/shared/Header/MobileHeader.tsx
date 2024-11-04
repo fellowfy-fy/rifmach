@@ -24,7 +24,7 @@ export function MobileHeader() {
 
   return (
     <div className="pt-[15px] pb-[12px] block md:hidden">
-      <div className="flex items-center justify-between mx-[9.31%]">
+      <div className="flex items-center justify-between mx-[5.31%]">
         <button onClick={() => setIsOpen(true)}>
           <MenuIcon className="w-6 h-6 text-orange-600" />
         </button>

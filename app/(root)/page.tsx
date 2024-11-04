@@ -1,4 +1,4 @@
-import IntroSection from '@/components/main-section/intro-section';
+import IntroSection from '@/components/main-section/IntroSection/IntroSection';
 import RoadmapSection from '@/components/main-section/roadmap-secion';
 import DemoSection from '@/components/main-section/demo-section/demo-section';
 import ReviewSection from '@/components/main-section/review-section';
