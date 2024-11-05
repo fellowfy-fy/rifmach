@@ -1,0 +1,9 @@
+.contactsFormButton {
+  position: relative !important;
+  width: 281px;
+  text-transform: uppercase;
+}
+
+.formContainer {
+  max-width: 1440px;
+}

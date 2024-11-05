@@ -1,4 +1,4 @@
-import { Slash } from "lucide-react";
+import { Slash } from 'lucide-react';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,16 +6,17 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from '@/components/ui/breadcrumb';
+import styles from './Breadcrumbs.module.css';
 
 interface BreadcrumbProps {
   currentPage: string;
-  variant?: "default" | "muted" | "solid";
+  variant?: 'default' | 'muted' | 'solid';
 }
 
-export function BreadcrumbWithCustomSeparator({ 
-  currentPage, 
-  variant = "default" 
+export function BreadcrumbWithCustomSeparator({
+  currentPage,
+  variant = 'default',
 }: BreadcrumbProps) {
   return (
     <Breadcrumb variant={variant}>
@@ -26,12 +27,12 @@ export function BreadcrumbWithCustomSeparator({
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash className={variant !== "default" ? "text-textsmain" : "text-white"} />
+          <Slash
+            className={variant !== 'default' ? 'text-textsmain' : 'text-white'}
+          />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
-          <BreadcrumbPage variant={variant}>
-            {currentPage}
-          </BreadcrumbPage>
+          <BreadcrumbPage variant={variant}>{currentPage}</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
