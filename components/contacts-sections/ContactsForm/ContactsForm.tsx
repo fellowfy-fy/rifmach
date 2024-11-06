@@ -1,15 +1,15 @@
-import { Input } from '../ui/input';
-import { Textarea } from '../ui/textarea';
-import ContactsAccordion from './contacts-accordion';
+import { Input } from '../../ui/input';
+import { Textarea } from '../../ui/textarea';
+import ContactsAccordion from '../contacts-accordion';
 import Image from 'next/image';
-import { CustomButton } from '../ui/CustomButton/CustomButton';
-import styles from './contacts-form.module.css';
+import { CustomButton } from '../../ui/CustomButton/CustomButton';
+import styles from './ContactsForm.module.css';
 
 export default function ContactsForm() {
   return (
     <div
       id="contact-form"
-      className="px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center"
+      className="max-w-[1440px] m-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center md:pt-[20px] font-harmonia"
     >
       <div className="flex flex-col lg:flex-row gap-[2%] mb-[82px]">
         <div className="w-full flex flex-col gap-4">
@@ -69,7 +69,7 @@ export default function ContactsForm() {
             <p className="text-[18px]">Наши реквизиты</p>
             <button className="flex flex-row text-main text-[12px] gap-2 hover:underline justify-center">
               <Image src="/icons/pdf.svg" alt="pdf" width={16} height={16} />
-              СКАЧАТЬ PDF
+              СКАЧАТЬ В PDF
             </button>
           </div>
           <ContactsAccordion />

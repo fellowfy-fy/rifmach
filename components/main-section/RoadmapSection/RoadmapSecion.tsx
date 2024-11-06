@@ -1,7 +1,7 @@
-import StepsCards from '../shared/steps-cards';
-import { Button } from '../ui/button';
+import StepsCards from '../../shared/steps-cards';
 import Image from 'next/image';
-import { CustomButton } from '../ui/CustomButton/CustomButton';
+import { CustomButton } from '../../ui/CustomButton/CustomButton';
+import styles from './RoadmapSection.module.css';
 
 export default function RoadmapSection() {
   return (
@@ -35,7 +35,7 @@ export default function RoadmapSection() {
         </div>
       </div>
 
-      <div className="mx-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-60 max-w-[1920px]">
+      <div className={styles.roadmapWrapper}>
         <h2 className="text-headers text-2xl md:text-h2 uppercase">
           Как создается стих,
           <br />

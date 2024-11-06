@@ -5,48 +5,48 @@ export const corporateCardsConfig = [
     imageSrc: '/icons/corporate-1.svg',
     imageStyle: styles.dartStyle,
     heading: (
-      <p className={styles.cardTitleStyle}>
+      <span className={styles.cardTitleStyle}>
         Хотите сделать{' '}
         <span className="font-bold">рекламные&nbsp;материалы</span> особенными?
-      </p>
+      </span>
     ),
     text: (
-      <p>
+      <span>
         Создадим для вашей целевой аудитории меткий стих, который привлечёт
         внимание быстрее, чем&nbsp;скучный текст.
-      </p>
+      </span>
     ),
   },
   {
     imageSrc: '/icons/corporate-2.svg',
     imageStyle: styles.smokingStyle,
     heading: (
-      <p className={styles.cardTitleStyle}>
+      <span className={styles.cardTitleStyle}>
         Вы <span className="font-bold">солидная компания</span>, которой важно
         получить качественный текст?
-      </p>
+      </span>
     ),
     text: (
-      <p>
+      <span>
         Наши лучшие авторы напишут стихи, соответствующие уровню и&nbsp;имиджу
         нашей фирмы.
-      </p>
+      </span>
     ),
   },
   {
     imageSrc: '/icons/corporate-3.svg',
     imageStyle: styles.letterStyle,
     heading: (
-      <p className={styles.cardTitleStyle}>
+      <span className={styles.cardTitleStyle}>
         Нужны <span className="font-bold">стихи для&nbsp;открыток</span> и
         другой подарочной продукции?
-      </p>
+      </span>
     ),
     text: (
-      <p>
+      <span>
         Мы знаем, как подобрать слова, которые вызовут желание купить
         ваш&nbsp;товар.
-      </p>
+      </span>
     ),
   },
   {
@@ -64,10 +64,10 @@ export const corporateCardsConfig = [
       </p>
     ),
     text: (
-      <p>
+      <span>
         Избавим вас от головной боли - в&nbsp;кротчайшие сроки напишем
         искромётные поздравления, тосты&nbsp;и&nbsp;песни.
-      </p>
+      </span>
     ),
   },
 ];
