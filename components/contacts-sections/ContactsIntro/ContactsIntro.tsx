@@ -48,6 +48,7 @@ export default function ContactsIntro() {
                 {contactsConfig.map((contactItem, index) => {
                   return (
                     <div
+                      key={contactItem.id}
                       className="flex flex-row gap-[12px] items-center"
                       onClick={index === 3 ? scrollToForm : undefined}
                     >
