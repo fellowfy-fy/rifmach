@@ -12,7 +12,8 @@ export const UrgencySwitch: React.FC<Props> = ({ className, isOn, setIsOn }) => 
     return (
         <>
       <h3 className='font-bold text-headers mb-2'>Срочность</h3>
-        <div className={cn("relative w-[67px]", className)}>
+      <div className='flex flex-row items-center gap-4'>
+                <div className={cn("relative w-[67px]", className)}>
           <Switch
             checked={isOn}
             onCheckedChange={setIsOn}
@@ -35,6 +36,8 @@ export const UrgencySwitch: React.FC<Props> = ({ className, isOn, setIsOn }) => 
             </span>
           </div>
         </div>
+          <span className='text-[12px] md:text-[14px] text-textsmain'>Покажем работу через 24 часа</span>
+      </div>
         </>
     )
 };

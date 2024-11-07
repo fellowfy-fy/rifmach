@@ -71,10 +71,10 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
   };
 
   const getBorderColor = () => {
-    if (!isFocused && !phoneNumber) return 'border-[#D4D4D4]';
-    if (isValid === false) return 'border-[#EB4403]';
-    if (isValid === true) return 'border-[#A4FA60]';
-    return 'border-[#D4D4D4]';
+    if (!phoneNumber) return 'border border-[#D4D4D4]';
+    if (isValid === false) return 'border border-[#EB4403]';
+    if (isValid === true) return 'border border-[#A4FA60]';
+    return 'border border-[#D4D4D4]';
   };
 
   const renderFlag = (country: (typeof countries)[0]) => {
@@ -121,7 +121,8 @@ export const PhoneInput = ({ shadow = true }: PhoneInputProps) => {
         </DropdownMenuContent>
       </DropdownMenu>
       <Input
-        className={`w-full md:w-[478px] border-none h-[44px] pl-14 transition-colors ${
+        noBorder
+        className={`w-full md:w-[478px] h-[44px] pl-14 transition-colors ${
           shadow ? 'shadow-[9px_10px_30px_0px_#65ADED]' : ''
         } ${getBorderColor()}`}
         placeholder={`${selectedCountry.phoneCode} (999) 999-99-99`}

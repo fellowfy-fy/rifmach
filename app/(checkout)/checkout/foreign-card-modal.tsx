@@ -1,5 +1,5 @@
 // components/modals/foreign-card-modal.tsx
-import { ModalContainer } from '@/components/ui/modal';
+import { ModalContainer } from '@/app/(checkout)/checkout/modal';
 import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
 import Image from 'next/image';
 import { DialogClose } from '@/components/ui/dialog';

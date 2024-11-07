@@ -122,14 +122,14 @@ export default function Carousel({
         className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 p-2 transition-colors text-accent hover:text-[#FF9900] hidden md:block"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={40} />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 p-2 transition-colors text-accent hover:text-[#FF9900] hidden md:block"
         aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={40} />
       </button>
 
       <div className="flex justify-center gap-3 md:gap-2 mt-6">

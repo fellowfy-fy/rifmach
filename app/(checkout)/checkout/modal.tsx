@@ -12,7 +12,7 @@ interface ModalContainerProps {
   className?: string;
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
-  showClose?: boolean; // Добавляем проп в интерфейс
+  showClose?: boolean;
 }
 
 export const ModalContainer = ({
@@ -27,10 +27,15 @@ export const ModalContainer = ({
       {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
       <DialogContent
         className={`
-          top-[30%]
+          fixed
           left-[50%]
+          top-[50%]
           translate-x-[-50%]
+          translate-y-[-50%]
           rounded-[5px]
+          border-none
+          shadow-none
+          p-0
           data-[state=open]:animate-in
           data-[state=closed]:animate-out
           data-[state=closed]:fade-out-0
