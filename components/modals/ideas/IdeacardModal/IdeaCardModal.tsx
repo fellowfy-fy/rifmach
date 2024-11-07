@@ -2,7 +2,7 @@
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import Image from 'next/image';
 import { useState } from 'react';
-import styles from './IdeaCard.module.css';
+import styles from './ideaCard.module.css';
 import { IdeaCardType } from '@/constants/ideas';
 
 interface IdeaCardProps {
