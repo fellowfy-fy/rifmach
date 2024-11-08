@@ -11,7 +11,6 @@ interface CTASectionProps {
   alternateOwlImage?: string;
   alternateOwlImageMobile?: string;
   cloudImageMobile: string;
-  cloudImageDesktop: string;
   hasArch?: boolean;
 }
 
@@ -23,7 +22,6 @@ const CTASection = ({
   alternateOwlImage,
   alternateOwlImageMobile,
   cloudImageMobile,
-  cloudImageDesktop,
 }: CTASectionProps) => {
   const [currentOwlImage, setCurrentOwlImage] = useState(owlImage);
   const [currentOwlImageMobile, setCurrentOwlImageMobile] = useState(owlImageMobile || owlImage);
@@ -69,14 +67,17 @@ const CTASection = ({
           alt="Mobile Clouds"
           width={375}
           height={200}
-          className="w-full h-auto object-cover block md:hidden absolute bottom-[-12px]"
+          className="w-full h-auto object-cover block md:hidden absolute bottom-[-2rem]"
         />
-        <Image
-          src={cloudImageDesktop}
+        <img
+          src="/clouds/clouds.svg"
           alt="Desktop Clouds"
-          width={1920}
-          height={200}
-          className="w-full h-auto object-cover hidden md:block absolute bottom-[-2px]"
+          className="max-w-[1920px] w-full h-auto object-cover hidden md:block 3xl:hidden absolute bottom-[-2px]"
+        />
+        <img
+          src="/clouds/clouds-wide.svg"
+          alt="Desktop Clouds"
+          className="max-w-[2100px] w-full h-auto object-cover hidden 3xl:block absolute bottom-0"
         />
         <div className="hidden md:block absolute top-0 w-full">
           <Image

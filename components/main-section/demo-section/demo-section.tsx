@@ -14,11 +14,19 @@ export default function DemoSection() {
             />
           </div>
 
-          <div className="hidden md:block absolute top-[-1px] w-full">
+          <div className="hidden md:block 3xl:hidden absolute top-[-1px] w-full">
             <img
               src="/clouds/clouds-flip.svg"
               alt="Desktop Clouds"
-              className="w-full h-auto object-cover"
+              className="max-w-[1920px] w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="hidden 3xl:block absolute top-[-1px] w-full">
+            <img
+              src="/clouds/clouds-wide-alt.svg"
+              alt="Desktop Clouds"
+              className="max-w-[1600px] w-full h-auto object-cover"
             />
           </div>
 
@@ -38,11 +46,19 @@ export default function DemoSection() {
             />
           </div>
 
-          <div className="hidden md:block absolute top-10 right-0">
+          <div className="hidden md:block 3xl:hidden absolute top-10 right-0">
             <img
               src="/alphabet2.svg"
               alt="Alphabet Background"
               className="w-full max-h-[845px]"
+            />
+          </div>
+
+          <div className="hidden 3xl:block absolute top-10 right-20">
+            <img
+              src="/alphabet-wide.svg"
+              alt="Alphabet Background"
+              className="w-full h-[850px]"
             />
           </div>
         </div>

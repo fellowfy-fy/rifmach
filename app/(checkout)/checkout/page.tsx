@@ -3,7 +3,6 @@ import PriceComponent from "@/components/shared/price-component"
 import PayWith from "@/components/shared/pay-with"
 import EmailComponent from "@/components/shared/email-component"
 import { CheckoutButton } from "./CheckoutButton"
-import { CustomButton } from "@/components/ui/CustomButton/CustomButton"
 import { PhoneButton } from "./phone-button"
 
 export default function Checkout() {

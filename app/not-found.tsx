@@ -1,6 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { CustomButton } from "@/components/ui/CustomButton/CustomButton";
 import { useRouter } from "next/navigation";
+import styles from "./NotFound.module.css"
 
 export default function NotFound() {
   const router = useRouter();
@@ -21,13 +22,13 @@ export default function NotFound() {
           Такой страницы не существует.<br/>
           Пожалуйста, вернитесь на главную.
         </p>
-        <Button 
-          variant="main" 
-          className="uppercase w-full md:w-[231px] mt-[41px] shadow-none"
+        <CustomButton 
+          type="main" 
+          customClass={styles.Button404}
           onClick={handleRedirect}
         >
-          на главную
-        </Button>
+          НА ГЛАВНУЮ
+        </CustomButton>
       </div>
       <div className="lg:absolute lg:right-[20px] xl:right-[35px] 2xl:right-[60px]">
         <img 

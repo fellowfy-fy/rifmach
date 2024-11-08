@@ -1,17 +1,27 @@
+"use client"
 import { Input } from '../../ui/input';
 import { Textarea } from '../../ui/textarea';
 import ContactsAccordion from '../contacts-accordion';
 import Image from 'next/image';
 import { CustomButton } from '../../ui/CustomButton/CustomButton';
 import styles from './ContactsForm.module.css';
+import { useState } from 'react';
+import { SuccessModal } from '@/components/modals/Succsess/SuccessModal';
 
 export default function ContactsForm() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSubmit = () => {
+    // Здесь будет логика отправки формы
+    setIsModalOpen(true);
+  };
+
   return (
     <div
       id="contact-form"
-      className="max-w-[1440px] m-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center md:pt-[20px] font-harmonia"
+      className="max-w-[1440px] m-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-auto items-center pt-[30px] md:pt-[20px] font-harmonia"
     >
-      <div className="flex flex-col lg:flex-row gap-[2%] mb-[82px]">
+      <div className="flex flex-col lg:flex-row gap-[2%] mb-[20px] md:mb-[82px]">
         <div className="w-full flex flex-col gap-4">
           <div className="mb-8">
             <h1 className="text-[24px] md:text-h2 text-headers uppercase">
@@ -54,7 +64,11 @@ export default function ContactsForm() {
             />
           </div>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <CustomButton type="main" customClass={styles.contactsFormButton}>
+            <CustomButton 
+              type="main" 
+              customClass={styles.contactsFormButton}
+              onClick={handleSubmit}
+            >
               отправить сообщение
             </CustomButton>
             <p className="text-textsmain text-[10px] text-center md:text-left">
@@ -76,6 +90,10 @@ export default function ContactsForm() {
         </div>
       </div>
       <hr className="hidden md:block" />
+      <SuccessModal
+        isOpen={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </div>
   );
 }

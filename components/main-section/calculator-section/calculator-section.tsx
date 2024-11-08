@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator } from '../shared/Calculator/calculator';
+import { Calculator } from '@/components/shared/Calculator/calculator';
 
 interface Props {
     className?: string;
@@ -17,11 +17,19 @@ export const CalculatorSection: React.FC<Props> = () => {
             />
           </div>
 
-          <div className="hidden md:block absolute top-[-1px] w-full">
+          <div className="hidden md:block 3xl:hidden absolute top-[-1px] w-full">
             <img
               src="/clouds/clouds-flip.svg"
               alt="Desktop Clouds"
-              className="w-full h-auto object-cover"
+              className="max-w-[1920px] w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="hidden 3xl:block absolute top-[-1px] w-full">
+            <img
+              src="/clouds/clouds-wide-alt.svg"
+              alt="Desktop Clouds"
+              className="max-w-[1600px] w-full h-auto object-cover"
             />
           </div>
 
@@ -41,7 +49,7 @@ export const CalculatorSection: React.FC<Props> = () => {
             />
           </div>
 
-          <div className="hidden md:block absolute bottom-10 -left-40">
+          <div className="hidden md:block absolute bottom-10 -left-40 3xl:left-40">
             <img
               src="/alphabet.svg"
               alt="Alphabet Background"

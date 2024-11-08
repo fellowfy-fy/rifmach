@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+            screens: {
+        '3xl': '1920px',
+      },
       fontFamily: {
         harmonia: ['Harmonia Sans Pro Cyr', 'sans-serif'],
       },

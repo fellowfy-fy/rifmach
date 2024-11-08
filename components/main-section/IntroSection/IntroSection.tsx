@@ -18,7 +18,12 @@ export default function IntroSection() {
         <img
           src="/clouds/clouds.svg"
           alt="Desktop Clouds"
-          className="max-w-[1440px] w-full h-auto object-cover hidden md:block absolute bottom-[-2px]"
+          className="max-w-[1920px] w-full h-auto object-cover hidden md:block 3xl:hidden absolute bottom-[-2px]"
+        />
+        <img
+          src="/clouds/clouds-wide.svg"
+          alt="Desktop Clouds"
+          className="max-w-[2100px] w-full h-auto object-cover hidden 3xl:block absolute bottom-0"
         />
       </div>
 

@@ -2,9 +2,12 @@ import Image from 'next/image';
 import { Button } from '../../../../ui/button';
 import { useRouter } from 'next/navigation';
 import styles from './HeaderContent.module.css';
+import { useState } from 'react';
+import { Contactus } from '@/components/modals/contactus/ContactusModal';
 
 export default function HeaderContent() {
   const router = useRouter();
+  const [isContactusModalOpen, setIsContactusModalOpen] = useState(false);
   return (
     <div className={styles.headerContentWrapperStyle}>
       <Image
@@ -93,7 +96,7 @@ export default function HeaderContent() {
           />
         </button>
       </div>
-      <Button variant="callback" className={styles.callbackButton}>
+      <Button variant="callback" className={styles.callbackButton} onClick={() => setIsContactusModalOpen(true)}>
         <span>ОБРАТНЫЙ ЗВОНОК</span>
       </Button>
       <div className="flex flex-row items-center gap-[4px]">
@@ -111,6 +114,10 @@ export default function HeaderContent() {
           +7 999 333-89-60
         </a>
       </div>
+            <Contactus 
+        isOpen={isContactusModalOpen} 
+        onOpenChange={setIsContactusModalOpen}
+      />
     </div>
   );
 }

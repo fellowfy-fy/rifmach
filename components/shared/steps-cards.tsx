@@ -11,7 +11,9 @@ export default function StepsCards() {
           text="Хотите вернуть любимую девушку? Блеснуть поздравлением на свадьбе? Обрадовать начальника? Запустить мощную рекламу бизнеса? Мы это сделаем."
           stepNumber={1}
           imageWidth={65.05}
-          imageHeight={58.58}
+          imageHeight={58.05}
+          hoverImageWidth={65.35}
+          hoverImageHeight={58.88}
         />
         <StepsCard
           imageSrc="/icons/pazl.svg"
@@ -19,8 +21,10 @@ export default function StepsCards() {
           heading="Узнаём у вас особенные детали"
           text="Вы сообщаете нам подробности о человеке, которые считаете нужными. Поэт виртуозно вплетает их в стих."
           stepNumber={2}
-          imageWidth={69.89}
-          imageHeight={65.58}
+          imageWidth={83.89}
+          imageHeight={78.58}
+          hoverImageWidth={69.89}
+          hoverImageHeight={65.58}
         />
         <StepsCard
           imageSrc="/icons/style.svg"
@@ -30,6 +34,8 @@ export default function StepsCards() {
           stepNumber={3}
           imageWidth={64.88}
           imageHeight={63.58}
+          hoverImageWidth={69}
+          hoverImageHeight={68}
         />
         <StepsCard
           imageSrc="/icons/brilliant-hover.svg"
@@ -39,6 +45,8 @@ export default function StepsCards() {
           stepNumber={4}
           imageWidth={42.75}
           imageHeight={64.58}
+          hoverImageWidth={42.75}
+          hoverImageHeight={64.58}
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function VideoSection() {
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] h-[698px] md:h-[957px] overflow-hidden items-center px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%]">
       <div className="absolute inset-0 pointer-events-none w-full">
 
-        <div className="block md:hidden absolute top-[-22px] sm:top-0 transform w-full">
+        <div className="block md:hidden absolute top-0 sm:top-0 transform w-full">
           <img
             src="clouds/clouds-flip-mob.svg"
             alt="Mobile Clouds"
@@ -17,13 +17,21 @@ export default function VideoSection() {
           />
         </div>
 
-        <div className="hidden md:block absolute top-[-1px] w-full">
-          <img
-            src="clouds/clouds-flip.svg"
-            alt="Desktop Clouds"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+          <div className="hidden md:block 3xl:hidden absolute top-[-1px] w-full">
+            <img
+              src="/clouds/clouds-flip.svg"
+              alt="Desktop Clouds"
+              className="max-w-[1920px] w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="hidden 3xl:block absolute top-[-1px] w-full">
+            <img
+              src="/clouds/clouds-wide-alt.svg"
+              alt="Desktop Clouds"
+              className="max-w-[3840px] w-full h-auto object-cover"
+            />
+          </div>
 
         <div className="hidden md:block absolute bottom-0 w-full">
             <img
@@ -41,13 +49,21 @@ export default function VideoSection() {
             />
           </div>
 
-        <div className="hidden md:block absolute top-10 right-0">
+        <div className="hidden md:block 3xl:hidden absolute top-10 right-0">
           <img
             src="/alphabet2.svg"
             alt="Alphabet Background"
             className="w-full max-h-[845px]"
           />
         </div>
+
+                  <div className="hidden 3xl:block absolute top-10 right-20">
+            <img
+              src="/alphabet-wide.svg"
+              alt="Alphabet Background"
+              className="w-full h-[850px]"
+            />
+          </div>
 
       </div>
 

@@ -20,13 +20,16 @@ export default function ReviewIntro() {
           />
         </div>
 
-        <div className="hidden md:block absolute bottom-[-2px] w-full">
-          <img
-            src="/clouds/clouds.svg"
-            alt="Desktop Clouds"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+        <img
+          src="/clouds/clouds.svg"
+          alt="Desktop Clouds"
+          className="max-w-[1920px] w-full h-auto object-cover hidden md:block 3xl:hidden absolute bottom-[-2px]"
+        />
+        <img
+          src="/clouds/clouds-wide.svg"
+          alt="Desktop Clouds"
+          className="max-w-[2100px] w-full h-auto object-cover hidden 3xl:block absolute bottom-0"
+        />
       </div>
 
       <div className="relative z-10 flex md:flex-row flex-col">

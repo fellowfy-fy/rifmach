@@ -8,7 +8,7 @@ import CorporateSection from '@/components/main-section/CorporateSection/Corpora
 import CTASection from '@/components/shared/cta-section';
 import VideoSection from '@/components/main-section/video-section/video-section';
 import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
-import { CalculatorSection } from '@/components/calculator-section/calculator-section';
+import { CalculatorSection } from '@/components/main-section/calculator-section/calculator-section';
 
 export default function Main() {
   return (
@@ -37,7 +37,6 @@ export default function Main() {
         }
         owlImage="/characters/owl-main-1.svg"
         cloudImageMobile="/clouds/cloud-cta-mob.svg"
-        cloudImageDesktop="/clouds/cloud-cta.svg"
       />
       <CorporateSection />
       <VideoSection />
@@ -53,7 +52,6 @@ export default function Main() {
         owlImage="/characters/owl-main-2.svg"
         alternateOwlImage="/characters/owl_poet_mask.svg"
         cloudImageMobile="/clouds/cloud-cta-mob.svg"
-        cloudImageDesktop="/clouds/cloud-cta.svg"
       />
     </div>
   );

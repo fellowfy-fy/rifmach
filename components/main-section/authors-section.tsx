@@ -14,12 +14,13 @@ export default function AuthorsSection() {
   return (
     <section className="bg-white py-20 md:py-6">
       <div className="mx-auto px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-60 max-w-[1920px]">
-        <div className="absolute top-[-5] right-10 hidden md:block">
-          <Image
+        <div className="absolute top-[-5] right-10 3xl:right-80 hidden md:block">
+          <img
             src="/alphabet.svg"
             alt="Alphabet Background"
             width={567}
             height={580}
+            className='h-[580px] 3xl:h-[980px]'
           />
         </div>
         <h2 className="text-headers text-2xl md:text-h2 uppercase">
