@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { CustomButton } from '../../ui/CustomButton/CustomButton';
 import styles from './RoadmapSection.module.css';
 import { useState } from 'react';
-import { Themes } from '@/components/modals/themes/Themes';
+import { Themes } from '@/components/Modals/Themes/Themes';
 
 export default function RoadmapSection() {
   const [isThemesModalOpen, setIsThemesModalOpen] = useState(false);

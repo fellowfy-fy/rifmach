@@ -1,0 +1,50 @@
+.sectionWrapper {
+  background: white;
+  padding-top: 0;
+  padding-bottom: 80px;
+
+  @media (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.customContainer {
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    134px
+  );
+}
+
+.title {
+  color: #25253F;
+  font-size: 24px;
+  text-transform: uppercase;
+  position: relative;
+
+  @media (min-width: 768px) {
+    font-size: 55px;
+  }
+}
+
+.divider {
+  width: 40px;
+  height: 5px;
+  background-color: #0E9EFF;
+  border-radius: 2px;
+  margin-top: 10px;
+
+  @media (min-width: 768px) {
+    width: 50px;
+    margin-top: 20px;
+  }
+}

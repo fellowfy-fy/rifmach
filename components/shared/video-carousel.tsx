@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSwipeable, SwipeEventData } from 'react-swipeable';
 import VideoCard from '../ui/video-card';
 import Image from 'next/image';
-import VideoPlayer from '../main-section/video-section/video-player';
+import VideoPlayer from '../main-section/VideoSection/video-player';
 import styles from './video-carousel.module.css';
 interface VideoSlide {
   videoUrl: string;

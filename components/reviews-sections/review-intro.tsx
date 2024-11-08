@@ -1,7 +1,6 @@
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
-import { BreadcrumbWithCustomSeparator } from '../breadcrumbs';
+import { BreadcrumbWithCustomSeparator } from '../main-section/breadcrumbs';
 import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
 import styles from './review-intro.module.css';
 
@@ -9,7 +8,7 @@ export default function ReviewIntro() {
   return (
     <section className="relative bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] px-4 md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%] h-[600px] md:h-[552px] overflow-hidden items-center">
       <div className="pt-[19px] md:pt-[21px]">
-        <BreadcrumbWithCustomSeparator variant="default" currentPage="Отзывы" />
+        <BreadcrumbWithCustomSeparator currentPage="Отзывы" />
       </div>
       <div className="absolute inset-0 pointer-events-none w-full">
         <div className="block md:hidden absolute bottom-[-12px] w-full">

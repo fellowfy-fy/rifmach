@@ -1,14 +1,14 @@
 import IntroSection from '@/components/main-section/IntroSection/IntroSection';
 import RoadmapSection from '@/components/main-section/RoadmapSection/RoadmapSecion';
-import DemoSection from '@/components/main-section/demo-section/demo-section';
-import ReviewSection from '@/components/main-section/review-section';
-import AuthorsSection from '@/components/main-section/authors-section';
-import IdeaSection from '@/components/main-section/idea-section';
+import DemoSection from '@/components/main-section/DemoSection/demo-section';
+import ReviewSection from '@/components/main-section/ReviewSection/review-section';
+import AuthorsSection from '@/components/main-section/AuthorsSection/authors-section';
+import IdeaSection from '@/components/main-section/IdeaSection/idea-section';
 import CorporateSection from '@/components/main-section/CorporateSection/CorporateSection';
-import CTASection from '@/components/shared/cta-section';
-import VideoSection from '@/components/main-section/video-section/video-section';
+import CTASection from '@/components/shared/CtaSection/cta-section';
+import VideoSection from '@/components/main-section/VideoSection/video-section';
 import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
-import { CalculatorSection } from '@/components/main-section/calculator-section/calculator-section';
+import { CalculatorSection } from '@/components/main-section/CalculatorSection/calculator-section';
 
 export default function Main() {
   return (

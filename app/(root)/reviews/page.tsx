@@ -1,6 +1,6 @@
-import CTASection from "@/components/shared/cta-section";
-import ReviewIntro from "@/components/shared/reviews-sections/review-intro";
-import ReviewsSection from "@/components/shared/reviews-sections/reviews-section";
+import CTASection from "@/components/shared/CtaSection/cta-section";
+import ReviewIntro from "@/components/reviews-sections/review-intro";
+import ReviewsSection from "@/components/reviews-sections/reviews-section";
 
 export default function Reviews() {
     return(

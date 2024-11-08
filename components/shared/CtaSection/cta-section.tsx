@@ -1,7 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import CallToAction from './Call-to-action.tsx/call-to-action';
+import CallToAction from '../Call-to-action.tsx/call-to-action';
+import styles from './CTASection.module.css';
 
 interface CTASectionProps {
   title: string | JSX.Element;
@@ -28,18 +29,11 @@ const CTASection = ({
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Проверяем размер экрана при монтировании
     const checkIsDesktop = () => {
-      setIsDesktop(window.innerWidth >= 768); // 768px - breakpoint для md
+      setIsDesktop(window.innerWidth >= 768);
     };
-
-    // Вызываем сразу при монтировании
     checkIsDesktop();
-
-    // Добавляем слушатель изменения размера окна
     window.addEventListener('resize', checkIsDesktop);
-
-    // Очищаем слушатель при размонтировании
     return () => window.removeEventListener('resize', checkIsDesktop);
   }, []);
 
@@ -59,8 +53,7 @@ const CTASection = ({
   }, [owlImage, alternateOwlImage, owlImageMobile, alternateOwlImageMobile]);
 
   return (
-    <section className="relative px-4 md:h-[552px] overflow-hidden md:px-10 lg:px-20 xl:px-[135px] 2xl:px-[15%] bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">
-      {/* clouds */}
+    <section className="relative md:h-[552px] overflow-hidden bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src={cloudImageMobile}
@@ -98,35 +91,35 @@ const CTASection = ({
           />
         </div>
       </div>
-      <div className="relative z-10 flex flex-col md:flex-row">
-        <div className="flex flex-col mb-8 md:mb-6">
-          <h1 className="text-2xl md:text-h2 text-white pt-16 md:pt-32 uppercase md:max-w-[560px]">
-            {title}
-          </h1>
-          <hr className="w-10 md:w-[50px] h-[4px] bg-white rounded-sm mt-2.5 md:mt-5" />
-          <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px] mb-6">
-            {subtitle}
-          </p>
-          <CallToAction
-            consentBreak={!isDesktop}
+      <div className={styles.customContainer}>
+        <div className="relative z-10 flex flex-col md:flex-row">
+          <div className="flex flex-col mb-8 md:mb-6">
+            <h1 className="text-2xl md:text-h2 text-white pt-16 md:pt-32 uppercase md:max-w-[560px]">
+              {title}
+            </h1>
+            <hr className="w-10 md:w-[50px] h-[4px] bg-white rounded-sm mt-2.5 md:mt-5" />
+            <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px] mb-6">
+              {subtitle}
+            </p>
+            <CallToAction
+              consentBreak={!isDesktop}
+            />
+          </div>
+          <Image
+            src={currentOwlImageMobile}
+            alt="Owl"
+            width={297}
+            height={297}
+            className="block md:hidden max-h-[297px] transition-opacity duration-800"
+          />
+          <Image
+            src={currentOwlImage}
+            alt="Owl"
+            width={420}
+            height={420}
+            className="hidden md:block md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800"
           />
         </div>
-        {/* Мобильная версия совы */}
-        <Image
-          src={currentOwlImageMobile}
-          alt="Owl"
-          width={297}
-          height={297}
-          className="block md:hidden max-h-[297px] transition-opacity duration-800"
-        />
-        {/* Десктопная версия совы */}
-        <Image
-          src={currentOwlImage}
-          alt="Owl"
-          width={420}
-          height={420}
-          className="hidden md:block md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800"
-        />
       </div>
     </section>
   );

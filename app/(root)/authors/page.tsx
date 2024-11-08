@@ -1,4 +1,4 @@
-import CTASection from "@/components/shared/cta-section";
+import CTASection from "@/components/shared/CtaSection/cta-section";
 import AllAuthorsSection from "@/components/authors-sections/all-authors-section";
 import AuthorsIntro from "@/components/authors-sections/authors-intro";
 

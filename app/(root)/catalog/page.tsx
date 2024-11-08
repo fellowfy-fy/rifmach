@@ -1,4 +1,4 @@
-import CTASection from "@/components/shared/cta-section";
+import CTASection from "@/components/shared/CtaSection/cta-section";
 import CatalogIntro from "@/components/catalog-sections/catalog-intro";
 
 export default function Catalog() {

@@ -1,0 +1,42 @@
+.sectionWrapper {
+  position: relative;
+  background: linear-gradient(to right, #70b3ff, #70dbfc);
+  height: 600px;
+  overflow: hidden;
+  
+  @media (min-width: 768px) {
+    height: 552px;
+  }
+}
+
+.customContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    134px
+  );
+  position: relative;
+}
+
+.reviewIntroButton {
+  position: relative;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.reviewIntroButtonMobile {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
