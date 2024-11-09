@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { BreadcrumbWithCustomSeparator } from '../main-section/breadcrumbs';
@@ -5,6 +7,19 @@ import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
 import styles from './review-intro.module.css';
 
 export default function ReviewIntro() {
+    const [imageIndex, setImageIndex] = useState(0);
+  const images = ['/characters/owl-post.svg', '/characters/owl-post-alt.svg'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 7000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.breadcrumbsWrapper}>
@@ -12,11 +27,11 @@ export default function ReviewIntro() {
       </div>
       
       <div className="absolute inset-0 pointer-events-none flex justify-center">
-        <div className="block md:hidden absolute bottom-[-12px] w-full">
+        <div className="block md:hidden absolute bottom-0 bg-white h-[120px] w-full">
           <img
             src="/clouds/clouds-mob.svg"
             alt="Mobile Clouds"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover absolute bottom-20"
           />
         </div>
         <img
@@ -70,8 +85,9 @@ export default function ReviewIntro() {
             </div>
           </div>
           <img
-            src="/characters/owl-post.svg"
-            className="md:absolute bottom-[-130px] right-[1%] max-h-[297px] md:max-h-[400px]"
+            src={images[imageIndex]}
+            className="md:absolute bottom-[-130px] md:right-[1%] w-[290px] h-[304px] md:h-[396px] md:w-[415px] mx-auto md:mx-0 mt-[-20px] md:mt-0"
+            alt="Owl Post"
           />
           <CustomButton type="main" customClass={styles.reviewIntroButtonMobile}>
             оставить отзыв
