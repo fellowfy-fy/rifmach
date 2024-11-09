@@ -1,6 +1,5 @@
 'use client';
 import { FC, useState } from 'react';
-import { GratitudeLetter } from './components/GratitudeLetter/GratitudeLetter';
 import { gratitudeLettersPathsConfig } from './GratitudeLetters.utils';
 import GratitudeLettersCarousel from './components/GratitudeLettersCarousel/GratitudeLettersCarousel';
 import styles from './GratitudeLetters.module.css';

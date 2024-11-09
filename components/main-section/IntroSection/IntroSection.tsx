@@ -3,7 +3,6 @@ import CallToAction from '../../shared/Call-to-action.tsx/call-to-action';
 import { IntroCarousel } from './components/IntroCarousel/IntroCarousel';
 import { useRouter } from 'next/navigation';
 import styles from './IntroSection.module.css';
-import Image from 'next/image';
 
 export default function IntroSection() {
   const router = useRouter();
@@ -41,7 +40,13 @@ export default function IntroSection() {
           <div className="md:hidden block">
             <IntroCarousel />
           </div>
-          <CallToAction />
+          <CallToAction
+            consentBreak={true}
+            consentAlign="center"
+            consentColor="white"
+            consentMobileAlign="right"
+            consentMobileColor="gray"
+          />
         </div>
 
         <div className={styles.desktopCarousel}>

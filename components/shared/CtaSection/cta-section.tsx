@@ -54,7 +54,7 @@ const CTASection = ({
 
   return (
     <section className="relative md:h-[552px] overflow-hidden bg-gradient-to-r from-[#70B3FF] to-[#70DBFC]">
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none flex justify-center">
         <Image
           src={cloudImageMobile}
           alt="Mobile Clouds"
@@ -63,7 +63,7 @@ const CTASection = ({
           className="w-full h-auto object-cover block md:hidden absolute bottom-[-2rem]"
         />
         <img
-          src="/clouds/clouds.svg"
+          src="/clouds/cloud-cta.svg"
           alt="Desktop Clouds"
           className="max-w-[1920px] w-full h-auto object-cover hidden md:block 3xl:hidden absolute bottom-[-2px]"
         />
@@ -103,6 +103,10 @@ const CTASection = ({
             </p>
             <CallToAction
               consentBreak={!isDesktop}
+              consentAlign="center"
+              consentColor="white"
+              consentMobileAlign="center"
+              consentMobileColor="white"
             />
           </div>
           <Image

@@ -11,7 +11,7 @@ export default function VideoSection() {
         <img
           src="clouds/clouds-flip-mob.svg"
           alt="Mobile Clouds"
-          className="w-full h-auto object-cover block md:hidden absolute top-0 sm:top-0"
+          className="w-full h-auto object-cover block md:hidden absolute -top-10 sm:-top-10"
         />
         {/* Десктопные облака */}
         <img
@@ -23,7 +23,7 @@ export default function VideoSection() {
         <img
           src="/clouds/clouds-wide-alt.svg"
           alt="Desktop Clouds"
-          className="max-w-[3840px] w-full h-auto object-cover hidden 3xl:block absolute top-[-1px]"
+          className="max-w-[1600px] w-full h-auto object-cover hidden 3xl:block absolute top-[-1px]"
         />
       </div>
 

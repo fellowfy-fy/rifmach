@@ -1,12 +1,11 @@
 .sectionWrapper {
   position: relative;
-  background: linear-gradient(to right, #70b3ff, #70dbfc);
-  height: 600px;
+  background: #E2F2FF;
+  height: 587px;
   overflow: hidden;
-  padding-top: 21px;
-  
+
   @media (min-width: 768px) {
-    height: 552px;
+    height: 469px;
   }
 }
 
@@ -19,10 +18,10 @@
     calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
     134px
   );
-  padding-bottom: 50px;
+  padding-top: 19px;
 
-  @media (max-width: 767px) {
-    padding-bottom: 19px;
+  @media (min-width: 768px) {
+    padding-top: 21px;
   }
 }
 
@@ -40,20 +39,4 @@
     134px
   );
   position: relative;
-}
-
-.reviewIntroButton {
-  position: relative;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
-.reviewIntroButtonMobile {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }

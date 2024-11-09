@@ -11,6 +11,10 @@ export interface CallToActionProps {
   showConsent?: boolean;
   variant?: 'primary' | 'secondary';
   consentBreak?: boolean;
+  consentAlign?: 'left' | 'center' | 'right';
+  consentColor?: 'gray' | 'white';
+  consentMobileAlign?: 'left' | 'center' | 'right';
+  consentMobileColor?: 'gray' | 'white';
 }
 
 export interface ContactTypeProps {

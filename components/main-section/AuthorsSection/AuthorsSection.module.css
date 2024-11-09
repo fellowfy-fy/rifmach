@@ -16,12 +16,12 @@
   position: relative;
   padding-left: clamp(
     16px,
-    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
     134px
   );
   padding-right: clamp(
     16px,
-    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
     134px
   );
 }
@@ -37,7 +37,7 @@
   }
 
   @media (min-width: 1920px) {
-    right: 320px;
+    right: -40px;
   }
 }
 

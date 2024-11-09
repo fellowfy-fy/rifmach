@@ -7,7 +7,7 @@ import IdeaSection from '@/components/main-section/IdeaSection/idea-section';
 import CorporateSection from '@/components/main-section/CorporateSection/CorporateSection';
 import CTASection from '@/components/shared/CtaSection/cta-section';
 import VideoSection from '@/components/main-section/VideoSection/video-section';
-import { GratitudeLetters } from '@/components/GratitudeLetters/GratitudeLetters';
+import { GratitudeLetters } from '@/components/main-section/GratitudeLetters/GratitudeLetters';
 import { CalculatorSection } from '@/components/main-section/CalculatorSection/calculator-section';
 
 export default function Main() {

@@ -40,7 +40,15 @@ export const Themes: React.FC<ThemesProps> = ({ isOpen, onOpenChange }) => {
           <h3 className={styles.callToAction}>
             СИЛЬНЫЕ СТИХИ ДЛЯ РЕШЕНИЯ <span>ЛЮБЫХ ЗАДАЧ!</span>
           </h3>
-          <CallToAction />
+          <CallToAction
+            consentBreak={true}
+            consentAlign="center"
+            consentColor="white"
+            consentMobileAlign="center"
+            consentMobileColor="white"
+            showConsent={true}
+            shadow={true}
+          />
         </div>
       </div>
     </Modal>

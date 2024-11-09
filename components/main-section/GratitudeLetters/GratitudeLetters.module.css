@@ -7,14 +7,14 @@
   margin-right: auto;
 
   padding-left: clamp(
-    14px,
-    calc(14px + (102 - 14) * ((100vw - 320px) / (1440 - 320))),
-    102px
+    16px,
+    calc(14px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
   );
   padding-right: clamp(
-    0px,
-    calc(0px + (102 - 0) * ((100vw - 320px) / (1440 - 320))),
-    102px
+    16px,
+    calc(0px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
   );
 }
 

@@ -1,5 +1,4 @@
 import AuthorCard from '../../ui/author-card';
-import Image from 'next/image';
 import Carousel from '../../ui/carousel';
 import styles from './AuthorsSection.module.css';
 
@@ -17,7 +16,7 @@ export default function AuthorsSection() {
             alt="Alphabet Background"
             width={567}
             height={580}
-            className='h-[580px] 3xl:h-[980px]'
+            className='h-[580px]'
           />
         </div>
 

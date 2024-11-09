@@ -14,12 +14,12 @@
   max-width: 1440px;
   padding-left: clamp(
     16px,
-    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
     134px
   );
   padding-right: clamp(
     16px,
-    calc(16px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
     134px
   );
 }
