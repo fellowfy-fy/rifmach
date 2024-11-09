@@ -13,7 +13,6 @@ export default function Catalog() {
                 subtitle="Вы оплатите заказ, только если стих Вам понравится."
                 owlImage="/characters/owl-contacts.svg"
                 cloudImageMobile="/clouds/cloud-cta-mob.svg"
-                cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>
     );

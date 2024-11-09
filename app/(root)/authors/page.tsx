@@ -25,7 +25,6 @@ export default function Authors() {
                 owlImage="/characters/pushkin-1.svg"
                 owlImageMobile="/pushkin-1-mob.svg"
                 cloudImageMobile="/clouds/cloud-cta-mob.svg"
-                cloudImageDesktop="/clouds/cloud-cta.svg"
             />
         </div>
     );
