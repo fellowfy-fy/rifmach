@@ -1,4 +1,4 @@
-import AuthorCard from '../../ui/author-card';
+import AuthorCard from './Components/author-card';
 import Carousel from '../../ui/carousel';
 import styles from './AuthorsSection.module.css';
 
