@@ -5,4 +5,5 @@ export interface ICustomButtonProps {
   children: ReactNode;
   customClass?: string;
   onClick?: ()=> void;
+  disabled?: boolean;
 }

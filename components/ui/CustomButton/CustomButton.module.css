@@ -34,7 +34,8 @@
     margin-top: 6px;
     width: 100% !important;
     z-index: 1;
-    box-shadow: 0 10px 16px -3px #e9a502;
+    box-shadow: 0 3px 0px 0px #e9a502,
+                0 10px 16px -3px rgba(233, 165, 2, 0.5);
   }
 }
 

@@ -1,29 +1,38 @@
+// Slider.tsx
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import { cn } from "@/lib/utils"
 
 const Slider = React.forwardRef<
-  React.ElementRef<typeof SliderPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+React.ElementRef<typeof SliderPrimitive.Root>,
+React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 >(({ className, ...props }, ref) => {
   const steps = React.useMemo(() => {
-    const max = props.max || 100;
-    const min = props.min || 0;
-    const step = props.step || 1;
-    const count = Math.floor((max - min) / step);
-    // Вычисляем позиции между значениями слайдер потом сделать да
-    return Array.from({ length: count - 1 }, (_, i) => {
-      const stepPosition = ((i + 1.5) / count) * 100;
-      return stepPosition;
-    });
-  }, [props.max, props.min, props.step]);
+    const positions = [];
+    const totalWidth = 393;
+    const standardGap = 33;
+    const specialGap = 58;
+
+    // Добавляем первые 9 делений
+    for (let i = 0; i < 9; i++) {
+      positions.push((i * standardGap / totalWidth) * 100);
+    }
+    
+    // 10-е деление с увеличенным отступом
+    positions.push(((9 * standardGap + specialGap) / totalWidth) * 100);
+    
+    // Последнее деление
+    positions.push(100);
+    
+    return positions;
+  }, []);
 
   return (
-    <div className="relative w-[400px]">
+    <div className="relative max-w-[393px]">
       <div className="absolute w-full top-1/2 -translate-y-1/2 pointer-events-none">
-        {steps.map((position) => (
+        {steps.map((position, index) => (
           <div
-            key={position}
+            key={index}
             className="absolute w-[1px] h-[10px] bg-slidercalc -translate-y-1/2"
             style={{ left: `${position}%` }}
           />
@@ -50,8 +59,8 @@ const Slider = React.forwardRef<
       </SliderPrimitive.Root>
     </div>
   );
-})
+});
 
-Slider.displayName = SliderPrimitive.Root.displayName
+Slider.displayName = SliderPrimitive.Root.displayName;
 
-export { Slider }
+export { Slider };

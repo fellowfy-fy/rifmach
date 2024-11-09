@@ -1,6 +1,7 @@
 .contactusButton {
-    position: relative !important;
-    width: 283px !important;
-    height: 41px !important;
-    margin-top: 5px;
+  position: relative !important;
+  width: 283px !important;
+  height: 41px !important;
+  margin-top: 5px;
+  transition: opacity 0.3s ease;
 }
