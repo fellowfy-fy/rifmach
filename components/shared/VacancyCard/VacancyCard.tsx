@@ -3,7 +3,7 @@ import { CustomButton } from '../../ui/CustomButton/CustomButton';
 import styles from './VacancyCard.module.css';
 export default function VacancyCard() {
   return (
-    <div className="border bg-white w-full md:w-[578px] h-auto md:h-[560px] pl-[25px] pr-[30px] py-[40px] rounded-[10px] relative mb-[39px] md:mb-0 flex flex-col">
+    <div className="border bg-white w-full md:w-[578px] h-auto md:h-[560px] pl-5 pr-9 pt-4 py-4 rounded-[10px] relative mb-[39px] md:mb-0 flex flex-col">
       <div className="mt-[10px] flex flex-row gap-2">
         <Avatar className="w-[100px] h-[100px]">
           <AvatarImage src="/placeholder.svg" />
