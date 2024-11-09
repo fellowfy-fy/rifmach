@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import styles from './CTABlock.module.css';
 import { useState } from 'react';
-import { Contactus } from '@/components/modals/Contactus/ContactusModal';
+import { Contactus } from '@/components/modals/contactus/ContactusModal';
 
 export default function CTABlock(props: { isMobile: boolean }) {
   const [isContactusModalOpen, setIsContactusModalOpen] = useState(false);
