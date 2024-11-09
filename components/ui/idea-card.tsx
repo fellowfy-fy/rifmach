@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { CustomButton } from './CustomButton/CustomButton';
 import { useState } from 'react';
-import { Ideas } from '../Modals/Ideas/Ideas';
+import { Ideas } from '../modals/Ideas/Ideas';
 
 interface IdeaCardProps {
   imageSrc: string;

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { CustomButton } from '../../ui/CustomButton/CustomButton';
 import styles from './ContactsForm.module.css';
 import { useState } from 'react';
-import { SuccessModal } from '@/components/Modals/Succsess/SuccessModal';
+import { SuccessModal } from '@/components/modals/Succsess/SuccessModal';
 
 export default function ContactsForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);

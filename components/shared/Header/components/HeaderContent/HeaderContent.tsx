@@ -3,7 +3,7 @@ import { Button } from '../../../../ui/button';
 import { useRouter } from 'next/navigation';
 import styles from './HeaderContent.module.css';
 import { useState } from 'react';
-import { Contactus } from '@/components/Modals/Contactus/ContactusModal';
+import { Contactus } from '@/components/modals/Contactus/ContactusModal';
 
 export default function HeaderContent() {
   const router = useRouter();
