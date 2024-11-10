@@ -1,11 +1,11 @@
 .sectionWrapper {
   position: relative;
-  background: #E2F2FF;
-  height: 587px;
+  background: #e2f2ff;
   overflow: hidden;
+  padding-bottom: 20px;
 
   @media (min-width: 768px) {
-    height: 469px;
+    padding-bottom: 67px;
   }
 }
 

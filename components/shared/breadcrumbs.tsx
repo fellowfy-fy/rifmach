@@ -7,7 +7,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import styles from './Breadcrumbs.module.css';
 
 interface BreadcrumbProps {
   currentPage: string;

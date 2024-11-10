@@ -4,7 +4,7 @@
   height: 650px;
   overflow: hidden;
   padding-top: 21px;
-  
+
   @media (min-width: 768px) {
     height: 552px;
   }
@@ -43,9 +43,9 @@
 }
 
 .reviewIntroButton {
-  position: relative;
+  position: relative !important;
   @media screen and (max-width: 767px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -54,6 +54,6 @@
   display: block;
   margin-top: 10px;
   @media screen and (min-width: 768px) {
-    display: none;
+    display: none !important;
   }
 }
