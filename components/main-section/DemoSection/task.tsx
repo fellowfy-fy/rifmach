@@ -4,13 +4,13 @@ import { TASK_CONTENT } from "@/constants/tasks";
 
 export const Task = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col font-harmonia">
       <h2 className="text-[20px] text-white/70 font-bold mb-10 uppercase">
         задача
       </h2>
-      <div className="w-[415px] h-[404px] mb-[65px]">
+      <div className="w-[415px] h-[404px] mb-[40px]">
         <ScrollArea className="h-full">
-          <div className="text-[15px] text-white leading-normal pr-4">
+          <div className="text-[15px] text-white leading-normal font-light">
             {TASK_CONTENT.description.split('\n').map((paragraph, index) => (
               <p key={index} className="mb-4 last:mb-0">
                 {paragraph}
