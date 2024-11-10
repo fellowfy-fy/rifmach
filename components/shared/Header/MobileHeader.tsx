@@ -1,12 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
-import { MenuIcon } from 'lucide-react';
+import { CrossIcon, MenuIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Menu from './components/Menu/Menu';
 import { Button } from '../../ui/button';
+import { useRouter } from 'next/navigation';
 
 export function MobileHeader() {
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -29,7 +32,16 @@ export function MobileHeader() {
           <MenuIcon className="w-6 h-6 text-orange-600" />
         </button>
 
-        <Image src="/icons/logo.svg" alt="Логотип" width={138} height={44} />
+        <Image
+          src="/icons/logo.svg"
+          alt="Логотип"
+          width={138}
+          height={44}
+          className="hover:cursor-pointer"
+          onClick={() => {
+            router.push('/');
+          }}
+        />
 
         <button>
           <Image
@@ -42,8 +54,37 @@ export function MobileHeader() {
       </div>
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetContent side="top" className="p-4 h-full items-start text-left">
-          <Menu>
+        <SheetContent
+          side="top"
+          className="p-4 h-full items-start text-left overflow-y-scroll"
+        >
+          <div className="flex items-center justify-between mx-[5.31%] mb-[54px]">
+            <button onClick={() => setIsOpen(false)}>
+              <XIcon className="w-6 h-6 text-orange-600" />
+            </button>
+
+            <Image
+              src="/icons/logo.svg"
+              alt="Логотип"
+              width={138}
+              height={44}
+              onClick={() => {
+                router.push('/');
+                setIsOpen(false);
+              }}
+              className="hover:cursor-pointer"
+            />
+
+            <button>
+              <Image
+                src="/icons/WhatsApp.svg"
+                alt="WhatsApp"
+                width={25}
+                height={25}
+              />
+            </button>
+          </div>
+          <Menu setMobileMenu={setIsOpen}>
             <hr className="w-[100%]" />
             <div className="mx-auto">
               <h4 className="text-h3 regular mt-3 text-headers uppercase text-center">

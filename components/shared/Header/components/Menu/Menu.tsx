@@ -3,11 +3,17 @@ import MobileAccordion from '../../../mobile-accordion';
 import { useRouter } from 'next/navigation';
 import styles from './Menu.module.css';
 import { compact, getRoutesConfig } from '@/lib/utils';
-import { useState } from 'react';
+import { SetStateAction, Dispatch, useState } from 'react';
 import Link from 'next/link';
 import ChevronAnimated from './components/ChevronAnimated/ChevronAnimated';
 
-export default function Menu({ children }: { children?: React.ReactNode }) {
+export default function Menu({
+  children,
+  setMobileMenu,
+}: {
+  children?: React.ReactNode;
+  setMobileMenu?: Dispatch<SetStateAction<boolean>>;
+}) {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -67,30 +73,42 @@ export default function Menu({ children }: { children?: React.ReactNode }) {
       </nav>
 
       <div className="block md:hidden w-full">
-        <MobileAccordion />
+        <MobileAccordion setMobileMenu={setMobileMenu} />
       </div>
 
       <Button
         className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
-        onClick={() => router.push('/pricing')}
+        onClick={() => {
+          router.push('/pricing');
+          if (setMobileMenu) setMobileMenu(false); // Check if setMobileMenu is defined
+        }}
       >
         <p className={styles.li_right}>Цены</p>
       </Button>
       <Button
         className="text-left md:text-center text-h4 md:px-0 xs:px-4 text-[#29383D]"
-        onClick={() => router.push('/authors')}
+        onClick={() => {
+          router.push('/authors');
+          if (setMobileMenu) setMobileMenu(false); // Check if setMobileMenu is defined
+        }}
       >
         <p className={styles.li_right}>Авторы</p>
       </Button>
       <Button
         className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
-        onClick={() => router.push('/reviews')}
+        onClick={() => {
+          router.push('/reviews');
+          if (setMobileMenu) setMobileMenu(false); // Check if setMobileMenu is defined
+        }}
       >
         <p className={styles.li_right}>Отзывы</p>
       </Button>
       <Button
         className="text-left md:text-center md:px-0 xs:px-4 text-[#29383D]"
-        onClick={() => router.push('/contacts')}
+        onClick={() => {
+          router.push('/contacts');
+          if (setMobileMenu) setMobileMenu(false); // Check if setMobileMenu is defined
+        }}
       >
         <p className={styles.li}>Контакты</p>
       </Button>
