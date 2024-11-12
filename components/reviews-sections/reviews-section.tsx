@@ -8,7 +8,7 @@ import styles from './ReviewsSection.module.css';
 
 export default function ReviewsSection() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 12;
   const totalPages = Math.ceil(reviews.length / itemsPerPage);
   const currentItems = reviews.slice(
     (currentPage - 1) * itemsPerPage,

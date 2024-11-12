@@ -20,21 +20,21 @@ export default function AuthorReviews({ author }: AuthorReviewsProps) {
 
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 hidden md:block">
       <div className="font-harmonia text-[0.875rem] text-[#8F8F9C]">
         <p>Рейтинг автора</p>
         <div className="flex items-center gap-1">
           <span className="text-[24px] font-bold text-[#25253F]">
             {author.rating}
           </span>
-          <img src="/icons/star-checked.svg" className="h-[16px]" alt="Рейтинг" />
+          <img src="/icons/star-checked.svg" className="h-[16px] mb-1.5" alt="Рейтинг" />
           <span className="text-h4 text-[#8F8F9C]">
             {author.reviewsCount} отзывов
           </span>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div>
         {currentItems.map((review, index) => (
           <ReviewCard key={index} review={review} variant="author" />
         ))}

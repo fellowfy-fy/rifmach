@@ -5,6 +5,7 @@ import { authors } from '@/constants/authors';
 import { BreadcrumbWithCustomSeparator } from "../../shared/breadcrumbs";
 import AuthorInfo from "./AuthorInfo/AuthorInfo";
 import AuthorReview from './AuthorReview/AuthorReview';
+import CooperationCard from './CooperationCard/CooperationCard';
 
 export default function AuthorIntro() {
   const pathname = usePathname();
@@ -34,9 +35,14 @@ export default function AuthorIntro() {
           path="authors"
           subPage={author.name}
         />
-        <div className='flex flex-row w-full'>
-          <AuthorInfo author={author} />
-          <AuthorReview author={author}/>
+        <div className='flex flex-col lg:flex-row justify-between gap-8 mt-6'>
+          <div>
+            <AuthorInfo author={author} />
+          </div>
+          <div className='flex flex-col'>
+            <AuthorReview author={author}/>
+            <CooperationCard />
+          </div>
         </div>
       </div>
     </section>

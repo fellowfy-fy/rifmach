@@ -1,3 +1,4 @@
+// components/AuthorCard/AuthorCardExtended.tsx
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -9,20 +10,6 @@ interface AuthorCardExtendedProps {
   author: Author;
 }
 
-interface AuthorCardExtendedProps {
-  author: {
-    id: number;
-    name: string;
-    rating: number;
-    reviewsCount: number;
-    experience: string;
-    description: string;
-    badges: string[];
-    avatarUrl: string;
-    city: string;
-    age: number;
-  };
-}
 export default function AuthorCardExtended({
   author,
 }: AuthorCardExtendedProps) {
@@ -61,7 +48,7 @@ export default function AuthorCardExtended({
         ))}
       </div>
       <div className="absolute bottom-[26px] left-[25px] right-[30px]">
-       <Link href={`/authors/${author.id}`}>
+        <Link href={`/authors/${author.id}`}>
           <CustomButton
             type="secondary"
             customClass={styles.authorCardOpenProfileButtom}

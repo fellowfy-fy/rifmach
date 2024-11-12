@@ -22,10 +22,11 @@ const buttonVariants = cva(
 
         secondary:
            "relative bg-gradient-to-t from-[#70C6FD] to-[#23B4E4] h-[45px] md:h-[41px] shadow-lg shadow-[#70C6FD]/60 text-white after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-full after:h-[3px] after:bg-[#70C6FD] after:rounded-b-md hover:bg-[#81D1FF] hover:from-[#81D1FF] hover:to-[#81D1FF]",
-        expand: "text-h4 text-main hover:underline",
+        expand: "text-[0.875rem] text-main hover:underline",
         image: "p-0 bg-transparent",
         outline: "p-0",
-        demo: "text-white text-[14px] text-center flex justify-center"
+        demo: "text-white text-[0.875rem] text-center flex justify-center",
+        coop: "text-[0.875rem] text-[#50636A] text-center border border-[#D7E3EB] font-harmonia font-semibold transition-colors duration-300 hover:border-main"
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -33,6 +34,7 @@ const buttonVariants = cva(
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "p-0",
+        coop: "w-20 h-9"
       },
     },
     defaultVariants: {
