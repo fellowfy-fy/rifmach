@@ -1,0 +1,16 @@
+.activeItem {
+  position: relative;
+  color: #29383d;
+}
+
+.activeItem::after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -30%;
+  left: -150%;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #ffc000;
+}

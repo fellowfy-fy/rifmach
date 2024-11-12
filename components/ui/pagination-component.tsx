@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import {
   Pagination,
@@ -8,7 +8,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination"
+} from '@/components/ui/pagination';
 
 interface PaginationComponentProps {
   totalPages: number;
@@ -16,7 +16,11 @@ interface PaginationComponentProps {
   onPageChange: (page: number) => void;
 }
 
-export default function PaginationComponent({ totalPages, currentPage, onPageChange }: PaginationComponentProps) {
+export default function PaginationComponent({
+  totalPages,
+  currentPage,
+  onPageChange,
+}: PaginationComponentProps) {
   const handlePrevious = () => {
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
@@ -30,7 +34,7 @@ export default function PaginationComponent({ totalPages, currentPage, onPageCha
   };
 
   return (
-    <div className="py-[53px]">
+    <div className="py-[53px] text-[#0E9EFF]">
       <Pagination>
         <PaginationContent>
           <PaginationItem>
@@ -38,9 +42,9 @@ export default function PaginationComponent({ totalPages, currentPage, onPageCha
           </PaginationItem>
 
           <PaginationItem>
-            <PaginationLink 
+            <PaginationLink
               href="#"
-              className={currentPage === 1 ? "font-bold" : ""}
+              className={currentPage === 1 ? '' : ''}
               onClick={() => onPageChange(1)}
             >
               1
@@ -57,7 +61,7 @@ export default function PaginationComponent({ totalPages, currentPage, onPageCha
                 <PaginationItem key={index + 2}>
                   <PaginationLink
                     href="#"
-                    className={currentPage === index + 2 ? "font-bold" : ""}
+                    className={currentPage === index + 2 ? '' : ''}
                     onClick={() => onPageChange(index + 2)}
                   >
                     {index + 2}
