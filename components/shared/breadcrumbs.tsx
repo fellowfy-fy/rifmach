@@ -11,6 +11,8 @@ import {
 interface BreadcrumbProps {
   currentPage: string;
   variant?: 'default' | 'muted' | 'solid';
+    path?: string;
+  subPage?: string;
 }
 
 export function BreadcrumbWithCustomSeparator({

@@ -1,4 +1,4 @@
-import AuthorCardExtended from '../ui/AuthorCardExtended/AuthorCardExtended';
+import AuthorCardExtended from './AuthorCardExtended/AuthorCardExtended';
 import Grid from '../ui/grid';
 import { authors } from '@/constants/authors';
 import VacancyCard from '../shared/VacancyCard/VacancyCard';

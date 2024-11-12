@@ -1,10 +1,17 @@
-import { Badge } from '../badge';
+import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { CustomButton } from '../CustomButton/CustomButton';
+import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
 import styles from './AuthorCardExtended.module.css';
+import { Author } from '@/constants/authors';
+
+interface AuthorCardExtendedProps {
+  author: Author;
+}
 
 interface AuthorCardExtendedProps {
   author: {
+    id: number;
     name: string;
     rating: number;
     reviewsCount: number;
@@ -12,15 +19,15 @@ interface AuthorCardExtendedProps {
     description: string;
     badges: string[];
     avatarUrl: string;
+    city: string;
+    age: number;
   };
 }
-
 export default function AuthorCardExtended({
   author,
 }: AuthorCardExtendedProps) {
   return (
     <div className="border bg-white w-full md:w-[578px] md:h-[403px] h-[462px] pl-5 pr-0 md:pr-9 pt-4 pb-[100px] rounded-[10px] relative mb-[39px] md:mb-0">
-      {/* Информация об авторе */}
       <div className="mt-[10px] flex flex-row gap-4">
         <Avatar className="w-[100px] h-[100px] border border-accent">
           <AvatarImage src={author.avatarUrl} />
@@ -32,7 +39,7 @@ export default function AuthorCardExtended({
             <span className="text-[24px] font-bold text-[#25253F]">
               {author.rating}
             </span>
-            <img src="/icons/star-checked.svg" className='h-[16px]' />
+            <img src="/icons/star-checked.svg" className="h-[16px]" />
             <span className="text-h4 text-[#8F8F9C]">
               ({author.reviewsCount} отзывов)
             </span>
@@ -43,11 +50,9 @@ export default function AuthorCardExtended({
           </p>
         </div>
       </div>
-      {/* Описание */}
       <p className="text-h4 text-textsmain mt-[11px] leading-[23px]">
         {author.description}
       </p>
-      {/* Бейджи */}
       <div className="flex flex-wrap gap-[10px] absolute bottom-[90px] left-[25px] right-[30px]">
         {author.badges.map((badge, index) => (
           <Badge key={index} variant="outline">
@@ -55,14 +60,15 @@ export default function AuthorCardExtended({
           </Badge>
         ))}
       </div>
-      {/* Кнопка с абсолютным позиционированием */}
       <div className="absolute bottom-[26px] left-[25px] right-[30px]">
-        <CustomButton
-          type="secondary"
-          customClass={styles.authorCardOpenProfileButtom}
-        >
-          ОТКРЫТЬ ПРОФИЛЬ
-        </CustomButton>
+       <Link href={`/authors/${author.id}`}>
+          <CustomButton
+            type="secondary"
+            customClass={styles.authorCardOpenProfileButtom}
+          >
+            ОТКРЫТЬ ПРОФИЛЬ
+          </CustomButton>
+        </Link>
       </div>
     </div>
   );

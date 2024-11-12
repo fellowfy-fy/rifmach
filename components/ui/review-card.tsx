@@ -15,10 +15,12 @@ interface ReviewCardProps {
     poemAuthor: string;
     icon: string;
   };
+  variant?: 'default' | 'author' | 'authorShort';
 }
 
-export default function ReviewCard({ review }: ReviewCardProps) {
+export default function ReviewCard({ review, variant = 'default' }: ReviewCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  
   const {
     avatarUrl,
     date,
@@ -33,13 +35,28 @@ export default function ReviewCard({ review }: ReviewCardProps) {
     reviewTitle.length > 30
       ? `"${reviewTitle.substring(0, 30)}..."`
       : `"${reviewTitle}"`;
+      
   const truncatedText =
     reviewText.length > 220
       ? `${reviewText.substring(0, 220)}...`
       : reviewText;
 
+  // Определяем классы высоты в зависимости от варианта
+  const heightClasses = {
+    default: 'min-h-[445px]',
+    author: 'min-h-[342px]',
+    authorShort: 'min-h-[390px]'
+  }[variant];
+
+  // Определяем верхний padding в зависимости от варианта
+  const topPaddingClasses = {
+    default: 'pt-[40px]',
+    author: 'pt-[20px]',
+    authorShort: 'pt-[20px]'
+  }[variant];
+
   return (
-    <div className="border transition-colors duration-300 hover:border-main w-full md:w-auto lg:w-[380px] min-h-[445px] flex flex-col justify-between pl-[25px] pr-[30px] pb-[20px] pt-[40px] rounded-[5px] relative mb-[9px] md:mb-0">
+    <div className={`border transition-colors duration-300 hover:border-main w-full md:w-auto lg:w-[380px] ${heightClasses} flex flex-col justify-between pl-[25px] pr-[30px] pb-[20px] ${topPaddingClasses} rounded-[5px] relative mb-[9px] md:mb-0`}>
       <div className="flex flex-row items-center justify-between">
         <div className="flex items-center">
           <Avatar className="w-[80px] h-[80px]">
@@ -58,6 +75,7 @@ export default function ReviewCard({ review }: ReviewCardProps) {
           <Image src={icon} width={24} height={24} alt="Icon" />
         </button>
       </div>
+      
       <div className="mt-10 flex-grow">
         <p className="text-h3 text-main font-semibold">{truncatedTitle}</p>
         <p className="text-h4 text-textsmain mt-[11px] leading-6">
@@ -74,10 +92,14 @@ export default function ReviewCard({ review }: ReviewCardProps) {
           </div>
         )}
       </div>
-      <div className="flex flex-col">
-        <hr />
-        <p className="text-h5 text-[#8F8F9C] mt-4">Автор стиха: {poemAuthor}</p>
-      </div>
+      
+      {/* Показываем блок с автором только для варианта по умолчанию */}
+      {variant === 'default' && (
+        <div className="flex flex-col">
+          <hr />
+          <p className="text-h5 text-[#8F8F9C] mt-4">Автор стиха: {poemAuthor}</p>
+        </div>
+      )}
     </div>
   );
 }

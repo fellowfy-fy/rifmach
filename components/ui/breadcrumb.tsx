@@ -77,8 +77,7 @@ const BreadcrumbLink = React.forwardRef<HTMLAnchorElement, BreadcrumbLinkProps>(
       <Comp
         ref={ref}
         className={cn(
-          // Удалили hover: и сделали подчеркивание постоянным
-          "transition-colors underline",
+          "transition-colors underline hover:no-underline",
           variants[variant].list,
           className
         )}

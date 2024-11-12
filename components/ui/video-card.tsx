@@ -4,15 +4,23 @@ interface VideoCardProps {
   subtitle: string;
   isActive: boolean;
   onClick?: () => void;
+  variant?: 'default' | 'author';
 }
 
-export default function VideoCard({ thumbnailUrl, title, subtitle, isActive, onClick }: VideoCardProps) {
+export default function VideoCard({ 
+  thumbnailUrl, 
+  title, 
+  subtitle, 
+  isActive, 
+  onClick,
+  variant = 'default' 
+}: VideoCardProps) {
   return (
     <div onClick={onClick} className="cursor-pointer">
       <div
         className={`flex flex-col transition-all duration-500 ${
           isActive
-            ? 'lg:w-[706px] md:min-h-[556px]'
+            ? `lg:w-[706px] md:min-h-[556px] ${variant === 'author' ? 'border border-main' : ''}`
             : 'w-full lg:w-[490px] lg:min-h-[273px] filter blur-[2px]'
         }`}
       >
@@ -28,7 +36,9 @@ export default function VideoCard({ thumbnailUrl, title, subtitle, isActive, onC
             className="w-full h-full object-cover"
           />
           {/* Оверлей и кнопка плей */}
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div className={`absolute inset-0 flex items-center justify-center ${
+            isActive ? 'bg-black/40' : 'bg-main/60'
+          }`}>
             {isActive && (
               <button className="w-[76.72px] h-[76.72px] flex items-center justify-center transition-all duration-500">
                 <img
@@ -41,9 +51,9 @@ export default function VideoCard({ thumbnailUrl, title, subtitle, isActive, onC
         </div>
         {/* Текстовый блок */}
         {isActive && (
-          <div className="bg-white rounded-b-[32px] px-6 py-4 lg:h-[84px] h-[78px] flex flex-col justify-center text-center">
-            <h4 className="text-h3 font-medium text-gray-900 bold">{title}</h4>
-            <p className="text-gray-600 mt-2">{subtitle}</p>
+          <div className="bg-white rounded-b-[32px] px-6 py-4 lg:h-[84px] h-[78px] flex flex-col justify-center text-center shadow-xl">
+            <h4 className="text-[1rem] text-headers font-bold">{title}</h4>
+            <p className="text-headers mt-1">{subtitle}</p>
           </div>
         )}
       </div>

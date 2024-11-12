@@ -1,33 +1,28 @@
-interface Video {
+// constants/videos.ts
+export interface Video {
+  id: number;
+  authorId: number;
   videoUrl: string;
-  thumbnailUrl: string; 
+  thumbnailUrl: string;
   title: string;
   subtitle: string;
 }
 
 export const videos: Video[] = [
   {
+    id: 1,
+    authorId: 1,
     videoUrl: "/dog.mp4",
-    thumbnailUrl: "/thumbnail1.png", 
+    thumbnailUrl: "/thumbnail1.png",
     title: "Юбилей компании «Медси»",
     subtitle: "на мотив «Despacito»"
   },
   {
-    videoUrl: "/video2.mp4",
-    thumbnailUrl: "/video2-thumbnail.jpg", 
-    title: "Второе видео",
-    subtitle: "Описание второго видео"
+    id: 2,
+    authorId: 1,
+    videoUrl: "https://example.com/video2.mp4",
+    thumbnailUrl: "/thumbnails/video2.jpg",
+    title: "Свадебное поздравление",
+    subtitle: "Романтическая поэма"
   },
-  {
-    videoUrl: "/video1.mp4",
-    thumbnailUrl: "/video1-thumbnail.jpg", 
-    title: "Юбилей компании «Медси»",
-    subtitle: "на мотив «Despacito»"
-  },
-  {
-    videoUrl: "/video2.mp4",
-    thumbnailUrl: "/video2-thumbnail.jpg", 
-    title: "Второе видео",
-    subtitle: "Описание второго видео"
-  }
 ];

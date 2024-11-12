@@ -8,7 +8,7 @@ import styles from './ReviewsSection.module.css';
 
 export default function ReviewsSection() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 6;
   const totalPages = Math.ceil(reviews.length / itemsPerPage);
   const currentItems = reviews.slice(
     (currentPage - 1) * itemsPerPage,
@@ -26,7 +26,7 @@ export default function ReviewsSection() {
           items={currentItems.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
-          columns={{ base: "1", md: "2", xl: "3" }} // Изменено с xl на lg для 3 колонок
+          columns={{ base: "1", md: "2", xl: "3" }} 
           gap={{ base: "2", md: "2", lg: "2" }}
         />
         <PaginationComponent
