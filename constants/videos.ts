@@ -20,7 +20,7 @@ export const videos: Video[] = [
   {
     id: 2,
     authorId: 1,
-    videoUrl: "https://example.com/video2.mp4",
+    videoUrl: "/2.mp4",
     thumbnailUrl: "/thumbnails/video2.jpg",
     title: "Свадебное поздравление",
     subtitle: "Романтическая поэма"
