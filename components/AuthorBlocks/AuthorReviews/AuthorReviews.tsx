@@ -34,7 +34,7 @@ export default function AuthorReviews({ authorId }: AuthorReviewsProps) {
     <section className={styles.customContainer}>
       <div className="mb-8 flex items-center gap-4 font-harmonia">
         <div className="font-bold text-headers text-[1.25rem] md:text-[1.5rem]">
-          {authorReviews.length} отзыва
+          {authorReviews.length} отзывов
         </div>
         <div className="flex items-center gap-2">
           <span className="text-h4 text-[#8F8F9C]">Средняя оценка</span>

@@ -3,6 +3,8 @@ import { Author } from "@/constants/authors";
 import { reviews } from "@/constants/reviews";
 import ReviewCard from "@/components/ui/review-card";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface AuthorReviewsProps {
   author: Author;
@@ -31,6 +33,14 @@ export default function AuthorReviews({ author }: AuthorReviewsProps) {
           <span className="text-h4 text-[#8F8F9C]">
             {author.reviewsCount} отзывов
           </span>
+          <Link href={`/catalog`}>
+            <Button
+              variant="link"
+              className="text-main ml-[11.5rem] p-0"
+            >
+              Все отзывы
+            </Button>
+          </Link>
         </div>
       </div>
 

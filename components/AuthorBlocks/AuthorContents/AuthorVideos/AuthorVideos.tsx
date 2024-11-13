@@ -3,7 +3,7 @@ import { videos } from "@/constants/videos";
 
 export default function AuthorVideos() {
     return(
-        <div className="flex flex-col font-harmonia">
+        <div className="flex flex-col font-harmonia my-12">
             <p className="font-bold text-headers text-[1.25rem] md:text-[1.5rem]">Видео</p>
             <VideoCarousel videos={videos} variant="author"/>
         </div>

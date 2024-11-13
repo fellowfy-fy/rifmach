@@ -53,7 +53,7 @@ export default function ReviewCard({ review, variant = 'default' }: ReviewCardPr
         <div className="flex items-center">
           <Avatar className="w-[80px] h-[80px]">
             <AvatarImage src={avatarUrl} />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback><Image src="/placeholder.svg" alt="?" width={80} height={80}/></AvatarFallback>
           </Avatar>
           <div className="ml-4">
             <div className="flex items-center">

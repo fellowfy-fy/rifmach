@@ -42,6 +42,13 @@ export default function AuthorIntro() {
           <div className='flex flex-col'>
             <AuthorReview author={author}/>
             <CooperationCard />
+            <div className='hidden md:block'>
+              <p className='text-headers text-[1.25rem] font-bold font-harmonia mt-[2.2rem]'>Дипломы и сертификаты </p>
+              <div className='flex flex-row gap-4 mt-[0.75rem]'>
+                <img src="/letter1.png" className='w-[6.7rem] h-[9.2rem]'/>
+                <img src="/letter2.png"/>
+              </div>
+            </div>
           </div>
         </div>
       </div>
