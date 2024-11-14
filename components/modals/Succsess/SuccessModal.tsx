@@ -55,9 +55,9 @@ export const SuccessModal = ({
         <span className="sr-only">Закрыть</span>
       </DialogClose>
       <div className="flex flex-col items-center text-center justify-center h-full px-[35px] md:px-[42px]">
-        <h2 className="text-center text-[18px] text-headers font-bold">
+        <p className="text-center text-[18px] text-headers font-bold">
           Ваше сообщение отправлено
-        </h2>
+        </p>
           <p className="text-[16px] py-[54px] text-textsmain leading-5 w-[165px] md:w-full">
             Спасибо, мы ответим в ближайшее время
           </p>

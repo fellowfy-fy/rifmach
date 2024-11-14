@@ -4,28 +4,50 @@ import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { BreadcrumbWithCustomSeparator } from '../main-section/breadcrumbs';
 import { CustomButton } from '@/components/ui/CustomButton/CustomButton';
+import { LeaveReview } from '@/components/modals/LeaveReview/LeaveReview';
 import styles from './review-intro.module.css';
 
+// временное решение пока заказчик не решит что выводить в модалке 
+const serviceAuthor = {
+  id: 0,
+  name: "Рифмач",
+  rating: 5,
+  reviewsCount: 544,
+  experience: "",
+  description: "",
+  badges: [],
+  avatarUrl: "/icons/logo.svg",
+  city: "",
+  age: 0,
+  extendedInfo: {
+    badgesInfo: [],
+    achievements: ""
+  }
+};
+
 export default function ReviewIntro() {
-    const [imageIndex, setImageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const images = ['/characters/owl-post.svg', '/characters/owl-post-alt.svg'];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 7000);
-
     return () => {
       clearInterval(interval);
     };
   }, []);
+
+  const handleOpenReviewModal = () => {
+    setIsReviewModalOpen(true);
+  };
 
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.breadcrumbsWrapper}>
         <BreadcrumbWithCustomSeparator currentPage="Отзывы" />
       </div>
-      
       <div className="absolute inset-0 pointer-events-none flex justify-center">
         <div className="block md:hidden absolute bottom-0 bg-white h-[120px] w-full">
           <img
@@ -45,7 +67,6 @@ export default function ReviewIntro() {
           className="max-w-[2100px] w-full h-auto object-cover hidden 3xl:block absolute bottom-0"
         />
       </div>
-      
       <div className={styles.customContainer}>
         <div className="relative z-10 flex md:flex-row flex-col">
           <div className="flex flex-col">
@@ -66,7 +87,11 @@ export default function ReviewIntro() {
               </div>
             </div>
             <div className="flex flex-row items-center gap-3">
-              <CustomButton customClass={styles.reviewIntroButton} type="main">
+              <CustomButton 
+                customClass={styles.reviewIntroButton} 
+                type="main"
+                onClick={handleOpenReviewModal}
+              >
                 оставить отзыв
               </CustomButton>
               <Separator
@@ -89,11 +114,21 @@ export default function ReviewIntro() {
             className="md:absolute bottom-[-130px] md:right-[1%] w-[290px] h-[304px] md:h-[396px] md:w-[415px] mx-auto md:mx-0 mt-[-20px] md:mt-0"
             alt="Owl Post"
           />
-          <CustomButton type="main" customClass={styles.reviewIntroButtonMobile}>
+          <CustomButton 
+            type="main" 
+            customClass={styles.reviewIntroButtonMobile}
+            onClick={handleOpenReviewModal}
+          >
             оставить отзыв
           </CustomButton>
         </div>
       </div>
+
+      <LeaveReview
+        isOpen={isReviewModalOpen}
+        onOpenChange={setIsReviewModalOpen}
+        author={serviceAuthor}
+      />
     </section>
   );
 }
