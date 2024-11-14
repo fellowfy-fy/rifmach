@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CallToAction from '../Call-to-action.tsx/call-to-action';
@@ -13,6 +13,12 @@ interface CTASectionProps {
   alternateOwlImageMobile?: string;
   cloudImageMobile: string;
   hasArch?: boolean;
+  owlDesktopClasses?: string;
+  owlMobileClasses?: string;
+  owlDesktopWidthProp?: number;
+  owlDesktipHeightProp?: number;
+  owlMobileWidthProp?: number;
+  owlMobileHeightProp?: number;
 }
 
 const CTASection = ({
@@ -23,10 +29,31 @@ const CTASection = ({
   alternateOwlImage,
   alternateOwlImageMobile,
   cloudImageMobile,
+  owlDesktopClasses,
+  owlMobileClasses,
+  owlDesktopWidthProp,
+  owlDesktipHeightProp,
+  owlMobileWidthProp,
+  owlMobileHeightProp,
 }: CTASectionProps) => {
   const [currentOwlImage, setCurrentOwlImage] = useState(owlImage);
-  const [currentOwlImageMobile, setCurrentOwlImageMobile] = useState(owlImageMobile || owlImage);
+  const [currentOwlImageMobile, setCurrentOwlImageMobile] = useState(
+    owlImageMobile || owlImage
+  );
   const [isDesktop, setIsDesktop] = useState(false);
+
+  const owlImageClassNameDesktop =
+    owlDesktopClasses ||
+    'hidden md:block md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800';
+
+  const owlImageClassNameMobile =
+    owlMobileClasses ||
+    'block md:hidden max-h-[297px] transition-opacity duration-800';
+
+  const owlMobileHeight = owlMobileHeightProp || 297;
+  const owlMobileWidth = owlMobileWidthProp || 297;
+  const owlDesktopHeight = owlDesktipHeightProp || 420;
+  const owlDesktopWidth = owlDesktopWidthProp || 420;
 
   useEffect(() => {
     const checkIsDesktop = () => {
@@ -112,16 +139,16 @@ const CTASection = ({
           <Image
             src={currentOwlImageMobile}
             alt="Owl"
-            width={297}
-            height={297}
-            className="block md:hidden max-h-[297px] transition-opacity duration-800"
+            width={owlMobileWidth}
+            height={owlMobileHeight}
+            className={owlImageClassNameMobile}
           />
           <Image
             src={currentOwlImage}
             alt="Owl"
-            width={420}
-            height={420}
-            className="hidden md:block md:absolute bottom-[-80px] right-[1%] max-h-[297px] md:min-h-[300px] xl:min-h-[380px] 2xl:min-h-[420px] transition-opacity duration-800"
+            width={owlDesktopWidth}
+            height={owlDesktopHeight}
+            className={owlImageClassNameDesktop}
           />
         </div>
       </div>
