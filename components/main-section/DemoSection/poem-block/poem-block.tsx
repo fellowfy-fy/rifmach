@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { PoemCard } from './PoemCard/PoemCard';
-import { PoemPlayer } from './PoemCard/PoemPlayer';
+import { PoemCard } from '@/components/shared/PoemCard/PoemCard';
+import { PoemPlayer } from '../../../shared/PoemCard/PoemPlayer';
 import { NavigationModule } from './NavigationModule/NavigationModule';
 import { POEMS } from '@/constants/Poems';
 
@@ -10,7 +10,6 @@ export const PoemBlock = () => {
   const [progress, setProgress] = useState(0);
   const [currentPoemIndex, setCurrentPoemIndex] = useState(0);
 
-  // Получаем массив ключей всех стихов (кроме DEFAULT)
   const poemKeys = Object.keys(POEMS).filter(key => key !== 'DEFAULT');
   const totalPoems = poemKeys.length;
 
@@ -24,19 +23,14 @@ export const PoemBlock = () => {
 
   const handleNext = () => {
     setCurrentPoemIndex((prev) => (prev + 1) % totalPoems);
-    // При переключении стиха сбрасываем проигрывание и прогресс
     setIsPlaying(false);
     setProgress(0);
   };
 
-  // Получаем текущий стих
   const currentPoemKey = poemKeys[currentPoemIndex];
   const currentPoem = POEMS[currentPoemKey];
-
-  // Получаем предыдущие стихи для фоновых карточек
   const prevPoemKey = poemKeys[(currentPoemIndex - 1 + totalPoems) % totalPoems];
   const prevPoem = POEMS[prevPoemKey];
-
   const prevPrevPoemKey = poemKeys[(currentPoemIndex - 2 + totalPoems) % totalPoems];
   const prevPrevPoem = POEMS[prevPrevPoemKey];
 
@@ -48,17 +42,17 @@ export const PoemBlock = () => {
       <div className="relative">
         {/* Background cards */}
         <div
-          className="absolute -top-6 left-[6.6rem] w-[221px] h-[281px] transform rotate-[5.6deg] -z-10 hidden lg:block"
+          className="absolute -top-6 left-[7rem] transform rotate-[5.6deg] -z-10 hidden lg:block"
           style={{
-            filter: 'blur(1px) brightness(0.97)'
+            filter: 'blur(1px) brightness(0.97)',
           }}
         >
           <PoemCard title={prevPoem.title} text={prevPoem.text} isBackground />
         </div>
         <div
-          className="absolute -top-12 left-[7rem] w-[200px] h-[256px] transform -rotate-[4.3deg] -z-20 hidden lg:block"
+          className="absolute -top-12 left-[8rem] transform -rotate-[4.3deg] -z-20 hidden lg:block"
           style={{
-            filter: 'blur(1px) brightness(0.9)'
+            filter: 'blur(1px) brightness(0.9)',
           }}
         >
           <PoemCard title={prevPrevPoem.title} text={prevPrevPoem.text} isBackground />
