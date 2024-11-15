@@ -19,10 +19,18 @@ export const videos: Video[] = [
   },
   {
     id: 2,
-    authorId: 1,
+    authorId: 2,
     videoUrl: "/2.mp4",
-    thumbnailUrl: "/thumbnails/video2.jpg",
+    thumbnailUrl: "/video2.jpg",
     title: "Свадебное поздравление",
     subtitle: "Романтическая поэма"
+  },
+    {
+    id: 3,
+    authorId: 3,
+    videoUrl: "/2.mp4",
+    thumbnailUrl: "/video3.jpg",
+    title: "Новогоднее поздравление",
+    subtitle: "Родителям от сына"
   },
 ];
