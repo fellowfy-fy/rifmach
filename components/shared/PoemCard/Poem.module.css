@@ -20,31 +20,10 @@
 .content {
   position: relative;
   height: 22rem;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding-right: 3rem;
-  scrollbar-width: thin;
-  scrollbar-color: #0e9eff transparent;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.content::-webkit-scrollbar {
-  width: 0.25rem;
-  background-color: #0e9eff;
-}
-
-.content::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.content::-webkit-scrollbar-thumb {
-  background-color: rgba(14, 158, 255, 0.2);
-  border-radius: 0.125rem;
-  height: 10.625rem;
-}
-
-.backgroundCard .content {
-  scrollbar-width: none;
 }
 
 .backgroundCard .content::-webkit-scrollbar {
