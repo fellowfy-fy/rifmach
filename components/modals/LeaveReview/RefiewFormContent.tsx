@@ -10,7 +10,7 @@ interface ReviewFormContentProps {
 
 export const ReviewFormContent: React.FC<ReviewFormContentProps> = ({ onSubmit }) => {
   return (
-    <div className='flex justify-left text-left flex-col max-w-[28rem] p-2 font-harmonia'>
+    <div className='flex justify-left text-left flex-col w-full md:max-w-[28rem] p-2 font-harmonia'>
       {/* Social Media Login Options */}
       <p className='text-headers text-[1rem]'>Авторизуйтесь с помощью социальной сети</p>
       <div className="flex gap-3 justify-left mt-4">
@@ -60,7 +60,7 @@ export const ReviewFormContent: React.FC<ReviewFormContentProps> = ({ onSubmit }
       </div>
 
       {/* Submit Button and Anonymous Checkbox */}
-      <div className="flex items-center flex-row mt-4 gap-14 mb-8">
+      <div className="flex items-center flex-row mt-4 gap-4 md:gap-14 mb-8">
         <CustomButton type='main' customClass={styles.button} onClick={onSubmit}>
           ОТПРАВИТЬ
         </CustomButton>

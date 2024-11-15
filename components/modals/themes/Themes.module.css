@@ -1,67 +1,67 @@
 .wrapper {
-  width: 974px;
-  background: linear-gradient(113.61deg, #70B3FF 18.35%, #70DBFC 88.81%);
-  border-radius: 5px;
-  padding: 15px 14px;
+  width: 60.875rem; /* 974px */
+  background: linear-gradient(113.61deg, #70b3ff 18.35%, #70dbfc 88.81%);
+  border-radius: 0.3125rem; /* 5px */
+  padding: 0.9375rem 0.875rem; /* 15px 14px */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .content {
-  width: 946px;
+  width: 59.125rem; /* 946px */
   background: white;
-  border-radius: 5px;
-  padding: 35px;
-  margin-bottom: 30px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem; /* 5px */
+  padding: 2.1875rem; /* 35px */
+  margin-bottom: 1.875rem; /* 30px */
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1); /* 0px 10px 15px */
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
 }
 
 .title {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   font-weight: 400;
-  color: #29383D;
+  color: #29383d;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
   position: relative;
 }
 
 .title::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -0.5rem; /* -8px */
   left: 0;
-  width: 40px;
-  height: 4px;
-  background: #0E9EFF;
-  border-radius: 2px;
+  width: 2.5rem; /* 40px */
+  height: 0.25rem; /* 4px */
+  background: #0e9eff;
+  border-radius: 0.125rem; /* 2px */
 }
 
 .subtitle {
-  font-size: 16px;
-  color: #50636A;
+  font-size: 1rem; /* 16px */
+  color: #50636a;
   text-align: left;
-  max-width: 600px;
+  max-width: 37.5rem; /* 600px */
 }
 
 .themesGrid {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
 }
 
 .themeCard {
-  width: 286px;
-  height: 255px;
-  padding: 30px 20px;
-  background: #F9F9F9;
-  border-radius: 5px;
+  width: 17.875rem; /* 286px */
+  height: 15.9375rem; /* 255px */
+  padding: 1.875rem 1.25rem; /* 30px 20px */
+  background: #f9f9f9;
+  border-radius: 0.3125rem; /* 5px */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -69,18 +69,18 @@
 }
 
 .themeIcon {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .themeCard h3 {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px */
   color: #333;
 }
 
 .themeCard p {
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   color: #666;
   line-height: 1.4;
 }
@@ -93,12 +93,12 @@
 }
 
 .callToAction {
-  font-family: 'Harmonia Sans Pro Cyr';
-  font-size: 18px;
+  font-family: "Harmonia Sans Pro Cyr";
+  font-size: 1.125rem; /* 18px */
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.35rem; /* 21.6px */
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
   text-transform: uppercase;
   color: white;
 }
@@ -108,15 +108,16 @@
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
+  /* 768px */
   .wrapper {
-    width: 380px;
-    padding: 10px;
+    width: 23.75rem; /* 380px */
+    padding: 0.625rem; /* 10px */
   }
 
   .content {
-    width: 360px;
-    padding: 20px;
+    width: 22.5rem; /* 360px */
+    padding: 1.25rem; /* 20px */
   }
 
   .header {
@@ -124,6 +125,7 @@
   }
 
   .title {
+    font-size: 1.25rem; /* 20px */
     text-align: center;
   }
 
@@ -133,17 +135,13 @@
 
   .themesGrid {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem; /* 10px */
   }
 
   .themeCard {
     width: 100%;
     height: auto;
-    padding: 20px 15px;
-  }
-
-  .title {
-    font-size: 20px;
+    padding: 1.25rem 0.9375rem; /* 20px 15px */
   }
 
   .subtitle {

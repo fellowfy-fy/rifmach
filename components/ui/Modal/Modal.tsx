@@ -8,9 +8,9 @@ interface ModalProps {
   containerClassName?: string;
 }
 
-export const Modal: FC<ModalProps> = ({ 
-  isOpen, 
-  onClose, 
+export const Modal: FC<ModalProps> = ({
+  isOpen,
+  onClose,
   children,
   containerClassName = ''
 }) => {
@@ -35,15 +35,17 @@ export const Modal: FC<ModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div 
-        className={`${styles.container} ${containerClassName}`}
-        onClick={e => e.stopPropagation()}
-      >
-        <button className={styles.closeButton} onClick={onClose}>
-          ×
-        </button>
-        {children}
+    <div className={styles.overlay}>
+      <div className={styles.scrollWrapper}>
+        <div
+          className={`${styles.container} ${containerClassName}`}
+          onClick={e => e.stopPropagation()}
+        >
+          <button className={styles.closeButton} onClick={onClose}>
+            ×
+          </button>
+          {children}
+        </div>
       </div>
     </div>
   );
