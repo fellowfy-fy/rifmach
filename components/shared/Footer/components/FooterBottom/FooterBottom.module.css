@@ -1,0 +1,24 @@
+.footerBottomWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: clamp(
+    40px,
+    calc(40px + (134 - 40) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    40px,
+    calc(40px + (134 - 40) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+}
+
+@media (min-width: 767px) {
+  .footerBottomWrapper {
+    flex-direction: row;
+  }
+}

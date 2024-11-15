@@ -1,0 +1,202 @@
+.breadcrumbsAbsoluteWrapper {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  padding-bottom: 50px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 19px;
+  }
+}
+
+.contactsIntroSectionWrapper {
+  position: relative; /* Equivalent to relative */
+  background: linear-gradient(
+    to right,
+    #70b3ff,
+    #70dbfc
+  ); /* Equivalent to bg-gradient-to-r from-[#70B3FF] to-[#70DBFC] */
+  height: auto; /* Equivalent to h-auto */
+  overflow: hidden; /* Equivalent to overflow-hidden */
+  padding-top: 21px;
+
+  @media (min-width: 768px) {
+  }
+
+  /* @media (min-width: 1536px) {
+      height: 620px;
+    } */
+}
+
+.introHrStyle {
+  width: 2.5rem; /* Equivalent to w-10 (10 * 0.25rem) */
+  height: 2px; /* Equivalent to h-[2px] */
+  background-color: white; /* Equivalent to bg-white */
+  border-radius: 2px; /* Equivalent to rounded-sm */
+  margin-top: 10px; /* Equivalent to mt-2.5 (2.5 * 4px) */
+  display: none; /* Equivalent to hidden */
+
+  @media (min-width: 768px) {
+    width: 50px; /* Equivalent to md:w-[50px] */
+    margin-top: 20px; /* Equivalent to md:mt-5 (5 * 4px) */
+    display: block; /* Equivalent to md:block */
+  }
+}
+
+.contactsCustomContainer {
+  z-index: 10; /* Equivalent to z-10 */
+  display: flex; /* Equivalent to flex */
+  flex-direction: column; /* Equivalent to flex-col */
+  max-width: 1440px; /* Equivalent to max-w-[1440px] */
+  overflow: hidden;
+  margin: 0 auto;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+}
+
+@media (min-width: 768px) {
+  .contactsCustomContainer {
+    flex-direction: row; /* Equivalent to md:flex-row */
+    flex-wrap: wrap;
+  }
+}
+
+.gridItemsContainer {
+  display: grid; /* Equivalent to grid */
+  grid-template-columns: repeat(1, 1fr); /* Equivalent to grid-cols-1 */
+  margin-top: 25px;
+  margin-bottom: 20px;
+  row-gap: 13px;
+}
+
+/* Media Query for Responsive Grid Columns */
+@media (min-width: 768px) {
+  /* md */
+  .gridItemsContainer {
+    margin-top: 43px; /* Equivalent to mt-[43px] */
+    margin-bottom: 44px;
+    column-gap: 40px;
+    row-gap: 44px;
+    grid-template-columns: repeat(2, 1fr); /* Equivalent to md:grid-cols-2 */
+  }
+}
+
+.supportInfoBlock {
+  font-size: 1.5rem; /* Equivalent to text-h4, adjust as needed based on your design */
+  color: #eef5f7; /* Equivalent to text-[#EEF5F7] */
+  font-weight: 400; /* Equivalent to regular */
+  max-width: 544px; /* Equivalent to max-w-[544px] */
+  display: none; /* Equivalent to hidden */
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* Media Query for Responsive Display */
+@media (min-width: 768px) {
+  /* md */
+  .supportInfoBlock {
+    display: block; /* Equivalent to md:block */
+    margin-bottom: 119px;
+  }
+}
+
+.contactLabelStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.phoneTextStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+  }
+}
+
+.mailTextStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: 400;
+  }
+}
+
+.mailTextStyle:hover {
+  text-decoration: none;
+}
+
+.requestTextStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  padding-bottom: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #eef5f7;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: none;
+    text-decoration: none;
+    padding-bottom: 0px;
+    font-weight: 400;
+  }
+}
+
+.requestTextStyle:hover {
+  border-color: transparent;
+}
+
+.owlContainer {
+  flex: 1 1 0%;
+  position: relative;
+  display: none; /* Hide the element by default */
+}
+
+@media (min-width: 1140px) {
+  .owlContainer {
+    display: block; /* Show the element when the screen width is greater than 1140px */
+  }
+}
+
+@media (max-width: 767px) {
+  .owlContainer {
+    display: block; /* Show the element when the screen width is greater than 1140px */
+  }
+}

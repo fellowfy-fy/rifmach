@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .paymentIcon {
+    height: clamp(
+      16px,
+      calc(16px + (25 - 16) * ((100vw - 320px) / (768 - 320))),
+      25px
+    );
+  }
+  .paymentButton {
+    padding-right: clamp(
+      2px,
+      calc(2px + (16 - 2) * ((100vw - 320px) / (768 - 320))),
+      16px
+    );
+    padding-left: clamp(
+      2px,
+      calc(2px + (16 - 2) * ((100vw - 320px) / (768 - 320))),
+      16px
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .paymentIcon {
+    height: 25px;
+  }
+}

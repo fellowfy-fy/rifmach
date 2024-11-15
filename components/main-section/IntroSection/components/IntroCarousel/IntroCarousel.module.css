@@ -1,0 +1,252 @@
+.introCarouselCloud {
+  width: 435px;
+  height: 220px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.introCarouselCloudMobile {
+  display: block;
+  width: 335px;
+  height: 156px;
+  z-index: 999;
+
+  @media (min-width: 768px) {
+    display: none;
+    width: 0px;
+    height: 0px;
+    z-index: 999;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
+}
+
+.introCarouselWrapper {
+  padding-top: 23px;
+}
+
+.introCarouselPointStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  color: #eef5f7;
+  position: absolute;
+  top: 55px;
+  left: 104px;
+  max-width: 215.5px;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    top: 50px;
+    left: 105px;
+    max-width: 190px;
+    line-height: 16px;
+  }
+}
+
+.introCarouselCurrentPointStyle {
+  font-family: 'Harmonia Sans Pro Cyr';
+  color: #ffffff;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 74px;
+  top: 75px;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    top: 68.4px;
+    left: 72px;
+    line-height: 15px;
+  }
+}
+
+.commonImageHolder {
+  position: absolute;
+}
+
+.boyImage {
+  width: clamp(
+    250px,
+    calc(298px - (48 * ((1440px - 100vw) / (1440 - 1140)))),
+    298px
+  );
+  height: clamp(
+    391px,
+    calc(466px - (75 * ((1440px - 100vw) / (1440 - 1140)))),
+    466px
+  );
+  right: clamp(
+    5px,
+    calc(5px + (134 - 5) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  bottom: 0;
+
+  @media (max-width: 768px) {
+    bottom: clamp(
+      150px,
+      calc(150px + (290 - 150) * ((768px - 100vw) / (768 - 393))),
+      290px
+    );
+    width: 217px;
+    height: 340px;
+    z-index: -1;
+  }
+}
+
+.valentineImage {
+  width: clamp(
+    420px,
+    /* 501px reduced by 16.1% */
+      calc(501px - (81 * ((1440px - 100vw) / (1440 - 1140)))),
+    501px
+  );
+  height: clamp(
+    311px,
+    /* 371px reduced by 16.1% */
+      calc(371px - (60 * ((1440px - 100vw) / (1440 - 1140)))),
+    371px
+  );
+  right: clamp(
+    -20px,
+    calc(-20px + (128 - 20) * ((100vw - 0px) / (1440 - 0))),
+    128px
+  );
+  bottom: 54px;
+
+  @media (max-width: 768px) {
+    bottom: clamp(
+      150px,
+      calc(150px + (295 - 150) * ((768px - 100vw) / (768 - 393))),
+      295px
+    );
+    width: 350px;
+    height: 259px;
+    z-index: -1;
+  }
+}
+
+.goalImage {
+  width: clamp(
+    466px,
+    /* 555px reduced by 16.1% */
+      calc(555px - (89 * ((1440px - 100vw) / (1440 - 1140)))),
+    555px
+  );
+  height: clamp(
+    251px,
+    /* 299px reduced by 16.1% */
+      calc(299px - (48 * ((1440px - 100vw) / (1440 - 1140)))),
+    299px
+  );
+  right: clamp(
+    2px,
+    calc(2px + (135 - 2) * ((100vw - 768px) / (1440 - 768))),
+    135px
+  );
+  bottom: 37px;
+
+  @media (max-width: 768px) {
+    bottom: clamp(
+      150px,
+      calc(150px + (285 - 150) * ((768px - 100vw) / (768 - 393))),
+      285px
+    );
+    width: 290px;
+    height: 163px;
+    z-index: -1;
+  }
+}
+
+.profitImage {
+  width: clamp(
+    420px,
+    /* 500px reduced by 16.1% */
+      calc(500px - (80 * ((1440px - 100vw) / (1440 - 1140)))),
+    500px
+  );
+  height: clamp(
+    258px,
+    /* 308px reduced by 16.1% */
+      calc(308px - (50 * ((1440px - 100vw) / (1440 - 1140)))),
+    308px
+  );
+  right: clamp(
+    10px,
+    calc(10px + (52 - 10) * ((100vw - 768px) / (1440 - 768))),
+    52px
+  );
+  bottom: 18px;
+
+  @media (max-width: 768px) {
+    bottom: clamp(
+      150px,
+      calc(150px + (285 - 150) * ((768px - 100vw) / (768 - 393))),
+      285px
+    );
+    width: 290px;
+    height: 192px;
+    z-index: -1;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.buttonsWrapper {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  top: 75%;
+  left: 45%;
+  transform: translate(-50%);
+  z-index: 999;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.switchButtonStyle {
+  cursor: pointer;
+  background-color: #b1e1fc;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  transition: background-color 0.3s ease;
+}
+
+.activeSwitch {
+  background-color: #d6effe;
+}
+
+.nextButton {
+  top: 80px;
+  right: 73px;
+  position: absolute;
+  width: 11px;
+  height: 14px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 999;
+
+  @media (max-width: 768px) {
+    top: 70px;
+    right: 15px;
+    width: 14px;
+    height: 15px;
+  }
+}

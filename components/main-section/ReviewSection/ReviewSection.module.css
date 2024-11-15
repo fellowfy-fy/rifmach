@@ -1,0 +1,60 @@
+.sectionWrapper {
+  background: white;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.customContainer {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-left: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+  padding-right: clamp(
+    16px,
+    calc(16px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    134px
+  );
+}
+
+.title {
+  color: var(--color-headers, #25253F);
+  font-size: 24px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 55px;
+  }
+}
+
+.divider {
+  width: 40px;
+  height: 5px;
+  background-color: var(--color-main, #0E9EFF);
+  border-radius: 2px;
+  margin-top: 10px;
+
+  @media (min-width: 768px) {
+    width: 50px;
+    margin-top: 20px;
+  }
+}
+
+.carouselWrapper {
+  margin-top: 40px;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @media (min-width: 768px) {
+    margin-top: 48px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
