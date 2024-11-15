@@ -22,7 +22,7 @@ export const Calculator: React.FC<Props> = () => {
                 <TariffSide occasion={occasion} setOccasion={setOccasion} tariff={tariff} setTariff={setTariff}  />
             </div>
             <div className='col-span-1 w-auto h-auto lg:w-[541px] lg:h-[507px] bg-white lg:bg-calculator mx-[10px] lg:my-[34px] lg:ml-[11px] lg:mr-[34px] rounded-[5px]'>
-                <CostSide genre={genre} setGenre={setGenre} occasion={occasion} isOn={isOn} setIsOn={setIsOn} />
+                <CostSide genre={genre} setGenre={setGenre} occasion={occasion} isOn={isOn} setIsOn={setIsOn} tariff={tariff}/>
             </div> 
         </div>
     </div>

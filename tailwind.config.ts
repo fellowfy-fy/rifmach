@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-            screens: {
+      screens: {
         '3xl': '1920px',
       },
       fontFamily: {

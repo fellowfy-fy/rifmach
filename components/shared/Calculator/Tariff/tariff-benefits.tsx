@@ -21,8 +21,8 @@ export const TariffBenefits: React.FC<Props> = ({ className, tariff }) => {
                 </div>
                 <div className='relative'>
                 <div className='flex flex-col'>
-                    <p className='text-[17px] leading-[20.4px] text-main font-[600]'>{item.title}</p>
-                    <p className='text-[13px] leading-[15.6px]'>{item.description}</p>
+                    <p className={`text-[17px] leading-[20.4px] text-main font-[600] ${!isAvailable && 'opacity-50'}`}>{item.title}</p>
+                    <p className={`text-[13px] leading-[15.6px] ${!isAvailable && 'opacity-50'}`}>{item.description}</p>
                 </div>
                 {item.hasRef && (
             <a className='absolute -right-[6.5rem] top-1/2 -translate-y-1/2' href='#'>

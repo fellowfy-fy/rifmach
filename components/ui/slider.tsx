@@ -49,7 +49,7 @@ React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
         <SliderPrimitive.Track className="relative h-[2px] w-full grow overflow-hidden rounded-full bg-slidercalc">
           <SliderPrimitive.Range className="absolute h-full bg-slidercalc" />
         </SliderPrimitive.Track>
-        <SliderPrimitive.Thumb className="block h-8 w-8 rounded-full bg-contain bg-center bg-no-repeat border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+        <SliderPrimitive.Thumb className="block h-8 w-8 rounded-full bg-contain bg-center bg-no-repeat border-none mx-auto focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
           <img
             src="/icons/slidercalc.svg"
             alt="slider thumb"

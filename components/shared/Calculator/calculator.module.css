@@ -1,0 +1,5 @@
+.calcButton {
+    position: relative !important;
+    margin-top: 1.5rem;
+    @apply w-[233px] h-[44px]
+}
