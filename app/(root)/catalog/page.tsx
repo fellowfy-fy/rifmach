@@ -1,10 +1,12 @@
 import CTASection from '@/components/shared/CtaSection/cta-section';
 import CatalogIntro from '@/components/catalog-sections/catalog-intro';
+import CatalogSection from '@/components/catalog-sections/CatalogSection';
 
 export default function Catalog() {
   return (
     <div>
       <CatalogIntro />
+      <CatalogSection/>
       <CTASection
         title={
           <>

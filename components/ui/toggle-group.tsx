@@ -7,13 +7,13 @@ import { toggleVariants } from "@/components/ui/toggle"
 
 type ToggleGroupProps = React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
 VariantProps<typeof toggleVariants> & {
-  ctaVariant?: 'primary' | 'secondary' | 'tertiary';
+  ctaVariant?: 'primary' | 'secondary' | 'tertiary' | 'filter';
 };
 
 const ToggleGroupContext = React.createContext<{
   variant?: VariantProps<typeof toggleVariants>["variant"];
   size?: VariantProps<typeof toggleVariants>["size"];
-  ctaVariant?: 'primary' | 'secondary' | 'tertiary';
+  ctaVariant?: 'primary' | 'secondary' | 'tertiary' | 'filter';
 }>({
   size: "default",
   variant: "default",
@@ -50,6 +50,8 @@ const ToggleGroupItem = React.forwardRef<
         return 'data-[state=on]:bg-[#70B8FE] data-[state=on]:text-white hover:bg-[#70B8FE]/90 hover:text-[#E2F2FF]/90 bg-transparent border border-[#70B8FE] text-[#70B8FE] font-light';
       case 'tertiary':
         return 'bg-[#E9EDF4] text-textsmain hover:bg-white data-[state=on]:bg-white data-[state=on]:text-main h-[30px] font-light';
+      case 'filter':
+        return 'bg-[#F5F7FA] text-textsmain hover:text-white hover:bg-[#70B8FE]/90 data-[state=on]:bg-main data-[state=on]:text-white h-[30px] font-light';
       default: // primary
         return 'border border-white/70 bg-transparent hover:bg-white hover:text-black text-white/70 h-[25px] data-[state=on]:bg-white data-[state=on]:text-main font-light';
     }

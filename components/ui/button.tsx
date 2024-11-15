@@ -26,6 +26,7 @@ const buttonVariants = cva(
         image: "p-0 bg-transparent",
         outline: "p-0",
         demo: "text-white text-[0.875rem] text-center flex justify-center",
+        filterMore: "text-textsmain text-[0.875rem] text-center flex justify-center",
         coop: "text-[0.875rem] text-[#50636A] text-center border border-[#D7E3EB] font-harmonia font-semibold transition-colors duration-300 hover:border-main"
       },
       size: {

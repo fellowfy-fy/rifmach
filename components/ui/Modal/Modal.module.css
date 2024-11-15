@@ -76,7 +76,7 @@
     padding: 1rem 0.5rem;
     align-items: flex-start; /* Better mobile experience */
   }
-  
+
   .container {
     width: 100%; /* Full width on mobile */
     margin: 0;
