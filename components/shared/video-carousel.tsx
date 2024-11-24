@@ -79,7 +79,7 @@ export default function VideoCarousel({ videos, variant = 'default' }: VideoCaro
       {/* карусель */}
       <div className="relative h-[300px] md:h-[600px]">
         {/* предыдущий слайд */}
-        <div className="hidden lg:block absolute left-0 top-[100px] z-10 transition-opacity duration-500 opacity-50 hover:opacity-100">
+        <div className="hidden lg:block absolute left-0 top-[100px] z-10 transition-opacity duration-300 opacity-50 hover:opacity-100">
           <VideoCard
             {...videos[getPrevIndex()]}
             isActive={false}
@@ -87,7 +87,7 @@ export default function VideoCarousel({ videos, variant = 'default' }: VideoCaro
           />
         </div>
         {/* текущий слайд */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-20 transition-opacity duration-500 opacity-100 w-full md:w-auto">
+        <div className="absolute left-1/2 -translate-x-1/2 z-20 transition-opacity duration-300 opacity-100 w-full md:w-auto">
           <VideoCard
             {...videos[currentIndex]}
             isActive={true}
@@ -95,7 +95,7 @@ export default function VideoCarousel({ videos, variant = 'default' }: VideoCaro
           />
         </div>
         {/* следующий слайд */}
-        <div className="hidden lg:block absolute right-0 top-[100px] z-10 transition-opacity duration-500 opacity-50 hover:opacity-100">
+        <div className="hidden lg:block absolute right-0 top-[100px] z-10 transition-opacity duration-300 opacity-50 hover:opacity-100">
           <VideoCard
             {...videos[getNextIndex()]}
             isActive={false}

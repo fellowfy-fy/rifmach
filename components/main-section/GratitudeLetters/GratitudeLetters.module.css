@@ -8,12 +8,12 @@
 
   padding-left: clamp(
     16px,
-    calc(14px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    calc(14px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
     134px
   );
   padding-right: clamp(
     16px,
-    calc(0px + (134 - 16) * ((100vw - 768px) / (1440 - 768))),
+    calc(0px + (134 - 16) * ((100vw - 768px) / (1920 - 768))),
     134px
   );
 }

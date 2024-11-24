@@ -1,4 +1,4 @@
-import { ToggleGroup, ToggleGroupItem } from "../../ui/toggle-group";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 interface ContactTypeProps {
   variant?: 'primary' | 'secondary';
@@ -10,7 +10,7 @@ export const ContactType = ({ variant = 'primary' }: ContactTypeProps) => {
       <label className={`text-[15px] ${variant === 'primary' ? 'text-white' : 'text-headers'}`}>
         Укажите
       </label>
-      <ToggleGroup type="single" ctaVariant={variant}>
+      <ToggleGroup type="single" defaultValue="WhatsApp" ctaVariant={variant}>
         <ToggleGroupItem value="WhatsApp" className="h-[24px]">
           WhatsApp
         </ToggleGroupItem>
@@ -24,3 +24,5 @@ export const ContactType = ({ variant = 'primary' }: ContactTypeProps) => {
     </div>
   );
 };
+
+export default ContactType;

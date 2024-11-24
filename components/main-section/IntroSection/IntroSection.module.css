@@ -83,6 +83,7 @@
   margin-bottom: 48px; /* Equivalent to mb-12 (12 * 4px) */
   font-weight: 400; /* Equivalent to regular */
   max-width: 152px; /* Equivalent to max-w-[152px] */
+  font-family: "Harmonia Sans Pro Cyr";
 
   @media (min-width: 768px) {
     font-size: 18px;

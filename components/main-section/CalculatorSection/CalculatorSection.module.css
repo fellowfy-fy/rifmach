@@ -3,7 +3,7 @@
   background: linear-gradient(to right, #70b3ff, #70dbfc);
   height: 1390px;
   overflow: hidden;
-  
+
   @media (min-width: 768px) {
     height: 992px;
   }
@@ -34,7 +34,7 @@
   font-size: 24px;
 
   @media (min-width: 768px) {
-    font-size: 55px;
+    font-size: 40px;
   }
 }
 
@@ -56,6 +56,8 @@
   font-size: 14px;
   margin-top: 16px;
   margin-bottom: 28px;
+  font-weight: 400;
+  font-family: "Harmonia Sans Pro Cyr";
   font-weight: 400;
 
   @media (min-width: 768px) {

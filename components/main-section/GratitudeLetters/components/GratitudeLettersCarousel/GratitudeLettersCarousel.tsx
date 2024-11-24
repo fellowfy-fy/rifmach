@@ -78,7 +78,7 @@ export default function GratitudeLettersCarousel({ letters }: CarouselProps) {
         className={`${styles.navButton} ${styles.prevButton}`}
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} className='text-accent hover:text-[#FF9900]'/>
+        <ChevronLeft size={32} className='text-accent hover:text-[#FF9900]'/>
       </button>
 
       <div className={styles.carouselViewport}>
@@ -99,7 +99,7 @@ export default function GratitudeLettersCarousel({ letters }: CarouselProps) {
         className={`${styles.navButton} ${styles.nextButton}`}
         aria-label="Next slide"
       >
-        <ChevronRight size={24} className='text-accent hover:text-[#FF9900]'/>
+        <ChevronRight size={32} className='text-accent hover:text-[#FF9900]'/>
       </button>
 
       {!isMobile && (

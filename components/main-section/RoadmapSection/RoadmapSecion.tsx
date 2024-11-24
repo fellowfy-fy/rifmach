@@ -1,5 +1,5 @@
 "use client"
-import StepsCards from '../../shared/steps-cards';
+import { StepsCards } from '@/components/shared/steps-cards';
 import Image from 'next/image';
 import { CustomButton } from '../../ui/CustomButton/CustomButton';
 import styles from './RoadmapSection.module.css';

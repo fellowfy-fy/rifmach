@@ -37,7 +37,7 @@ export default function CallToAction({
               }`}
             >
               {consentBreak ? (
-                <p className={`mt-2 text-[10px] leading-tight ${getConsentClasses()}`}>
+                <p className={`mt-2 text-[10px] leading-tight font-harmonia ${getConsentClasses()}`}>
                   Даю согласие на обработку
                   <br />
                   персональных данных

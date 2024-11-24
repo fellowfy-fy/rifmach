@@ -32,7 +32,7 @@ export default function VideoSection() {
           <h2 className={styles.title}>видео от клиентов</h2>
           <hr className={styles.divider}/>
           <h3 className={styles.subtitle}>
-            Реальные живые эмоции клиентов. Узнайте больше о том, как презентуют готовые стихи на публику!
+            Реальные живые эмоции клиентов. Узнайте больше о том,<br /><span className="font-bold">как презентуют готовые стихи на публику!</span>
           </h3>
           <div className="mt-[30px]">
             <VideoMenu/>

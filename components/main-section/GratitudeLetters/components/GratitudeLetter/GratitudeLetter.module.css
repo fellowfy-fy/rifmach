@@ -2,12 +2,24 @@
   position: relative;
   width: 197px;
   height: 272px;
-  /* margin-left: 45px;
-  margin-right: 45px; */
   border: 1px solid #b1e1fc;
-  transition: all 0.3s ease; /* Add smooth transition for hover effects */
+  transition: all 0.3s ease;
+  margin-bottom: 45px;
+}
+
+.letterWrapper:after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Высота тени */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 146.52px; /* Точная ширина тени */
+  height: 27.69px; /* Точная высота тени */
+  background: rgba(101, 173, 237, 0.5);
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .letterWrapper:hover {
-  border-color: #ffc000; /* Change border color on hover */
+  border-color: #ffc000;
 }

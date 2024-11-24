@@ -28,7 +28,7 @@
 
 .navButton {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -49,7 +49,6 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
 }
 
 .dot {

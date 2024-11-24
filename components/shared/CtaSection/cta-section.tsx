@@ -121,11 +121,11 @@ const CTASection = ({
       <div className={styles.customContainer}>
         <div className="relative z-10 flex flex-col md:flex-row">
           <div className="flex flex-col mb-8 md:mb-6">
-            <h1 className="text-2xl md:text-h2 text-white pt-16 md:pt-32 uppercase md:max-w-[560px]">
+            <h1 className="text-2xl md:text-h2 text-white pt-16 md:pt-32 uppercase md:max-w-[560px] font-harmonia">
               {title}
             </h1>
             <hr className="w-10 md:w-[50px] h-[4px] bg-white rounded-sm mt-2.5 md:mt-5" />
-            <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px] mb-6">
+            <p className="text-h3 md:text-[18px] text-white mt-4 regular max-w-[584px] mb-6 font-harmonia">
               {subtitle}
             </p>
             <CallToAction

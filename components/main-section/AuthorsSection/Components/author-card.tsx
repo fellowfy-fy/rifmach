@@ -14,7 +14,7 @@ export default function AuthorCard({ author }: AuthorCardProps) {
   const { avatarUrl, name, city, description } = author;
 
   return (
-    <div className="font-harmonia border transition-colors duration-300 hover:border-main bg-white w-auto md:w-[280px] md:h-[350px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[9px] md:mb-0 flex items-center flex-col ">
+    <div className="font-harmonia border-[2px] transition-colors duration-300 hover:border-main bg-white w-auto md:w-[280px] md:h-[350px] pl-[25px] pr-[30px] py-[40px] rounded-[5px] relative mb-[9px] md:mb-0 flex items-center flex-col ">
       <div className="absolute top-[-60px] w-[120px] h-[120px] flex items-center justify-center rounded-full bg-white border border-accent">
         <Avatar>
           <AvatarImage src={avatarUrl} />

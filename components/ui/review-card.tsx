@@ -83,7 +83,7 @@ export default function ReviewCard({ review, variant = 'default' }: ReviewCardPr
       {variant === 'default' && (
         <div className="flex flex-col">
           <hr />
-          <p className="text-h5 text-[#8F8F9C] mt-4">Автор стиха: {poemAuthor}</p>
+          <p className="text-h5 text-[#8F8F9C] mt-4">Автор стиха: <span className="text-[#171B1C]">{poemAuthor}</span></p>
         </div>
       )}
     </div>

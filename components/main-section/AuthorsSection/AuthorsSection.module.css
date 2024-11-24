@@ -42,20 +42,20 @@
 }
 
 .title {
-  color: #25253F;
+  color: #25253f;
   font-size: 24px;
   text-transform: uppercase;
   position: relative;
 
   @media (min-width: 768px) {
-    font-size: 55px;
+    font-size: 40px;
   }
 }
 
 .divider {
   width: 40px;
   height: 5px;
-  background-color: #0E9EFF;
+  background-color: #0e9eff;
   border-radius: 2px;
   margin-top: 10px;
 
@@ -66,10 +66,11 @@
 }
 
 .description {
-  color: #29383D;
+  color: #50636a;
   font-size: 12px;
   margin-top: 10px;
   max-width: 659px;
+  font-family: "Harmonia Sans Pro Cyr";
 
   @media (min-width: 768px) {
     font-size: 14px;
