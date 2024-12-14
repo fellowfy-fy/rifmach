@@ -14,7 +14,7 @@ export const Ideas: React.FC<IdeasProps> = ({ isOpen, onOpenChange }) => {
   const ideaItems = ideaCards.map((idea, index) => (
     <IdeaCard key={index} idea={idea} />
   ));
-
+// 
   return (
     <Modal isOpen={isOpen} onClose={() => onOpenChange(false)}>
       <div className={styles.wrapper}>

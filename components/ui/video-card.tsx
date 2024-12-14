@@ -51,7 +51,7 @@ export default function VideoCard({
         </div>
         {/* Текстовый блок */}
         {isActive && (
-          <div className="bg-white text-[##29383D] leading-5 rounded-b-[32px] px-6 py-4 lg:h-[84px] h-[78px] flex flex-col justify-center text-center shadow-xl font-harmonia">
+          <div className="bg-white text-[##29383D] leading-5 rounded-b-[32px] px-6 py-4 lg:h-[84px] h-[78px] flex flex-col justify-center text-center shadow-2xl font-harmonia">
             <h4 className="text-[1rem] font-bold">{title}</h4>
             <p className="text-[1rem] font-normal">{subtitle}</p>
           </div>
